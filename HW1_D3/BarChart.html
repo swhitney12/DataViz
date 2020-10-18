@@ -71,12 +71,14 @@ d3.csv("bar-data.csv", function(error, data) {
       .style("text-anchor", "end")
       .attr("dx", "-.8em")
       .attr("dy", "-.55em")
-      .attr("transform", "rotate(-90)" )
-    .append("text")
-      .attr("transform", "translate(" + (width/2) + "," +
-                                        (height + margin.top + 20) + ")")
-      .style("text-anchor", "middle")
-      .text("Text here");
+      .attr("transform", "rotate(-90)" );
+
+  svg.append("text")             
+    .attr("transform",
+          "translate(" + (width/2) + " ," + 
+                         (height + margin.top + 20) + ")")
+    .style("text-anchor", "middle")
+    .text("Date");    
 
   svg.append("g")
       .attr("class", "y axis")
