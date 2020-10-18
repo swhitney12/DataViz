@@ -104,14 +104,22 @@ d3.csv("bar-data-grouped.csv", function(error, data) {
     .attr("class", "g")
     .attr("transform", function(d) { return "translate(" + x0(d.Time) + ",0)"; });
   
-  svg.selectAll("bar")
-      .data(function(d) {return d.ages; })
+  Time.selectAll("rect")
+    .data(function(d) {return d.ages; })
     .enter().append("rect")
-      .attr("width", x1.rangeBand())
-      .attr("x", function(d) { return x1(d.name); })
-      .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); })
-      .style("fill", function (d) { return color(d.name); });
+    .attr("width", x1.rangeBand())
+    .attr("x", function(d) { return x1(d.name); })
+    .attr("y", function(d) { return y(d.value); })
+    .attr("height", function(d) {return height - y(d.value); })
+    .style("fill", function(d) {return color(d.name); });
+  // svg.selectAll("bar")
+  //     .data(function(d) {return d.ages; })
+  //   .enter().append("rect")
+  //     .attr("width", x1.rangeBand())
+  //     .attr("x", function(d) { return x1(d.name); })
+  //     .attr("y", function(d) { return y(d.value); })
+  //     .attr("height", function(d) { return height - y(d.value); })
+  //     .style("fill", function (d) { return color(d.name); });
 });
 
 </script>
