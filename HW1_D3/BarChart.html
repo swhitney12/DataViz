@@ -56,12 +56,14 @@ d3.csv("bar-data.csv", function(error, data) {
 
     data.forEach(function(d) {
         d.Time = parseTime(d.Time);
-        d.Value= +d.Value;
-        console.log(d.Value);
+        d.Junior= +d.Junior;
+        d.Senior= +d.Senior;
+        console.log(d.Junior);
+        console.log(d.Senior);
     });
 	
   x.domain(data.map(function(d) { return d.Time; }));
-  y.domain([0, d3.max(data, function(d) { return d.Value; })]);
+  y.domain([0, d3.max(data, function(d) { return d.Junior; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -99,8 +101,9 @@ d3.csv("bar-data.csv", function(error, data) {
       .style("fill", "steelblue")
       .attr("x", function(d) { return x(d.Time); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.Value); })
-      .attr("height", function(d) { return height - y(d.Value); });
+      .attr("y", function(d) { return y(d.Junior); })
+      .attr("y", function(d) { return y(d.Senior); })
+      .attr("height", function(d) { return height - y(d.Junior); });
 
 });
 
