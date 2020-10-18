@@ -73,12 +73,10 @@ d3.csv("bar-data.csv", function(error, data) {
       .attr("dy", "-.55em")
       .attr("transform", "rotate(-90)" )
     .append("text")
-      .attr("y", 0 - margin.bottom)
-      .attr("x", 0 - (width/2))
-      .attr("dy", ".71em")
+      .attr("transform", "translate(" + (width/2) + "," +
+                                        (height + margin.top + 20) + ")")
       .style("text-anchor", "middle")
-      .text("Value ($)");
-
+      .text("Text here");
 
   svg.append("g")
       .attr("class", "y axis")
