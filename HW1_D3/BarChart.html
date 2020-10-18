@@ -68,10 +68,11 @@ d3.csv("bar-data.csv", function(error, data) {
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis)
     .selectAll("text")
-      .style("text-anchor", "end")
+      .style("text-anchor", "middle")
       .attr("dx", "-.8em")
       .attr("dy", "-.55em")
-      .attr("transform", "rotate(-90)" );
+      .attr("transform", "rotate(-90)" )
+      .text("What time do you go to bed?");
 
   svg.append("g")
       .attr("class", "y axis")
