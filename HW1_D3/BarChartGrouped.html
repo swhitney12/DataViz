@@ -114,7 +114,7 @@ d3.csv("bar-data-grouped.csv", function(error, data) {
     .style("fill", function(d) {return color(d.name); });
 
   var legend = svg.selectAll(".legend")
-    .data(ageNames.slice().reverse())
+    .data(ageGroups.slice().reverse())
     .enter().append("g")
     .attr("class", "legend")
     .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
