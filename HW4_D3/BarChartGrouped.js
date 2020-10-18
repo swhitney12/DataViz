@@ -9,7 +9,7 @@ var x0 = d3.scale.ordinal().rangeRoundBands([0, width], .3);
 
 var x1 = d3.scale.ordinal();
 
-var y = d3.scale.linear().range([height, 0], 1);
+var y = d3.scale.linear().range([height, 0]);
 
 var color = d3.scale.ordinal()
     .range(["#DA70D6", "#F02688"]);
@@ -21,8 +21,8 @@ var xAxis = d3.svg.axis()
 
 var yAxis = d3.svg.axis()
     .scale(y)
-    .orient("left");
-    //.ticks(1);
+    .orient("left")
+    .ticks(3);
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
