@@ -73,11 +73,12 @@ d3.csv("bar-data.csv", function(error, data) {
       .attr("dy", "-.55em")
       .attr("transform", "rotate(-90)" );
 
-  svg.append("text")             
+  svg.append("text")  
+    .attr("class", "x axis")
+    .call(xAxis)           
     .attr("transform",
           "translate(" + (width/2) + " ," + 
                          (height + margin.top + 50) + ")")
-    .attr("dy", ".71em")
     .style("text-anchor", "middle")
     .text("Bedtime");    
 
