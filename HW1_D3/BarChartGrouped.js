@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-
-<head>
-	<style>
-
-	.axis {
-	  font: 10px sans-serif;
-	}
-
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
-
-	</style>
-</head>
-
-<body>
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-
-<h1>Bedtime by School Year</h1>
-<p>This graph shows the number of senior and junior students that go to bed at a given time</p>
-
-<script src = "./BarChartGrouped.js"></script>
-<!-- <script>
-
 var margin = {top: 20, right: 20, bottom: 70, left: 40},
     width = 600 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
@@ -137,7 +107,3 @@ d3.csv("bar-data-grouped.csv", function(error, data) {
     .text(function(d) { return d; });
 
 });
-
-</script> -->
-
-</body>
