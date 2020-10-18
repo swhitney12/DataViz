@@ -76,7 +76,8 @@ d3.csv("bar-data.csv", function(error, data) {
   svg.append("text")             
     .attr("transform",
           "translate(" + (width/2) + " ," + 
-                         (height + margin.top + 40) + ")")
+                         (height + margin.top + 50) + ")")
+    .attr("dy", ".71em")
     .style("text-anchor", "middle")
     .text("Bedtime");    
 
