@@ -55,7 +55,7 @@ var svg = d3.select("body").append("svg")
 d3.csv("bar-data.csv", function(error, data) {
 
     data.forEach(function(d) {
-        d.Year= +Year;
+        d.Year= +d.Year;
         d.Time = +d.Time;
     });
 	
