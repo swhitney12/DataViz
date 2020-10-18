@@ -31,7 +31,7 @@ var margin = {top: 20, right: 20, bottom: 70, left: 40},
 // Parse the date / time
 var	parseTime = d3.time.format("%I:%M%p").parse;
 
-var x0 = d3.scale.ordinal().rangeRoundBands([0, width], .02);
+var x0 = d3.scale.ordinal().rangeRoundBands([0, width], .05);
 
 var x1 = d3.scale.ordinal();
 
@@ -112,14 +112,7 @@ d3.csv("bar-data-grouped.csv", function(error, data) {
     .attr("y", function(d) { return y(d.value); })
     .attr("height", function(d) {return height - y(d.value); })
     .style("fill", function(d) {return color(d.name); });
-  // svg.selectAll("bar")
-  //     .data(function(d) {return d.ages; })
-  //   .enter().append("rect")
-  //     .attr("width", x1.rangeBand())
-  //     .attr("x", function(d) { return x1(d.name); })
-  //     .attr("y", function(d) { return y(d.value); })
-  //     .attr("height", function(d) { return height - y(d.value); })
-  //     .style("fill", function (d) { return color(d.name); });
+
 });
 
 </script>
