@@ -29,7 +29,7 @@ var margin = {top: 20, right: 20, bottom: 70, left: 40},
     height = 300 - margin.top - margin.bottom;
 
 // Parse the date / time
-var	parseTime = d3.time.format("%I-%p").parse;
+var	parseTime = d3.time.format("%H:%M%p").parse;
 
 var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
 
