@@ -29,22 +29,22 @@ var margin = {top: 20, right: 20, bottom: 70, left: 40},
     height = 300 - margin.top - margin.bottom;
 
 // Parse the date / time
-//var	parseDate = d3.time.format("%Y-%m").parse;
+var	parseTime = d3.time.format("%I-%p").parse;
 
 var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
 
 var y = d3.scale.linear().range([height, 0]);
-svg.pointsNames = ["0", "11:00 PM", "11:30 PM", "12:00 AM", "1:00 AM", "2:00 AM"]
+
 
 var xAxis = d3.svg.axis()
-    .scale(x)
+    .scale.Time(x)
     .orient("bottom")
-    .tickValues(svg.pointsNames);
+    .tickValues(d3.time.format("%I-%p"));
 
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .ticks(5);
+    .ticks(10);
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -56,12 +56,12 @@ var svg = d3.select("body").append("svg")
 d3.csv("bar-data.csv", function(error, data) {
 
     data.forEach(function(d) {
-        d.Year= +d.Year;
-        d.Time = +d.Time;
+        d.Value= +d.Value;
+        d.Time = parseTime(d.Time);
     });
 	
-  x.domain(data.map(function(d) { return d.Year; }));
-  y.domain([0, d3.max(data, function(d) { return d.Time; })]);
+  x.domain(data.map(function(d) { return d.Time; }));
+  y.domain([0, d3.max(data, function(d) { return d.Value; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -87,10 +87,10 @@ d3.csv("bar-data.csv", function(error, data) {
       .data(data)
     .enter().append("rect")
       .style("fill", "steelblue")
-      .attr("x", function(d) { return x(d.Year); })
+      .attr("x", function(d) { return x(d.Time); })
       .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.Time); })
-      .attr("height", function(d) { return height - y(d.Time); });
+      .attr("y", function(d) { return y(d.Value); })
+      .attr("height", function(d) { return height - y(d.Value); });
 
 });
 

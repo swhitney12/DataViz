@@ -1,13 +1,6 @@
-Year, Time
-Junior, 1:00 AM
-Senior, 11:00 PM
-Junior, 12:00 AM
-Senior, 12:00 AM
-Junior, 2:00 AM
-Junior, 1:00 AM
-Senior, 11:30 AM
-Junior, 1:00 AM
-Senior, 12:00 AM
-Junior, 11:00 AM
-Senior, 11:00 PM
-Senior, 2:00 AM
+Time, Value
+11:00 PM, 3
+12:00 AM, 3
+1:00 AM, 3
+2:00 AM, 2
+11:30 AM, 1
