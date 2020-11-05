@@ -3,7 +3,7 @@ var margin = {top:20, right: 20, bottom:20, left:20},
     width = 1000;
 
 //function for date parsing
-//var parseDate = d3.timeFormat("%Y-%m-%e").parse;
+var parseDate = d3.timeFormat("%Y-%m-%e").parse;
 
 //var x = d3.scaleTime().range([0, width]);
 //var y = d3.scaleLinear().range([height, 0]);
@@ -38,10 +38,10 @@ var margin = {top:20, right: 20, bottom:20, left:20},
 d3.csv("XOM-XOM.csv")
      .then(function(data) {
          console.log(data);
-//         data.forEach(function(d)  {
-//             d.Date = parseDate(d.Date);
-//             d.Close = +d.Close;
-//         });
+         data.forEach(function(d)  {
+             d.Date = parseDate(d.Date);
+             d.Close = +d.Close;
+         });
 
 //d3.csv("XOM-XOM.csv", function(error, data) {
 //    console.log(data);
