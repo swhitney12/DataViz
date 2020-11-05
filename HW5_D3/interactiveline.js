@@ -36,12 +36,12 @@ const brush = d3.brushX()
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
      .then(function(data) {
-         console.log(data);
          data.forEach(function(d)  {
              d.Date = parseDate(d.Date);
              d.Close = +d.Close;
          });
 
+         console.log(d.Date);
     x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
