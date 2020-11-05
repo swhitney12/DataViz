@@ -11,6 +11,7 @@ var y = d3.scaleLinear().range([height, 0]);
 //setting up axes
 var xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
+    .range([margin.left, width - margin.right])
     .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m-%d")));
 
 var yAxis = g => g
@@ -39,8 +40,7 @@ d3.csv("XOM-XOM.csv")
          data.forEach(function(d)  {
              d.Date = parseDate(d.Date);
              d.Close = +d.Close;
-             console.log(d.Date);
-         });
+    });
 
  
     x.domain(d3.extent(data, function(d) { return d.Date; }));
