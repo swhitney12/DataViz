@@ -12,9 +12,9 @@ var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
      .call(d3.axisLeft(y).ticks(5));
 
-var valueline = d3.line()
-    .x(function(d) { return x(d.date);})
-    .y(function(d) { return y(d.close);})
+//var valueline = d3.line()
+//    .x(function(d) { return x(d.date);})
+//    .y(function(d) { return y(d.close);})
 
 var x = d3.scaleTime().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
@@ -36,12 +36,12 @@ d3.csv("XOM-XOM.csv", function(error, data) {
     //     d.close = +d.Close;
     //});
 
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
+//    x.domain(d3.extent(data, function(d) { return d.date; }));
+//    y.domain([0, d3.max(data, function(d) { return d.close; })]);
 
-    svg.append("path")
-        .attr("class", "line")
-        .attr("d", valueline(data));
+//    svg.append("path")
+//        .attr("class", "line")
+//        .attr("d", valueline(data));
 
     svg.append("g").call(xAxis);
     svg.append("g").call(brush);
