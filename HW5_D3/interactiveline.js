@@ -12,7 +12,7 @@ yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
      .call(d3.axisLeft(y));
 
-var valueline = d3.svg.line()
+var valueline = d3.line()
     .x(function(d) {return x(d.Date);})
     .y(function(d) {return y(d.Close);})
 
