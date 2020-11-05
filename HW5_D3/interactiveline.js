@@ -43,7 +43,7 @@ d3.csv("XOM-XOM.csv")
          });
 
  
-    x.domain(d3.map(data, function(d) { return d.Date; }));
+    x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
     svg.append("path")
