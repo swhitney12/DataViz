@@ -24,4 +24,6 @@ const brush = d3.brushX()
     .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
 
 svg.append("g").call(xAxis);
-svg.append("g").call(yAxis);
+svg.append("g")
+    .call(brush);
+// svg.append("g").call(yAxis);
