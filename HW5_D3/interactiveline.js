@@ -6,18 +6,18 @@ var parseDate = d3.timeFormat("%Y-%m-%e").parse;
 
 xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x));
+    .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
-     .call(d3.axisLeft(y));
+     .call(d3.axisLeft(y).ticks(5));
 
 var valueline = d3.line()
-    .x(function(d) {return x(d.date);})
-    .y(function(d) {return y(d.close);})
+    .x(function(d) { return x(d.date);})
+    .y(function(d) { return y(d.close);})
 
-x = d3.scaleLinear([0,10], [margin.left, width - margin.right]);
-y = d3.scaleLinear([0,10], [margin.left, height - margin.bottom])
+x = d3.timeScale().range([0, width]);
+y = d3.scaleLinear().range([height, 0]);
 
 const svg = d3.select("body")
     .append("svg")
