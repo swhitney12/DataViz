@@ -21,3 +21,4 @@ const svg = d3.select("body")
     .attr("viewBox", [0,0,width,height]);
 
 svg.append("g").call(xAxis);
+svg.append("g").call(yAxis);
