@@ -6,7 +6,13 @@ xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x));
 
-x = d3.scaleLinear([0,100], [margin.left, width - margin.right]);
+yAxis = g => g
+    .attr("transform", `translate(0,${width - margin.right})`)
+    .call(d3.axisLeft(y));
+
+
+x = d3.scaleLinear([0,10], [margin.left, width - margin.right]);
+y = d3.scaleLinear([0,10], [margin.top, height - margin.bottom])
 
 const svg = d3.select("body")
     .append("svg")
