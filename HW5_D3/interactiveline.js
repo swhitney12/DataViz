@@ -7,7 +7,7 @@ xAxis = g => g
     .call(d3.axisBottom(x));
 
 yAxis = g => g
-    .attr("transform", `translate(0,${width - margin.right})`)
+    .attr("transform", `translate(0,${width - margin.left})`)
     .call(d3.axisLeft(y));
 
 
