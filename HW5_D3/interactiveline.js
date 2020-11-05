@@ -8,4 +8,10 @@ xAxis = g => g
 
 x = d3.scaleLinear([0,10], [margin.left, width - margin.right]);
 
+const svg = d3.select("body")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("viewBox", [0,0,width,height]);
+
 svg.append("g").call(xAxis);
