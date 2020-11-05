@@ -1,4 +1,4 @@
-margin = ({top:10, right: 20, bottom:20, left:20});
+margin = ({top:20, right: 20, bottom:20, left:20});
 height = 200;
 width = 1000;
 
