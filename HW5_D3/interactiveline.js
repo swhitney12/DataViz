@@ -32,10 +32,10 @@ var margin = {top:20, right: 20, bottom:20, left:20},
 d3.csv("XOM-XOM.csv")
     .then((data) => {
         console.log(data);
-//    data.forEach(function(d)  {
-//         d.Date = parseDate(d.Date);
-//         d.Close = +d.Close;
-//    });
+        data.forEach(function(d)  {
+            d.Date = parseDate(d.Date);
+            d.Close = +d.Close;
+        });
 
 //    x.domain(d3.extent(data, function(d) { return d.date; }));
 //    y.domain([0, d3.max(data, function(d) { return d.close; })]);
