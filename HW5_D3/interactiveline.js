@@ -4,6 +4,9 @@ width = 1000;
 
 var parseDate = d3.timeFormat("%Y-%m-%e").parse;
 
+var x = d3.scaleTime().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
+
 var xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
@@ -16,13 +19,10 @@ var yAxis = g => g
 //    .x(function(d) { return x(d.date);})
 //    .y(function(d) { return y(d.close);})
 
-var x = d3.scaleTime().range([0, width]);
-var y = d3.scaleLinear().range([height, 0]);
-
 const svg = d3.select("body")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height)
+        .attr("width", width)
+        .attr("height", height)
     .attr("viewBox", [0,0,width,height]);
 
 const brush = d3.brushX()
@@ -32,8 +32,8 @@ const brush = d3.brushX()
 d3.csv("XOM-XOM.csv", function(error, data) {
     console.log(data);
     data.forEach(function(d)  {
-         d.date = parseDate(d.Date);
-         d.close = +d.Close;
+         d.Date = parseDate(d.Date);
+         d.Close = +d.Close;
     });
 
 //    x.domain(d3.extent(data, function(d) { return d.date; }));
