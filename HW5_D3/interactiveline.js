@@ -4,11 +4,11 @@ width = 1000;
 
 var parseDate = d3.timeFormat("%Y-%m-%e").parse;
 
-xAxis = g => g  
+var xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
 
-yAxis = g => g
+var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
      .call(d3.axisLeft(y).ticks(5));
 
@@ -16,8 +16,8 @@ var valueline = d3.line()
     .x(function(d) { return x(d.date);})
     .y(function(d) { return y(d.close);})
 
-x = d3.scaleTime().range([0, width]);
-y = d3.scaleLinear().range([height, 0]);
+var x = d3.scaleTime().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
 
 const svg = d3.select("body")
     .append("svg")
@@ -43,8 +43,7 @@ d3.csv("XOM-XOM.csv", function(error, data) {
         .attr("d", valueline(data));
 
     svg.append("g").call(xAxis);
-    svg.append("g")
-        .call(brush);
+    svg.append("g").call(brush);
     svg.append("g").call(yAxis);
 });
 
