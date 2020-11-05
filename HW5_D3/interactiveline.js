@@ -29,7 +29,7 @@ width = 1000;
 //    .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
 
 //getting the data for line1
-d3.csv("XOM-XOM.csv", function(error, data) {
+d3.csv("TSLA-TSLA.csv", function(error, data) {
     console.log(data);
 //    data.forEach(function(d)  {
 //         d.Date = parseDate(d.Date);
