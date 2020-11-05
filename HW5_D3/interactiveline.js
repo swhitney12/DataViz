@@ -1,11 +1,11 @@
 var margin = {top:20, right: 20, bottom:20, left:20},
-    height = 300,
-    width = 1000;
+    height = 300 - margin.left - margin.right,
+    width = 1000 - margin.top - margin.bottom;
 
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
-var x = d3.scaleUtc().range([0, width]);
+var x = d3.scaleLinear().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 //setting up axes
