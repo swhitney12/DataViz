@@ -3,7 +3,7 @@ var margin = {top:20, right: 20, bottom:20, left:20},
     width = 1000;
 
 //function for date parsing
-var parseDate = d3.timeParse("%Y-%B-%d");
+var parseDate = d3.timeParse("%Y-%m-%d");
 
 var x = d3.scaleTime().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
