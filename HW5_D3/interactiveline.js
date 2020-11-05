@@ -42,8 +42,8 @@ d3.csv("XOM-XOM.csv")
              d.Close = +d.Close;
          });
 
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
+    x.domain(d3.extent(data, function(d) { return d.Date; }));
+    y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
 //    svg.append("path")
 //        .attr("class", "line")
