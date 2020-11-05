@@ -16,7 +16,7 @@ var valueline = d3.line()
     .x(function(d) { return x(d.date);})
     .y(function(d) { return y(d.close);})
 
-x = d3.timeScale().range([0, width]);
+x = d3.scaleTime().range([0, width]);
 y = d3.scaleLinear().range([height, 0]);
 
 const svg = d3.select("body")
