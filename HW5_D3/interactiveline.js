@@ -29,8 +29,9 @@ var margin = {top:20, right: 20, bottom:20, left:20},
 //    .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
 
 //getting the data for line1
-d3.csv("XOM-XOM.csv", function(error, data) {
-    console.log(data);
+d3.csv("XOM-XOM.csv")
+    .then((data) => {
+        console.log(data);
 //    data.forEach(function(d)  {
 //         d.Date = parseDate(d.Date);
 //         d.Close = +d.Close;
@@ -46,5 +47,8 @@ d3.csv("XOM-XOM.csv", function(error, data) {
 //    svg.append("g").call(xAxis);
 //    svg.append("g").call(brush);
 //    svg.append("g").call(yAxis);
-});
+    })
+    .catch((error) => {
+        console.error("error loading data");
+    });
 
