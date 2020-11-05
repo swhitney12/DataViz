@@ -18,9 +18,9 @@ var yAxis = g => g
      .call(d3.axisLeft(y).ticks(5));
 
 //creating line
-//var valueline = d3.line()
-//    .x(function(d) { return x(d.date);})
-//    .y(function(d) { return y(d.close);})
+var valueline = d3.line()
+    .x(function(d) { return x(d.date);})
+    .y(function(d) { return y(d.close);})
 
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
@@ -45,9 +45,9 @@ d3.csv("XOM-XOM.csv")
     x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
-//    svg.append("path")
-//        .attr("class", "line")
-//        .attr("d", valueline(data));
+    svg.append("path")
+        .attr("class", "line")
+        .attr("d", valueline(data));
 
     svg.append("g").call(xAxis);
     svg.append("g").call(brush);
