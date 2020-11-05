@@ -2,7 +2,7 @@ margin = ({top:20, right: 20, bottom:20, left:20});
 height = 300;
 width = 1000;
 
-var parseDate = d3.timeFormat("%d-%b-%y").parse;
+var parseDate = d3.timeFormat("%Y-%m-%e").parse;
 
 xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
