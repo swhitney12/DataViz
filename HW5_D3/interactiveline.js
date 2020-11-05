@@ -13,8 +13,8 @@ yAxis = g => g
      .call(d3.axisLeft(y));
 
 var valueline = d3.line()
-    .x(function(d) {return x(d.Date);})
-    .y(function(d) {return y(d.Close);})
+    .x(function(d) {return x(d.date);})
+    .y(function(d) {return y(d.close);})
 
 x = d3.scaleLinear([0,10], [margin.left, width - margin.right]);
 y = d3.scaleLinear([0,10], [margin.left, height - margin.bottom])
@@ -29,7 +29,7 @@ const brush = d3.brushX()
     .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
 
 //getting the data for line1
-d3.csv("XOM-XOM.csv", function(error,data) {
+d3.csv("XOM-XOM.csv", function(error, data) {
     data.forEach(function(d) {
         d.date = parseDate(d.Date);
         d.close = +d.Close;
