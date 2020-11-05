@@ -34,10 +34,9 @@ d3.csv("XOM-XOM.csv", function(d) {
         Date: parseDate(d.Date),
         Close: +d.Close
     };
-
 }).then(function(data) {
     console.log(data);
-});
+
 
 
 //    x.domain(d3.extent(data, function(d) { return d.date; }));
