@@ -30,7 +30,7 @@ const brush = d3.brushX()
 
 //getting the data for line1
 d3.csv("XOM-XOM.csv", function(error, data) {
-    console.log(data[1].Date);
+    console.log(data);
     // data.forEach(function(d)  {
     //     d.date = parseDate(d.Date);
     //     d.close = +d.Close;
