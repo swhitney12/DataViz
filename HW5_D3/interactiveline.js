@@ -19,8 +19,8 @@ var yAxis = g => g
 
 //creating line
 var valueline = d3.line()
-    .x(function(d) { return x(d.date);})
-    .y(function(d) { return y(d.close);})
+    .x(function(d) { return x(d.Date);})
+    .y(function(d) { return y(d.Close);})
 
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
