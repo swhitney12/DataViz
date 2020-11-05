@@ -48,7 +48,7 @@ d3.csv("XOM-XOM.csv")
 //    svg.append("g").call(brush);
 //    svg.append("g").call(yAxis);
     })
-    .catch((error) => {
-        console.error("error loading data");
-    });
+    //.catch((error) => {
+    //    console.error("error loading data");
+    //});
 
