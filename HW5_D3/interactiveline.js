@@ -39,9 +39,10 @@ d3.csv("XOM-XOM.csv")
          data.forEach(function(d)  {
              d.Date = parseDate(d.Date);
              d.Close = +d.Close;
+             console.log(d.Date);
          });
 
-         console.log(d.Date);
+ 
     x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
