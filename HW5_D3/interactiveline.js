@@ -1,6 +1,6 @@
-margin = {top:20, right: 20, bottom:20, left:20},
-height = 300,
-width = 1000;
+var margin = {top:20, right: 20, bottom:20, left:20},
+    height = 300,
+    width = 1000;
 
 //var parseDate = d3.timeFormat("%Y-%m-%e").parse;
 
@@ -29,7 +29,7 @@ width = 1000;
 //    .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
 
 //getting the data for line1
-d3.csv("TSLA-TSLA.csv", function(error, data) {
+d3.csv("XOM-XOM.csv", function(error, data) {
     console.log(data);
 //    data.forEach(function(d)  {
 //         d.Date = parseDate(d.Date);
