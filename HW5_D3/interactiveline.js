@@ -39,7 +39,7 @@ yAxis = g => g
         .attr("y", 10)
         .attr("fill", "currentColor")
         .attr("text-anchor", "start")
-        .text("Close"))
+        .text("Close");
 // yAxis = g => g
 //      .attr("transform", `translate(${margin.left},0)`)
 //      .call(d3.axisLeft(y));
