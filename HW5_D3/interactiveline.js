@@ -45,11 +45,9 @@ const svg = d3.select("body")
 
 var focus = svg.append("g")
     .attr("class", "focus");
-    //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var context = svg.append("g")
     .attr("class", "context");
-    //.attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
 //creating brush
 const brush = d3.brushX()
@@ -77,16 +75,24 @@ d3.csv("XOM-XOM.csv")
 
     focus.append("g")
         .attr("class", "x axis")
-        .call(xAxis)
-
-    svg.append("g")
-        .attr("class", "x axis 2")
         .call(xAxis);
+
+    focus.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    context.append("path")
+        .attr("class", "line")
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("d", valueline2(data));
+    
+    context.append("g")
+        .attr("class", "x axis")
+        .call(xAxis2);
 
     svg.append("g")
          .call(brush);
-    svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
+
 });
 
