@@ -14,9 +14,13 @@ var x = d3.scaleTime().range([margin.left, width - margin.right]);
     y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
 
 //setting up axes
-xAxis = g => g  
-    .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(5));
+
+xAxis = d3.scaleUtc()
+    .domain(d3.extent(data, d => d.date))
+    .range([margin.left, width - margin.right])
+// xAxis = g => g  
+//     .attr("transform", `translate(0,${height - margin.bottom})`)
+//     .call(d3.axisBottom(x).ticks(5));
 
 xAxis2 = g => g
     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
