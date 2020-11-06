@@ -33,8 +33,6 @@ const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-//    .append("g")
-//    .attr("transform", "translate("+margin.left+","+margin.top+")");
     .attr("viewBox", [0,0,width,height]);
 
 //creating brush
