@@ -68,6 +68,12 @@ xAxis2 = g => g
                 d3.select(this)
                 .call(brush.move, [brushL - 50, brushR+50]);
             }
+            let filterednodes = myData.filter(
+                function(d) {
+                    return d.Date >= x0 && d.Date <= x1;
+                }
+            ); 
+            renderGraph(filterednodes);
         }
     }
 
@@ -81,12 +87,12 @@ xAxis2 = g => g
             renderGraph(myData);
         } else {
             const[x0, x1] = selection.map(x.invert);
-            let filterednodes = myData.filter(
-                function(d) {
-                    return d.Date >= x0 && d.Date <= x1;
-                }
-            ); 
-            renderGraph(filterednodes);
+            // let filterednodes = myData.filter(
+            //     function(d) {
+            //         return d.Date >= x0 && d.Date <= x1;
+            //     }
+            // ); 
+            // renderGraph(filterednodes);
         }
     }
 
