@@ -52,13 +52,13 @@ d3.csv("XOM-XOM.csv")
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
     svg.append("path")
-    .attr("class", "area")
-    .attr("fill", "steelblue")
-    .attr("d", area(data));
-
-    svg.append("path")
         .attr("class", "line")
         .attr("d", valueline(data));
+
+    svg.append("path")
+        .attr("class", "area")
+        .attr("fill", "steelblue")
+        .attr("d", area(data));
 
     svg.append("g")
         .attr("class", "x axis")
