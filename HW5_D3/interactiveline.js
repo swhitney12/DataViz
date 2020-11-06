@@ -249,13 +249,13 @@ function updateData() {
 
     var context = d3.select("body").transition();
 
-   context.select("line")
+   context.select(".line")
         .duration(750)
         .attr("d", valueline(data));
-    context.select("x axis")
+    context.select(".x.axis")
         .duration(750)
         .call(xAxis);
-    context.select("y axis")
+    context.select(".y.axis")
         .duration(750)
         .call(yAxis);
 
