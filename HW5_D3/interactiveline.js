@@ -78,20 +78,14 @@ xAxis2 = g => g
             const gb = svg.append("g")
                 .call(brush)
                 .call(brush.move, defaultSelection);
-        //renderGraph(data);
+            renderGraph(myData);
         } else {
             const[x0, x1] = selection.map(x.invert);
             let filterednodes = myData.filter(
                 function(d) {
                     return d.Date >= x0 && d.Date <= x1;
                 }
-            ); //.select("path").filter(
-            //console.log(filterednodes)   
-            // //function(d) {
-                //     console.log(d)
-                //     return d.Date >= x0 && d.Date <= x1;
-                // }
-            //)
+            ); 
             renderGraph(filterednodes);
             //put update here
             //have a set of datapoints, go through and find maximum value to set y axis of selection
@@ -127,22 +121,22 @@ d3.csv("XOM-XOM.csv")
     x2.domain(x.domain());
     y2.domain(y.domain());
 
-    //appending line to focus
-    focus.append("path")
-        .attr("class", "line")
-        .attr("fill", "none")
-        .attr("stroke", "steelblue")
-        .attr("d", valueline(data));
+    // //appending line to focus
+    // focus.append("path")
+    //     .attr("class", "line")
+    //     .attr("fill", "none")
+    //     .attr("stroke", "steelblue")
+    //     .attr("d", valueline(data));
 
-    //appending x axis to focus
-    focus.append("g")
-        .attr("class", "x axis")
-        .call(xAxis);
+    // //appending x axis to focus
+    // focus.append("g")
+    //     .attr("class", "x axis")
+    //     .call(xAxis);
 
-    //appending y axis to focus
-    focus.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
+    // //appending y axis to focus
+    // focus.append("g")
+    //     .attr("class", "y axis")
+    //     .call(yAxis);
 
     //appending line to context
     context.append("path")
@@ -163,7 +157,6 @@ d3.csv("XOM-XOM.csv")
 });
 
 function renderGraph(nodes) {
-    // console.log(nodes)
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
     y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
 
