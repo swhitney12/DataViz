@@ -8,10 +8,6 @@ var margin1 = {top:30, right: 20, bottom:30, left:50},
 
 var focusheight = 100;
 
-chart = {
-    
-}
-
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
@@ -19,13 +15,9 @@ var x = d3.scaleTime().range([margin.left, width - margin.right]);
 var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
 //setting up axes
-xAxis = ƒ(g)
-
 xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-
-yAxis = ƒ(g)
+    .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
@@ -35,12 +27,6 @@ yAxis = g => g
 var valueline = d3.line()
     .x(function(d) { return x(d.Date);})
     .y(function(d) { return y(d.Close);});
-
-//creating area
-// var area = d3.area()
-//     .x(function(d) { return x(d.Date); })
-//     .y0(height - margin.bottom)
-//     .y1(function(d) { return y(d.Close); });
 
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
@@ -71,11 +57,6 @@ d3.csv("XOM-XOM.csv")
         .attr("stroke", "steelblue")
         .attr("d", valueline(data));
 
-    // svg.append("path")
-    //     .attr("class", "area")
-    //     .attr("fill", "steelblue")
-    //     .attr("d", area(data));
-
     svg.append("g")
         .attr("class", "x axis")
         .call(xAxis)
@@ -86,4 +67,8 @@ d3.csv("XOM-XOM.csv")
         .attr("class", "y axis")
         .call(yAxis);
 });
+
+const svg1 = d3.create("svg1")
+    .attr("viewBox", [0,0,width1,focusHeight])
+    .style("display", "block");
 
