@@ -5,8 +5,8 @@ var margin = {top:30, right: 20, bottom:30, left:50},
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
-var x = d3.scaleTime().range([margin.left, width - margin.right]);
-var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
+var x = d3.scaleTime().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
 
 //setting up axes
 xAxis = g => g  
