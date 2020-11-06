@@ -4,13 +4,14 @@ var margin = {top:10, right: 10, bottom:100, left:40},
     height = 500 - margin.top - margin.bottom,
     height2 = 700 - margin2.top - margin2.bottom;
 
+
 //creating svg & viewbox for brushing
     const svg = d3.select("body")
         .append("svg")
         .attr("width", width) 
         .attr("height", height); 
 
-function makechart(data) { 
+//function makechart(data) { 
 
     //create focus
     var focus = svg.append("g")
@@ -34,10 +35,10 @@ function makechart(data) {
         .attr("class", "y axis")
         .call(yAxis);
 
-    return focus;
-}
+//    return focus;
+//}
 
-function makecontext(data) {
+//function makecontext(data) {
     //create context
     var context = svg.append("g")
         .attr("class", "context")
@@ -101,8 +102,8 @@ function makecontext(data) {
     .attr("class", "brush")
     .call(brush);
 
-    return context;
-}
+//    return context;
+//}
 
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
@@ -168,7 +169,7 @@ function updateData() {
    x2.domain(x.domain());
    y2.domain(y.domain());
 
-//    var context = d3.select("body").transition();
+    var context = d3.select("body").transition();
 
    context.select("line")
         .duration(750)
