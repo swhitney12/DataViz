@@ -97,6 +97,12 @@ function makecontext(data) {
     .attr("class", "brush")
     .call(brush);
 }
+
+function update(data) {
+    const [minX, maxX] = makecontext(data);
+    const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+    makechart(data).update(x.copy().domain(focus), y.copy().domain([0, maxY]));
+}
 //this is also what my code doesn't like
 // update = {
 //     const [minX, maxX] = focus;
@@ -136,68 +142,6 @@ var valueline2 = d3.line()
     .x(function(d) { return x2(d.Date); })
     .y(function(d) { return y2(d.Close); });
 
-// //creating svg & viewbox for brushing
-// const svg = d3.select("body")
-//     .append("svg")
-//         .attr("width", width) 
-//         .attr("height", height); 
-
-// svg.append("defs").append("clipPath")
-//     .attr("id", "clip")
-//   .append("rect")
-//     .attr("width", width)
-//     .attr("height", height);
-
-// //create focus
-// var focus = svg.append("g")
-//     .attr("class", "focus")
-//     .attr("viewBox", [0,0,width,height]);
-
-// //create context
-// var context = svg.append("g")
-//     .attr("class", "context")
-//     .attr("viewBox", [0,0,width,height2]);
-
-//creating brush
-// const brush = d3.brushX()
-//     .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
-//     .on("brush", brushed)
-//     .on("end", brushended);
-
-// const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
-
-// //brushended function
-// function brushended(event) {
-//     if(event.selection === null) {
-//         const dx = x(1) - x(0);
-//         const [[cx]] = d3.pointers(event);
-//         const [x0, x1] = [cx - dx / 2, cx + dx / 2];
-//         const[X0,X1] = x.range();
-//         d3.select(this)
-//             .call(brush.move, x1 > X1 ? [X1 - dx, X1]
-//                 : x0 < X0 ? [X0, X0 + dx]
-//                 :[x0, x1]);
-//     } else {
-//         var [brushL, brushR] = d3.brushSelection(this);
-//         if(brushR - brushL < 100) {
-//             d3.select(this)
-//             .call(brush.move, [brushL - 50, brushR+50]);
-//         }
-//     }
-// }
-
-// //brushed function
-// function brushed(event) {
-//     const selection = event.selection;
-//     if(selection === null) {
-//         const gb = svg.append("g")
-//             .call(brush)
-//             .call(brush.move, defaultSelection);
-//     } else {
-//         const[x0, x1] = selection.map(x.invert);
-//     }
-// }
-
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
      .then(function(data) {
@@ -212,42 +156,9 @@ d3.csv("XOM-XOM.csv")
     x2.domain(x.domain());
     y2.domain(y.domain());
 
-// //appending line to focus
-//     focus.append("path")
-//         .attr("class", "line")
-//         .attr("fill", "none")
-//         .attr("stroke", "steelblue")
-//         .attr("d", valueline(data));
-
-// //appending x axis to focus
-//     focus.append("g")
-//         .attr("class", "x axis")
-//         .call(xAxis);
-
-// //appending y axis to focus
-//     focus.append("g")
-//         .attr("class", "y axis")
-//         .call(yAxis);
-
     makechart(data);
     makecontext(data);
-
-// //appending line to context
-//     context.append("path")
-//         .attr("class", "line")
-//         .attr("fill", "none")
-//         .attr("stroke", "steelblue")
-//         .attr("d", valueline2(data));
-
-// //appending x axis to context
-//     context.append("g")
-//         .attr("class", "x axis")
-//         .call(xAxis2);
-
-// //adding brush to context
-//     context.append("g")
-//         .attr("class", "brush")
-//         .call(brush);
+    update(data);
 
 });
 
