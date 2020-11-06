@@ -49,13 +49,17 @@ d3.csv("XOM-XOM.csv")
         .attr("class", "line")
         .attr("d", valueline(data));
 
-    svg.append("g").call(xAxis)
-        .selectAll("text")
-            .style("text-anchor", "end")
-            .attr("dx", "-.8em")
-            .attr("dy", ".15em")
-            .attr("transform", "rotate(-65)");
+    svg.append("g")
+        .attr("class", "x axis")
+        .call(xAxis)
+            .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-65)");
     svg.append("g").call(brush);
-    svg.append("g").call(yAxis);
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
 });
 
