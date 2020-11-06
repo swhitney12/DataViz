@@ -68,7 +68,7 @@ function makecontext(data) {
                 .call(brush.move, [brushL - 50, brushR+50]);
             }
         }
-
+        update(data);
     }
 
     //brushed function
@@ -100,13 +100,12 @@ function makecontext(data) {
     .attr("class", "brush")
     .call(brush);
 
-    console.log(context.node())
     return context;
 }
 
 function update(data) {
     const [minX, maxX] = makecontext(data);
-    const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+    const maxY = d3.max(data, d => minX <= d.Date && d.Date <= maxX ? d.Close : NaN);
     makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
 }
 
@@ -158,7 +157,7 @@ d3.csv("XOM-XOM.csv")
 
     makechart(data);
     makecontext(data);
-    update(data);
+  //  update(data);
 
 });
 
