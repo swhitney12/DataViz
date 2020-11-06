@@ -11,11 +11,11 @@ var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 //setting up axes
 xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(width/80).tickSizeOuter(0));//tickFormat(d3.timeFormat("%Y-%m-%d")));
+    .call(d3.axisBottom(x).ticks(7).tickSizeOuter(0));//tickFormat(d3.timeFormat("%Y-%m-%d")));
 
 var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
-     .call(d3.axisLeft(y));
+     .call(d3.axisLeft(y).ticks(6));
 
 //creating line
 var valueline = d3.line()
