@@ -34,8 +34,7 @@ function makechart(data) {
         .attr("class", "y axis")
         .call(yAxis);
 
-    console.log(focus.node);
-    return svg.node();
+        return focus.node();
 }
 
 function makecontext(data) {
@@ -100,7 +99,7 @@ function makecontext(data) {
     .attr("class", "brush")
     .call(brush);
 
-    return svg.node();
+    return context.node();
 }
 
 function update(data) {
