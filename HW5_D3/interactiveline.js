@@ -82,6 +82,8 @@ xAxis2 = g => g
         } else {
             const[x0, x1] = selection.map(x.invert);
             console.log(selection);
+            console.log(x0);
+            console.log(x1);
             //put update here
             //have a set of datapoints, go through and find maximum value to set y axis of selection
             //use that data to make the chart
@@ -150,7 +152,7 @@ d3.csv("XOM-XOM.csv")
        .call(brush);
 });
 
-function renderGraph(data) {
+function renderGraph(data, selection) {
 
 }
 
