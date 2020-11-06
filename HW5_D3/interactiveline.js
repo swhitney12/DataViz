@@ -2,8 +2,7 @@ var margin = {top:30, right: 20, bottom:30, left:50},
     height = 500 - margin.top - margin.bottom,
     width = 1000 - margin.left - margin.right;
 
-var margin2 = {top: 530, right: 20, bottom: 30, left: 50}
-    height2 = 660 - margin2.top - margin2.bottom;
+var focusHeight = 100;
 
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
@@ -13,6 +12,10 @@ var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
 //setting up axes
 xAxis = g => g  
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(5));
+
+xAxis2 = (g,x,height) => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
 
@@ -29,8 +32,8 @@ var valueline = d3.line()
 const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom);
- //   .attr("viewBox", [0,0,width,height]);
+        .attr("height", height + margin.top + margin.bottom)
+    .attr("viewBox", [0,0,width,height]);
 
 //creating brush
 const brush = d3.brushX()
@@ -59,15 +62,13 @@ d3.csv("XOM-XOM.csv")
         .call(xAxis)
 
     svg.append("g")
+        .attr("class", "x axis 2")
+        .call(xAxis, x, focusHeight);
+
+    svg.append("g")
          .call(brush);
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis);
 });
-
-const svg1 = d3.select("body")
-    .append("svg1")
-        .attr("width", width + margin2.left + margin2.right)
-        .attr("height", height2 + margin2.top + margin2.bottom)
-    .attr("viewBox", [0,0,width,height2]);
 
