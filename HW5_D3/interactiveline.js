@@ -162,7 +162,7 @@ function renderGraph(nodes) {
         .attr("class", "line")
         .attr("fill", "none")
         .attr("stroke", "steelblue")
-        .attr("d", valueline(selec));
+        .attr("d", valueline(nodes));
 
     //appending x axis to focus
     focus.append("g")
