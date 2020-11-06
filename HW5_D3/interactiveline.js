@@ -44,12 +44,12 @@ const svg = d3.select("body")
     .attr("viewBox", [0,0,width,height]);
 
 var focus = svg.append("g")
-    .attr("class", "focus")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("class", "focus");
+    //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var context = svg.append("g")
-    .attr("class", "context")
-    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+    .attr("class", "context");
+    //.attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
 //creating brush
 const brush = d3.brushX()
