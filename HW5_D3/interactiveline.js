@@ -104,7 +104,7 @@ function makecontext(data) {
 }
 
 function update(data) {
-    const [minX, maxX] = makecontext(data);
+    const [minX, maxX] = context.node();
     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
     makechart(data).update(x.copy().domain(focus), y.copy().domain([0, maxY]));
 }
