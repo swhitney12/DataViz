@@ -168,15 +168,15 @@ function updateData() {
    x2.domain(x.domain());
    y2.domain(y.domain());
 
-   var svg = d3.select("body").transition();
+   var context = d3.select("body").transition();
 
-   svg.select("line")
+   context.select("line")
         .duration(750)
         .attr("d", valueline(data));
-    svg.select("x axis")
+    context.select("x axis")
         .duration(750)
         .call(xAxis);
-    svg.select("y axis")
+    context.select("y axis")
         .duration(750)
         .call(yAxis);
 
