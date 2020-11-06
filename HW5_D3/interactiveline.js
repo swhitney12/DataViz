@@ -67,8 +67,8 @@ d3.csv("XOM-XOM.csv")
 
 const svg1 = d3.select("body")
     .append("svg1")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height2 + margin.top + margin.bottom)
+        .attr("width", width + margin2.left + margin2.right)
+        .attr("height", height2 + margin2.top + margin2.bottom)
     .attr("viewBox", [0,0,width,height2])
     .style("display", "block");
 
