@@ -34,7 +34,7 @@ function makechart(data) {
         .attr("class", "y axis")
         .call(yAxis);
 
-    return focus.node();
+    return focus;
 }
 
 function makecontext(data) {
@@ -100,7 +100,7 @@ function makecontext(data) {
     .call(brush);
 
     console.log(context.node())
-    return context.node();
+    return context;
 }
 
 update = undefined;
