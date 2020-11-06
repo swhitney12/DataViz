@@ -75,9 +75,9 @@ const brush = d3.brushX()
 
 const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
 
-const gb = svg.append("g")
-    .call(brush)
-    .call(brush.move, defaultSelection);
+// const gb = svg.append("g")
+//     .call(brush)
+//     .call(brush.move, defaultSelection);
 
 // function brushed({selection}) {
 //     if(selection) {
@@ -112,7 +112,13 @@ function brushended(event) {
 
 function brushed(event) {
     const selection = event.selection;
-    const[x0, x1] = selection.map(x.invert);
+    if(selection === null) {
+        const gb = svg.append("g")
+            .call(brush)
+            .call(brush.move, defaultSelection);
+    } else {
+        const[x0, x1] = selection.map(x.invert);
+    }
 }
 
 //getting the data for line1
