@@ -51,9 +51,7 @@ var context = svg.append("g")
 
 //creating brush
 const brush = d3.brushX()
-    .x(x2);
-    //.on("brush", brushed);
-     //.extent([[margin2.left,margin2.top],[width-margin2.right,height2-margin2.bottom]])
+    .extent([[margin2.left,margin2.top + 10],[width-margin2.right,height2-margin2.bottom]])
 
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
