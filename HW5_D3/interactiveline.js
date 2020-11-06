@@ -9,9 +9,7 @@ var x = d3.scaleTime().range([margin.left, width - margin.right]);
 var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
 //setting up axes
-xAxis = ƒ(g, x, height)
-
-xAxis = (g,x,height) => g  
+xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(width/80).tickSizeOuter(0));//tickFormat(d3.timeFormat("%Y-%m-%d")));
 
