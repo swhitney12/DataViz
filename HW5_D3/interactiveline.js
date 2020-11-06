@@ -68,7 +68,7 @@ function makecontext(data) {
                 .call(brush.move, [brushL - 50, brushR+50]);
             }
         }
-        update(data);
+        UpdateChart(data);
     }
 
     //brushed function
@@ -103,7 +103,7 @@ function makecontext(data) {
     return context;
 }
 
-function update(data) {
+function UpdateChart(data) {
     const [minX, maxX] = makecontext(data);
     const maxY = d3.max(data, d => minX <= d.Date && d.Date <= maxX ? d.Close : NaN);
     makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
@@ -157,7 +157,5 @@ d3.csv("XOM-XOM.csv")
 
     makechart(data);
     makecontext(data);
-  //  update(data);
-
 });
 
