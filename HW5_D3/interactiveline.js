@@ -60,8 +60,8 @@ const brush = d3.brushX()
 
 function brushed({selection}) {
     if(selection) {
-        focus.select(".valueline").attr("d", valueline);
-        focus.select(".x.axis").call(xAxis);
+        focus.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
+        focus.dispatch("input");
     }
 }
 //getting the data for line1
