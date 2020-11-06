@@ -54,12 +54,13 @@ d3.csv("XOM-XOM.csv")
     svg.append("path")
         .attr("class", "line")
         .attr("fill", "none")
+        .attr("stroke", "steelblue")
         .attr("d", valueline(data));
 
-    svg.append("path")
-        .attr("class", "area")
-        .attr("fill", "steelblue")
-        .attr("d", area(data));
+    // svg.append("path")
+    //     .attr("class", "area")
+    //     .attr("fill", "steelblue")
+    //     .attr("d", area(data));
 
     svg.append("g")
         .attr("class", "x axis")
