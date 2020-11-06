@@ -45,7 +45,8 @@ const svg = d3.select("body")
 
 //create focus
 var focus = svg.append("g")
-    .attr("class", "focus");
+    .attr("class", "focus")
+    .attr("viewBox", [0,0,width,height]);
 
 //create context
 var context = svg.append("g")
@@ -60,12 +61,10 @@ const brush = d3.brushX()
 
 function brushed({selection}) {
     if(selection) {
-        svg.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
-        svg.dispatch("input");
+        context.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
+        context.dispatch("input");
     }
 }
-
-return svg.node();
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
      .then(function(data) {
