@@ -9,8 +9,6 @@ var parseDate = d3.timeParse("%Y-%m-%d");
 
 var x = d3.scaleUtc().range([margin.left, width - margin.right]);
     x2 = d3.scaleUtc().range([margin2.left, width - margin2.right]);
-//x = d3.scaleTime().range([margin.left, width - margin.right]);
-//     x2 = d3.scaleTime().range([margin2.left, width - margin2.right]);
     y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
     y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
 
