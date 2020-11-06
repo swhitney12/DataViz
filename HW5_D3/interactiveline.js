@@ -28,13 +28,13 @@ yAxis = g => g
 
 //creating line
 var valueline = d3.line()
-    .x(function(d) { return x2(d.Date);})
-    .y(function(d) { return y2(d.Close);});
+    .x(function(d) { return x(d.Date);})
+    .y(function(d) { return y(d.Close);});
 
 //creating line2
 var valueline2 = d3.line()
-    .x(function(d) {return x(d.Date); })
-    .y(function(d) { return y(d.Close); });
+    .x(function(d) {return x2(d.Date); })
+    .y(function(d) { return y2(d.Close); });
 
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
