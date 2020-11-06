@@ -5,17 +5,17 @@ var margin = {top:30, right: 20, bottom:30, left:50},
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
-var x = d3.scaleTime().range([0, width]);
-var y = d3.scaleLinear().range([height, 0]);
+var x = d3.scaleTime().range([margin.left, width - margin.right]);
+var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
 //setting up axes
 xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(7));//tickFormat(d3.timeFormat("%Y-%m-%d")));
+    .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
-     .call(d3.axisLeft(y).ticks(6));
+     .call(d3.axisLeft(y).ticks(5));
 
 //creating line
 var valueline = d3.line()
@@ -36,8 +36,8 @@ const svg = d3.select("body")
     .attr("viewBox", [0,0,width,height]);
 
 //creating brush
-// const brush = d3.brushX()
-//     .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
+const brush = d3.brushX()
+     .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
 
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
@@ -57,7 +57,6 @@ d3.csv("XOM-XOM.csv")
 
     svg.append("path")
         .attr("class", "area")
-        .datum(data)
         .attr("d", area(data));
 
     svg.append("g")
@@ -68,8 +67,8 @@ d3.csv("XOM-XOM.csv")
                 .attr("dx", "-.8em")
                 .attr("dy", ".15em")
                 .attr("transform", "rotate(-65)");
-    // svg.append("g")
-    //     .call(brush);
+    svg.append("g")
+         .call(brush);
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis);
