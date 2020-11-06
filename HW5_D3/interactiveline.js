@@ -259,13 +259,13 @@ function updateData() {
         .duration(750)
         .call(yAxis);
 
-    var context = d3.select("body").transition();
-    context.select(".line")
-        .duration(750)
-        .attr("d", valueline2(data));
-    context.select(".x.axis")
-        .duration(750)
-        .call(xAxis2);
+    // var context = d3.select("body").transition();
+    // context.select(".line")
+    //     .duration(750)
+    //     .attr("d", valueline2(data));
+    // context.select(".x.axis")
+    //     .duration(750)
+    //     .call(xAxis2);
    //makechart(data);
    //makecontext(data);
     });
