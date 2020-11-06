@@ -78,8 +78,16 @@ xAxis2 = g => g
             const gb = svg.append("g")
                 .call(brush)
                 .call(brush.move, defaultSelection);
+                //call function here and render whole dataset
         } else {
             const[x0, x1] = selection.map(x.invert);
+            console.log(selection);
+            //put update here
+            //have a set of datapoints, go through and find maximum value to set y axis of selection
+            //use that data to make the chart
+            //make a separate function for the drawing
+            //pass in the data itself
+            //can just append w/ the new data, and it should erase previous selection
         }
     }
 
@@ -141,6 +149,10 @@ d3.csv("XOM-XOM.csv")
        .attr("class", "brush")
        .call(brush);
 });
+
+function renderGraph(data) {
+
+}
 
 function updateData() {
     d3.csv("TSLA-TSLA.csv")
