@@ -168,7 +168,7 @@ function updateData() {
    x2.domain(x.domain());
    y2.domain(y.domain());
 
-   var context = d3.select("body").transition();
+//    var context = d3.select("body").transition();
 
    context.select("line")
         .duration(750)
