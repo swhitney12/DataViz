@@ -108,10 +108,10 @@ d3.csv("XOM-XOM.csv")
     y2.domain(y.domain());
 
 //update
-update = undefined
-const [minX, maxX] = focus;
-const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
-chart.update(x.copy().domain(focus), y.copy().domain([0, maxY]));
+// update = undefined
+// const [minX, maxX] = focus;
+// const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+// chart.update(x.copy().domain(focus), y.copy().domain([0, maxY]));
 //appending line to focus
     focus.append("path")
         .attr("class", "line")
