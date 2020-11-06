@@ -137,7 +137,7 @@ d3.csv("XOM-XOM.csv")
         .call(yAxis);
 
     //appending line to context
-    context.append("path")
+    context.append("path2")
        .attr("class", "line2")
        .attr("fill", "none")
        .attr("stroke", "steelblue")
