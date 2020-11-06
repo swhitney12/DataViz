@@ -9,27 +9,19 @@ var parseDate = d3.timeParse("%Y-%m-%d");
 
 var x = d3.scaleUtc().range([margin.left, width - margin.right]);
     x2 = d3.scaleUtc().range([margin2.left, width - margin2.right]);
-//x = d3.scaleTime().range([margin.left, width - margin.right]);
-//     x2 = d3.scaleTime().range([margin2.left, width - margin2.right]);
     y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
     y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
 
 //setting up axes
-
 xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-// xAxis = g => g  
-//     .attr("transform", `translate(0,${height - margin.bottom})`)
-//     .call(d3.axisBottom(x).ticks(5));
+
 xAxis2 = g => g
     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
     .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-// xAxis2 = g => g
-//     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
-//     .call(d3.axisBottom(x).ticks(5));
 
- yAxis = g => g
+yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
     .call(d3.axisLeft(y));
 
@@ -48,12 +40,6 @@ const svg = d3.select("body")
     .append("svg")
         .attr("width", width) 
         .attr("height", height); 
-
-svg.append("defs").append("clipPath")
-    .attr("id", "clip")
-  .append("rect")
-    .attr("width", width)
-    .attr("height", height);
 
 //create focus
 var focus = svg.append("g")
