@@ -64,12 +64,17 @@ var context = svg.append("g")
 
 
 //creating brush
+// const brush = d3.brushX()
+//     .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
+//     .on("brush", brushed)
+//     .on("end", brushended);
+
 const brush = d3.brushX()
-    .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
+    .extent([[margin2.left, 0.5],[width-margin2.right,height2-margin2.bottom + 0.5]])
     .on("brush", brushed)
     .on("end", brushended);
 
-const defaultSelection = [x(d3.utcYearx), x.range()[1]];
+const defaultSelection = [x(d3.utcYearx.offset(x.domain()[1], -1)), x.range()[1]];
 
 const gb = svg.append("g")
     .call(brush)
