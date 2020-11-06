@@ -34,8 +34,7 @@ var valueline = d3.line()
 //creating line2
 var valueline2 = d3.line()
     .x(function(d) {return x(d.Date); })
-    .y0(height2)
-    y1(function(d) { return y(d.Close); });
+    .y(function(d) { return y(d.Close); });
 
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
