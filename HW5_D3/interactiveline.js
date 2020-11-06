@@ -25,8 +25,8 @@ var valueline = d3.line()
 //creating area
 var area = d3.area()
     .x(function(d) { return x(d.Date); })
-    .y0(height - margin.bottom);
-//    .y1(function(d) { return y(d.Close); });
+    .y0(height - margin.bottom)
+    .y1(function(d) { return y(d.Close); });
 
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
@@ -57,6 +57,7 @@ d3.csv("XOM-XOM.csv")
 
     svg.append("path")
         .attr("class", "area")
+        .datum(data)
         .attr("d", area(data));
 
     svg.append("g")
