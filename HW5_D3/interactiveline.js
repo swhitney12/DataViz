@@ -104,12 +104,6 @@ function brushended(event) {
     }
 }
 
-// function brushended({selection}) {
-//     if (!selection) {
-//       gb.call(brush.move, defaultSelection);
-//     }
-// }
-
 function brushed(event) {
     const selection = event.selection;
     if(selection === null) {
