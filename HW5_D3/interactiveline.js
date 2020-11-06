@@ -40,15 +40,17 @@ var valueline2 = d3.line()
 const svg = d3.select("body")
     .append("svg")
         .attr("width", width) 
-        .attr("height", height) 
-    .attr("viewBox", [0,0,width,height]);
+        .attr("height", height); 
 
+
+//create focus
 var focus = svg.append("g")
     .attr("class", "focus");
 
+//create context
 var context = svg.append("g")
-    .attr("class", "context");
-
+    .attr("class", "context")
+    .attr("viewBox", [0,0,width,height2]);
 //creating brush
 const brush = d3.brushX()
     .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
@@ -61,36 +63,42 @@ d3.csv("XOM-XOM.csv")
              d.Close = +d.Close;
     });
 
- 
+//setting domains
     x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
     x2.domain(x.domain());
     y2.domain(y.domain());
 
+//appending line to focus
     focus.append("path")
         .attr("class", "line")
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("d", valueline(data));
 
+//appending x axis to focus
     focus.append("g")
         .attr("class", "x axis")
         .call(xAxis);
 
+//appending y axis to focus
     focus.append("g")
         .attr("class", "y axis")
         .call(yAxis);
 
+//appending line to context
     context.append("path")
         .attr("class", "line")
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("d", valueline2(data));
-    
+
+//appending x axis to context
     context.append("g")
         .attr("class", "x axis")
         .call(xAxis2);
 
+//adding brush to context
     context.append("g")
         .attr("class", "brush")
         .call(brush);
