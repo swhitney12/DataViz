@@ -99,13 +99,16 @@ function makecontext(data) {
     .attr("class", "brush")
     .call(brush);
 
+    console.log(context.node())
     return context.node();
 }
 
+update = undefined;
+
 function update(data) {
-    const [minX, maxX] = makechart(data);
+    const [minX, maxX] = makecontext(data);
     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
-    makecontext(data).update(x.copy().domain(focus), y.copy().domain([0, maxY]));
+    makechart(data).update(x.copy().domain(focus), y.copy().domain([0, maxY]));
 }
 
 //function for date parsing
