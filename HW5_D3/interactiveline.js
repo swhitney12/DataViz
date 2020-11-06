@@ -151,8 +151,8 @@ d3.csv("XOM-XOM.csv")
     x2.domain(x.domain());
     y2.domain(y.domain());
 
-    makechart(data);
-    makecontext(data);
+    //makechart(data);
+    //makecontext(data);
 });
 
 function updateData() {
@@ -181,7 +181,7 @@ function updateData() {
         .duration(750)
         .call(yAxis);
 
-   makechart(data);
-   makecontext(data);
+   //makechart(data);
+   //makecontext(data);
     });
 }
