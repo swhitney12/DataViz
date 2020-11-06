@@ -65,7 +65,7 @@ d3.csv("XOM-XOM.csv")
         .call(yAxis);
 });
 
-const svg1 = d3.select("svg1")
+const svg1 = d3.select("body")
     .append("svg1")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height2 + margin.top + margin.bottom)
