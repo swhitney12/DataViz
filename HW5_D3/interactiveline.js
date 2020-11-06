@@ -17,13 +17,18 @@ var x = d3.scaleUtc().range([margin.left, width - margin.right]);
 
 //setting up axes
 
-xAxis = g => g  
+xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(5));
-
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
+// xAxis = g => g  
+//     .attr("transform", `translate(0,${height - margin.bottom})`)
+//     .call(d3.axisBottom(x).ticks(5));
 xAxis2 = g => g
-    .attr("transform", `translate(0,${height2 - margin2.bottom})`)
-    .call(d3.axisBottom(x).ticks(5));
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
+// xAxis2 = g => g
+//     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
+//     .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
