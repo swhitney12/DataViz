@@ -50,6 +50,7 @@ var focus = svg.append("g")
 var context = svg.append("g")
     .attr("class", "context")
     .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+
 //creating brush
 const brush = d3.brushX()
      .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
@@ -65,14 +66,16 @@ d3.csv("XOM-XOM.csv")
  
     x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
+    x2.domain(x.domain());
+    y2.domain(y.domain());
 
-    svg.append("path")
+    focus.append("path")
         .attr("class", "line")
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("d", valueline(data));
 
-    svg.append("g")
+    focus.append("g")
         .attr("class", "x axis")
         .call(xAxis)
 
