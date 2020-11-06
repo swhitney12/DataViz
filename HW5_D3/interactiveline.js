@@ -69,6 +69,7 @@ d3.csv("XOM-XOM.csv")
 });
 
 const svg1 = d3.select("svg1")
+    .append("svg1")
     .attr("viewBox", [0,0,width1,focusHeight])
     .style("display", "block");
 
