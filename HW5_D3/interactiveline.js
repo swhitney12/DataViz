@@ -15,7 +15,7 @@ xAxis = g => g
 
 var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
-     .call(d3.axisLeft(y).ticks(3));
+     .call(d3.axisLeft(y));
 
 //creating line
 var valueline = d3.line()
