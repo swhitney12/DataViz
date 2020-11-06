@@ -81,8 +81,7 @@ xAxis2 = g => g
             const[x0, x1] = selection.map(x.invert);
             let filterednodes = graph.nodes.filter(
                 function(d) {
-                    return 
-                        d.date >= x0 && d.date <= x1;
+                    return d.date >= x0 && d.date <= x1;
                 }
             )
             renderGraph(filterednodes);
