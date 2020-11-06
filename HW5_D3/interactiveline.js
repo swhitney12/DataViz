@@ -68,7 +68,6 @@ function makecontext(data) {
                 .call(brush.move, [brushL - 50, brushR+50]);
             }
         }
-        //     const [minX, maxX] = makecontext(data);
 //     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
 //     makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
     }
@@ -155,3 +154,33 @@ d3.csv("XOM-XOM.csv")
     makecontext(data);
 });
 
+function updateData() {
+    d3.csv("TSLA-TSLA.csv")
+    .then(function(data) {
+        data.forEach(function(d)  {
+            d.Date = parseDate(d.Date);
+            d.Close = +d.Close;
+   });
+
+//setting domains
+   x.domain(d3.extent(data, function(d) { return d.Date; }));
+   y.domain([0, d3.max(data, function(d) { return d.Close; })]);
+   x2.domain(x.domain());
+   y2.domain(y.domain());
+
+   var svg = d3.select("body").transition();
+
+   svg.select("line")
+        .duration(750)
+        .attr("d", valueline(data));
+    svg.select("x axis")
+        .duration(750)
+        .call(xAxis);
+    svg.select("y axis")
+        .duration(750)
+        .call(yAxis);
+
+   makechart(data);
+   makecontext(data);
+    });
+}
