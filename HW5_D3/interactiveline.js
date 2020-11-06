@@ -15,8 +15,8 @@ xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
 
-xAxis2 = (g,x,height) => g
-    .attr("transform", `translate(0,${height - margin.bottom})`)
+xAxis2 = (g,x,height2) => g
+    .attr("transform", `translate(0,${height2 - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
@@ -33,7 +33,7 @@ const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-    .attr("viewBox", [0,0,width,focusHeight]);
+    .attr("viewBox", [0,0,width,Height]);
 
 //creating brush
 const brush = d3.brushX()
