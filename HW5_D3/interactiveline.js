@@ -18,22 +18,22 @@ var margin = {top:10, right: 10, bottom:100, left:40},
         .attr("class", "focus")
         .attr("viewBox", [0,0,width,height]);
  
-    //appending line to focus
-    focus.append("path")
-        .attr("class", "line")
-        .attr("fill", "none")
-        .attr("stroke", "steelblue")
-        .attr("d", valueline(data));
+    // //appending line to focus
+    // focus.append("path")
+    //     .attr("class", "line")
+    //     .attr("fill", "none")
+    //     .attr("stroke", "steelblue")
+    //     .attr("d", valueline(data));
 
-    //appending x axis to focus
-    focus.append("g")
-        .attr("class", "x axis")
-        .call(xAxis);
+    // //appending x axis to focus
+    // focus.append("g")
+    //     .attr("class", "x axis")
+    //     .call(xAxis);
 
-    //appending y axis to focus
-    focus.append("g")
-        .attr("class", "y axis")
-        .call(yAxis);
+    // //appending y axis to focus
+    // focus.append("g")
+    //     .attr("class", "y axis")
+    //     .call(yAxis);
 
 //    return focus;
 //}
@@ -85,22 +85,22 @@ var margin = {top:10, right: 10, bottom:100, left:40},
         }
     }
 
-    //appending line to context
-    context.append("path")
-    .attr("class", "line")
-    .attr("fill", "none")
-    .attr("stroke", "steelblue")
-    .attr("d", valueline2(data));
+    // //appending line to context
+    // context.append("path")
+    // .attr("class", "line")
+    // .attr("fill", "none")
+    // .attr("stroke", "steelblue")
+    // .attr("d", valueline2(data));
 
-    //appending x axis to context
-    context.append("g")
-    .attr("class", "x axis")
-    .call(xAxis2);
+    // //appending x axis to context
+    // context.append("g")
+    // .attr("class", "x axis")
+    // .call(xAxis2);
 
-    //adding brush to context
-    context.append("g")
-    .attr("class", "brush")
-    .call(brush);
+    // //adding brush to context
+    // context.append("g")
+    // .attr("class", "brush")
+    // .call(brush);
 
 //    return context;
 //}
@@ -151,6 +151,39 @@ d3.csv("XOM-XOM.csv")
     x2.domain(x.domain());
     y2.domain(y.domain());
 
+    //appending line to focus
+    focus.append("path")
+        .attr("class", "line")
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("d", valueline(data));
+
+    //appending x axis to focus
+    focus.append("g")
+        .attr("class", "x axis")
+        .call(xAxis);
+
+    //appending y axis to focus
+    focus.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+    //appending line to context
+    context.append("path")
+       .attr("class", "line")
+       .attr("fill", "none")
+       .attr("stroke", "steelblue")
+       .attr("d", valueline2(data));
+   
+    //appending x axis to context
+    context.append("g")
+       .attr("class", "x axis")
+       .call(xAxis2);
+   
+    //adding brush to context
+    context.append("g")
+       .attr("class", "brush")
+       .call(brush);
     //makechart(data);
     //makecontext(data);
 });
