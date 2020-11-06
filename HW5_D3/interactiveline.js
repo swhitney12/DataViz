@@ -39,8 +39,8 @@ var valueline2 = d3.line()
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
     .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("width", width) // + margin.left + margin.right)
+        .attr("height", height) // + margin.top + margin.bottom)
     .attr("viewBox", [0,0,width,height]);
 
 var focus = svg.append("g")
