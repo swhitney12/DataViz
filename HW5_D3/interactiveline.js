@@ -64,6 +64,8 @@ function brushed({selection}) {
         svg.dispatch("input");
     }
 }
+
+return svg.node();
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
      .then(function(data) {
