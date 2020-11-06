@@ -29,7 +29,7 @@ var valueline = d3.line()
     .y(function(d) { return y(d.Close);});
 
 //creating svg & viewbox for brushing
-const svg = d3.create("svg")
+const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -68,7 +68,7 @@ d3.csv("XOM-XOM.csv")
         .call(yAxis);
 });
 
-const svg1 = d3.create("svg1")
+const svg1 = d3.select("svg1")
     .attr("viewBox", [0,0,width1,focusHeight])
     .style("display", "block");
 
