@@ -79,7 +79,7 @@ xAxis2 = g => g
         //renderGraph(data);
         } else {
             const[x0, x1] = selection.map(x.invert);
-            let filterednodes = svg.select("path").filter(
+            let filterednodes = svg.select("path").nodes.filter(
                 function(d) {
                     return d.Date >= x0 && d.Date <= x1;
                 }
