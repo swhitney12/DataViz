@@ -75,16 +75,6 @@ const brush = d3.brushX()
 
 const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
 
-// const gb = svg.append("g")
-//     .call(brush)
-//     .call(brush.move, defaultSelection);
-
-// function brushed({selection}) {
-//     if(selection) {
-//         context.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
-//         context.dispatch("input");
-//     }
-// }
 function brushended(event) {
     if(event.selection === null) {
         const dx = x(1) - x(0);
