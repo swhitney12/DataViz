@@ -96,7 +96,7 @@ d3.csv("XOM-XOM.csv")
         .call(brush)
        .selectAll("rect")
         .attr("y", -6)
-        .attr("height", height2+7);
+        .attr("height", height2+20);
 
 });
 
