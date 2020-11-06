@@ -2,11 +2,8 @@ var margin = {top:30, right: 20, bottom:30, left:50},
     height = 400 - margin.top - margin.bottom,
     width = 1000 - margin.left - margin.right;
 
-var margin1 = {top:30, right: 20, bottom:30, left:50},
-    height1 = 440 - margin.top - margin.bottom,
-    width1 = 1000 - margin.left - margin.right;
-
-var focusHeight = 100;
+var margin2 = {top: 530, right: 20, bottom: 30, left: 50}
+    height2 = 100 - margin.top - margin.bottom;
 
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
@@ -70,6 +67,8 @@ d3.csv("XOM-XOM.csv")
 
 const svg1 = d3.select("svg1")
     .append("svg1")
-    .attr("viewBox", [0,0,width1,focusHeight])
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height2 + margin.top + margin.bottom)
+    .attr("viewBox", [0,0,width,height2])
     .style("display", "block");
 
