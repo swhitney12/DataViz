@@ -81,7 +81,7 @@ xAxis2 = g => g
         //renderGraph(data);
         } else {
             const[x0, x1] = selection.map(x.invert);
-            let filterednodes = data; //.select("path").filter(
+            let filterednodes = myData; //.select("path").filter(
             console.log(filterednodes)   
             // //function(d) {
                 //     console.log(d)
