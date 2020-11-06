@@ -5,7 +5,7 @@ var margin = {top:30, right: 20, bottom:30, left:50},
 //function for date parsing
 var parseDate = d3.timeParse("%d-%b-%y");
 
-var x = d3.scaleLinear().range([0, width]);
+var x = d3.timeScale().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 //setting up axes
@@ -27,6 +27,8 @@ const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     .attr("viewBox", [0,0,width,height]);
 
 //creating brush
