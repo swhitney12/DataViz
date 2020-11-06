@@ -11,7 +11,7 @@ var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 //setting up axes
 xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(7));
+    .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
@@ -57,6 +57,7 @@ d3.csv("XOM-XOM.csv")
 
     svg.append("path")
         .attr("class", "area")
+        .attr("fill", "steelblue")
         .attr("d", area(data));
 
     svg.append("g")
