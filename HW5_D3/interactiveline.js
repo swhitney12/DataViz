@@ -30,13 +30,9 @@ xAxis2 = g => g
 //     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
 //     .call(d3.axisBottom(x).ticks(5));
 
-yAxis = g => g
+ yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y))
-    .call(g => g.select(".domain").remove());
-// yAxis = g => g
-//      .attr("transform", `translate(${margin.left},0)`)
-//      .call(d3.axisLeft(y));
+    .call(d3.axisLeft(y));
 
 //creating line
 var valueline = d3.line()
@@ -65,16 +61,28 @@ var context = svg.append("g")
     .attr("class", "context")
     .attr("viewBox", [0,0,width,height2]);
 
+const gb = svg.append("g")
+    .call(brush)
+    .call(brush.move, defaultSelection);
+
 //creating brush
 const brush = d3.brushX()
     .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
     .on("brush", brushed);
-    //.on("end", brushended);
+    .on("end", brushended);
+
+const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
 
 function brushed({selection}) {
     if(selection) {
         context.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
         context.dispatch("input");
+    }
+}
+
+function brushended({selection}) {
+    if (!selection) {
+      gb.call(brush.move, defaultSelection);
     }
 }
 //getting the data for line1
