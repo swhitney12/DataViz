@@ -79,19 +79,41 @@ const gb = svg.append("g")
     .call(brush)
     .call(brush.move, defaultSelection);
 
-function brushed({selection}) {
-    if(selection) {
-        context.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
-        context.dispatch("input");
+// function brushed({selection}) {
+//     if(selection) {
+//         context.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
+//         context.dispatch("input");
+//     }
+// }
+function brushended(event) {
+    if(event.selection === null) {
+        const dx = x(1) - x(0);
+        const [[cx]] = d3.pointers(event);
+        const [x0, x1] = [cx - dx / 2, cx + dx / 2];
+        const[X0,X1] = x.range();
+        d3.select(this)
+            .call(brush.move, x1 > X1 ? [X1 - dx, X1]
+                : x0 < X0 ? [X0, X0 + dx]
+                :[x0, x1]);
+    } else {
+        var [brushL, brushR] = d3.brushSelection(this);
+        if(brushR - brushL < 100) {
+            d3.select(this)
+            .call(brush.move, [brushL - 50, brushR+50]);
+        }
     }
 }
 
-function brushended({selection}) {
-    if (!selection) {
-      gb.call(brush.move, defaultSelection);
-    }
-}
+// function brushended({selection}) {
+//     if (!selection) {
+//       gb.call(brush.move, defaultSelection);
+//     }
+// }
 
+function brushed(event) {
+    const selection = event.selection;
+    const[x0, x1] = selection.map(x.invert);
+}
 
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
