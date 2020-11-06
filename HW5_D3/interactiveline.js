@@ -62,11 +62,7 @@ d3.csv("XOM-XOM.csv")
     svg.append("g")
         .attr("class", "x axis")
         .call(xAxis)
-            .selectAll("text")
-                .style("text-anchor", "end")
-                .attr("dx", "-.8em")
-                .attr("dy", ".15em")
-                .attr("transform", "rotate(-65)");
+
     svg.append("g")
          .call(brush);
     svg.append("g")
