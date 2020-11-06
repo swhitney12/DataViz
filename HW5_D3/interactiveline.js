@@ -91,9 +91,6 @@ function brushended(event) {
             d3.select(this)
             .call(brush.move, [brushL - 50, brushR+50]);
         }
-        const [minX, maxX] = focus;
-        const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
-        update(x.copy().domain(focus), y.copy().domain([0, maxY]));
     }
 }
 
