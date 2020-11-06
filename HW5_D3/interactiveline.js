@@ -19,7 +19,7 @@ xAxis = g => g
     .call(d3.axisBottom(x).ticks(5));
 
 xAxis2 = g => g
-    .attr("transform", `translate(0,${height2 - margin.bottom})`)
+    .attr("transform", `translate(0,${height2 - margin2.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
@@ -39,8 +39,8 @@ var valueline2 = d3.line()
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
     .append("svg")
-        .attr("width", width) // + margin.left + margin.right)
-        .attr("height", height) // + margin.top + margin.bottom)
+        .attr("width", width) 
+        .attr("height", height) 
     .attr("viewBox", [0,0,width,height]);
 
 var focus = svg.append("g")
