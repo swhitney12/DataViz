@@ -9,12 +9,12 @@ var x = d3.scaleTime().range([margin.left, width - margin.right]);
 var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
 //setting up axes
-xAxis = g => g  
-    .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(7));//tickFormat(d3.timeFormat("%Y-%m-%d")));
+xAxis = d3.axis() 
+    //.attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(7));
 
-var yAxis = g => g
-     .attr("transform", `translate(${margin.left},0)`)
+yAxis = d3.axis()
+     //.attr("transform", `translate(${margin.left},0)`)
      .call(d3.axisLeft(y).ticks(6));
 
 //creating line
@@ -33,11 +33,13 @@ const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-    .attr("viewBox", [0,0,width,height]);
+    .append("g")
+    .attr("transform", "translate("+margin.left+","+margin.top+")");
+//    .attr("viewBox", [0,0,width,height]);
 
 //creating brush
-const brush = d3.brushX()
-    .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
+// const brush = d3.brushX()
+//     .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
 
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
@@ -67,7 +69,8 @@ d3.csv("XOM-XOM.csv")
                 .attr("dx", "-.8em")
                 .attr("dy", ".15em")
                 .attr("transform", "rotate(-65)");
-    svg.append("g").call(brush);
+    // svg.append("g")
+    //     .call(brush);
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis);
