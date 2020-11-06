@@ -81,8 +81,12 @@ xAxis2 = g => g
         //renderGraph(data);
         } else {
             const[x0, x1] = selection.map(x.invert);
-            let filterednodes = myData; //.select("path").filter(
-            console.log(filterednodes)   
+            let filterednodes = myData.filter(
+                function(d) {
+                    console.log(d);
+                }
+            ); //.select("path").filter(
+            //console.log(filterednodes)   
             // //function(d) {
                 //     console.log(d)
                 //     return d.Date >= x0 && d.Date <= x1;
