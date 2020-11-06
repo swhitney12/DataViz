@@ -5,13 +5,13 @@ var margin = {top:30, right: 20, bottom:30, left:50},
 //function for date parsing
 var parseDate = d3.timeParse("%d-%b-%y");
 
-var x = d3.scaleTime().rangeRound([0, width]);
+var x = d3.scaleLinear().rangeRound([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 //setting up axes
 var xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(5)); //.tickFormat(d3.timeFormat("%d-%b-%y")));
+    .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d-%b-%y")));
 
 var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
