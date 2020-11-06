@@ -33,6 +33,8 @@ function makechart(data) {
     focus.append("g")
         .attr("class", "y axis")
         .call(yAxis);
+
+    return focus.node();
 }
 
 function makecontext(data) {
@@ -96,6 +98,8 @@ function makecontext(data) {
     context.append("g")
     .attr("class", "brush")
     .call(brush);
+
+    return context.node();
 }
 
 function update(data) {
