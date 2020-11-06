@@ -9,12 +9,12 @@ var x = d3.scaleTime().range([margin.left, width - margin.right]);
 var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 
 //setting up axes
-xAxis = d3.axis() 
-    //.attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(7));
+xAxis = g => g  
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(7));//tickFormat(d3.timeFormat("%Y-%m-%d")));
 
-yAxis = d3.axis()
-     //.attr("transform", `translate(${margin.left},0)`)
+yAxis = g => g
+     .attr("transform", `translate(${margin.left},0)`)
      .call(d3.axisLeft(y).ticks(6));
 
 //creating line
