@@ -76,7 +76,7 @@ xAxis2 = g => g
             const gb = svg.append("g")
                 .call(brush)
                 .call(brush.move, defaultSelection);
-                //call function here and render whole dataset
+        //renderGraph(data);
         } else {
             const[x0, x1] = selection.map(x.invert);
             let filterednodes = graph.nodes.filter(
@@ -154,6 +154,7 @@ d3.csv("XOM-XOM.csv")
 });
 
 function renderGraph(nodes) {
+    console.log("function ran")
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
     y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
 
