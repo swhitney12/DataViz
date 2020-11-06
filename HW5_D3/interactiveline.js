@@ -55,8 +55,8 @@ var context = svg.append("g")
 //creating brush
 const brush = d3.brushX()
     .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
-    .on("brush", brushed)
-    .on("end", brushended);
+    .on("brush", brushed);
+    //.on("end", brushended);
 
 function brushed({selection}) {
     if(selection) {
