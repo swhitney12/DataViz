@@ -4,6 +4,18 @@ var margin = {top:10, right: 10, bottom:100, left:40},
     height = 500 - margin.top - margin.bottom,
     height2 = 700 - margin2.top - margin2.bottom;
 
+//this is what my code doesn't like
+//chart = {
+//    
+//}
+
+//this is also what my code doesn't like
+// update = {
+//     const [minX, maxX] = focus;
+//     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+//     chart.update(x.copy().domain(focus), y.copy().domain([0, maxY]));
+//   }
+
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
