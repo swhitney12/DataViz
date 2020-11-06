@@ -155,7 +155,7 @@ d3.csv("XOM-XOM.csv")
 });
 
 function renderGraph(nodes) {
-    console.log("function ran")
+    console.log(nodes)
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
     y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
 
