@@ -8,19 +8,18 @@ var margin = {top:10, right: 10, bottom:100, left:40},
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
-var x = d3.scaleTime().range([margin.left, width - margin.right]);
-    x2 = d3.scaleTime().range([margin2.left, width - margin2.right]);
+var x = d3.scaleUtc().range([margin.left, width - margin.right]);
+    x2 = d3.scaleUtc().range([margin2.left, width - margin2.right]);
+//x = d3.scaleTime().range([margin.left, width - margin.right]);
+//     x2 = d3.scaleTime().range([margin2.left, width - margin2.right]);
     y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
     y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
 
 //setting up axes
 
-xAxis = d3.scaleUtc()
-    .domain(d3.extent(data, d => d.date))
-    .range([margin.left, width - margin.right])
-// xAxis = g => g  
-//     .attr("transform", `translate(0,${height - margin.bottom})`)
-//     .call(d3.axisBottom(x).ticks(5));
+xAxis = g => g  
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(5));
 
 xAxis2 = g => g
     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
