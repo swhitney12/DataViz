@@ -8,10 +8,10 @@ var margin = {top:10, right: 10, bottom:100, left:40},
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
-var x = d3.scaleTime().range([margin.left, width - margin.right]);
-var x2 = d3.scaleTime().range([margin2.left, width - margin2.right]);
-var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
-var y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
+var x = d3.scaleTime().range([0, width]), //[margin.left, width - margin.right]);
+    x2 = d3.scaleTime().range([0, width]), //[margin2.left, width - margin2.right]);
+    y = d3.scaleLinear().range([height, 0]), //[height - margin.bottom, margin.top]);
+var y2 = d3.scaleLinear().range([height2, 0]); //[height2 - margin2.bottom, margin2.top]);
 
 //setting up axes
 xAxis = g => g  
