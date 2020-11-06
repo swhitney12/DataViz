@@ -31,8 +31,18 @@ xAxis2 = g => g
 //     .call(d3.axisBottom(x).ticks(5));
 
 yAxis = g => g
-     .attr("transform", `translate(${margin.left},0)`)
-     .call(d3.axisLeft(y));
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(y))
+    .call(g => g.select(".domain").remove())
+        .attr("class", "title")
+        .attr("x", -margin.left)
+        .attr("y", 10)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "start")
+        .text("Close"))
+// yAxis = g => g
+//      .attr("transform", `translate(${margin.left},0)`)
+//      .call(d3.axisLeft(y));
 
 //creating line
 var valueline = d3.line()
