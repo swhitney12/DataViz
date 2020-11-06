@@ -247,18 +247,25 @@ function updateData() {
    x2.domain(x.domain());
    y2.domain(y.domain());
 
-    var context = d3.select("body").transition();
+    var focus = d3.select("body").transition();
 
-   context.select(".line")
+    focus.select(".line")
         .duration(750)
         .attr("d", valueline(data));
-    context.select(".x.axis")
+    focus.select(".x.axis")
         .duration(750)
         .call(xAxis);
-    context.select(".y.axis")
+    focus.select(".y.axis")
         .duration(750)
         .call(yAxis);
 
+    var context = d3.select("body").transition();
+    context.select(".line")
+        .duration(750)
+        .attr("d", valueline2(data));
+    context.select(".x.axis")
+        .duration(750)
+        .call(xAxis2);
    //makechart(data);
    //makecontext(data);
     });
