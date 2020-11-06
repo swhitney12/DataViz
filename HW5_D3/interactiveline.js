@@ -4,7 +4,6 @@ var margin = {top:10, right: 10, bottom:100, left:40},
     height = 500 - margin.top - margin.bottom,
     height2 = 700 - margin2.top - margin2.bottom;
 
-
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
@@ -50,6 +49,11 @@ const svg = d3.select("body")
         .attr("width", width) 
         .attr("height", height); 
 
+svg.append("defs").append("clipPath")
+    .attr("id", "clip")
+  .append("rect")
+    .attr("width", width)
+    .attr("height", height);
 
 //create focus
 var focus = svg.append("g")
