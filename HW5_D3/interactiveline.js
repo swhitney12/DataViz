@@ -58,6 +58,12 @@ const brush = d3.brushX()
     .on("brush", brushed)
     .on("end", brushended);
 
+function brushed({selection}) {
+    if(selection) {
+        focus.select(".valueline").attr("d", valueline);
+        focus.select(".x.axis").call(xAxis);
+    }
+}
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
      .then(function(data) {
@@ -105,13 +111,6 @@ d3.csv("XOM-XOM.csv")
     context.append("g")
         .attr("class", "brush")
         .call(brush);
-
-    function brushed({selection}) {
-        if(selection) {
-            focus.select(".valueline").attr("d", valueline);
-            focus.select(".x.axis").call(xAxis);
-        }
-    }
 
 });
 
