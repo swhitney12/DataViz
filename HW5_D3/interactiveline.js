@@ -35,7 +35,7 @@ function makechart(data) {
         .call(yAxis);
 
     console.log(focus.node);
-    return focus.node();
+    return svg.node();
 }
 
 function makecontext(data) {
@@ -100,20 +100,14 @@ function makecontext(data) {
     .attr("class", "brush")
     .call(brush);
 
-    return context.node();
+    return svg.node();
 }
 
 function update(data) {
-    const [minX, maxX] = context.node();
+    const [minX, maxX] = makecontext(data);
     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
     makechart(data).update(x.copy().domain(focus), y.copy().domain([0, maxY]));
 }
-//this is also what my code doesn't like
-// update = {
-//     const [minX, maxX] = focus;
-//     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
-//     chart.update(x.copy().domain(focus), y.copy().domain([0, maxY]));
-//   }
 
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
