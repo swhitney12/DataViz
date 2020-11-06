@@ -79,12 +79,13 @@ xAxis2 = g => g
         //renderGraph(data);
         } else {
             const[x0, x1] = selection.map(x.invert);
-            let filterednodes = svg.select("context").select("path").filter(
-                function(d) {
-                    console.log(d)
-                    return d.Date >= x0 && d.Date <= x1;
-                }
-            )
+            let filterednodes = svg.select("context") //.select("path").filter(
+            console.log(filterednodes)   
+            // //function(d) {
+                //     console.log(d)
+                //     return d.Date >= x0 && d.Date <= x1;
+                // }
+            //)
             renderGraph(filterednodes);
             //put update here
             //have a set of datapoints, go through and find maximum value to set y axis of selection
