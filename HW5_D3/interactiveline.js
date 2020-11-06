@@ -29,7 +29,7 @@ var valueline = d3.line()
     .y(function(d) { return y(d.Close);});
 
 //creating svg & viewbox for brushing
-const svg = d3.select("body")
+const svg = d3.create("svg")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
