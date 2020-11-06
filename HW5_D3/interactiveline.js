@@ -11,7 +11,7 @@ var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
 //setting up axes
 var xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(3));//tickFormat(d3.timeFormat("%Y-%m-%d")));
+    .call(d3.axisBottom(x).ticks(width/80).tickSizeOuter(0));//tickFormat(d3.timeFormat("%Y-%m-%d")));
 
 var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
