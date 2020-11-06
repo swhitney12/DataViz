@@ -87,6 +87,13 @@ function brushended({selection}) {
       gb.call(brush.move, defaultSelection);
     }
 }
+
+//update
+update = undefined
+
+    const [minX, maxX] = focus;
+    const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+    chart.update(x.copy().domain(focus), y.copy().domain([0, maxY]));
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
      .then(function(data) {
