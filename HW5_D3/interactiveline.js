@@ -3,7 +3,7 @@ var margin = {top:30, right: 20, bottom:30, left:50},
     width = 600 - margin.left - margin.right;
 
 //function for date parsing
-var parseDate = d3.timeParse("%d-%b-%y");
+var parseDate = d3.timeParse("%Y-%m-%d");
 
 var x = d3.scaleLinear().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
@@ -11,7 +11,7 @@ var y = d3.scaleLinear().range([height, 0]);
 //setting up axes
 var xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%d-%b-%y")));
+    .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m-%d")));
 
 var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
