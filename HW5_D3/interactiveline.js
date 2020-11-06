@@ -87,12 +87,6 @@ xAxis2 = g => g
                 }
             ); 
             renderGraph(filterednodes);
-            //put update here
-            //have a set of datapoints, go through and find maximum value to set y axis of selection
-            //use that data to make the chart
-            //make a separate function for the drawing
-            //pass in the data itself
-            //can just append w/ the new data, and it should erase previous selection
         }
     }
 
@@ -116,11 +110,12 @@ d3.csv("XOM-XOM.csv")
 
     myData = data;
 //setting domains
-    x.domain(d3.extent(data, function(d) { return d.Date; }));
-    y.domain([0, d3.max(data, function(d) { return d.Close; })]);
+    // x.domain(d3.extent(data, function(d) { return d.Date; }));
+    // y.domain([0, d3.max(data, function(d) { return d.Close; })]);
     x2.domain(x.domain());
     y2.domain(y.domain());
 
+    renderGraph(myData);
     // //appending line to focus
     // focus.append("path")
     //     .attr("class", "line")
