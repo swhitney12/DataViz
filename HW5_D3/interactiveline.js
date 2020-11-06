@@ -2,6 +2,8 @@ var margin = {top:30, right: 20, bottom:30, left:50},
     height = 400 - margin.top - margin.bottom,
     width = 1000 - margin.left - margin.right;
 
+var focusheight = 100;
+
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
@@ -23,17 +25,18 @@ var valueline = d3.line()
     .y(function(d) { return y(d.Close);});
 
 //creating area
-var area = d3.area()
-    .x(function(d) { return x(d.Date); })
-    .y0(height - margin.bottom)
-    .y1(function(d) { return y(d.Close); });
+// var area = d3.area()
+//     .x(function(d) { return x(d.Date); })
+//     .y0(height - margin.bottom)
+//     .y1(function(d) { return y(d.Close); });
 
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-    .attr("viewBox", [0,0,width,height]);
+    .attr("viewBox", [0,0,width,focusheight])
+    .style("display", "block");
 
 //creating brush
 const brush = d3.brushX()
