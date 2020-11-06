@@ -33,13 +33,7 @@ xAxis2 = g => g
 yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
     .call(d3.axisLeft(y))
-    .call(g => g.select(".domain").remove())
-        .attr("class", "title")
-        .attr("x", margin.left)
-        .attr("y", 10)
-        .attr("fill", "currentColor")
-        .attr("text-anchor", "start")
-        .text("Close");
+    .call(g => g.select(".domain").remove());
 // yAxis = g => g
 //      .attr("transform", `translate(${margin.left},0)`)
 //      .call(d3.axisLeft(y));
