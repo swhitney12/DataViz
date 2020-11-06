@@ -79,7 +79,7 @@ xAxis2 = g => g
                 //call function here and render whole dataset
         } else {
             const[x0, x1] = selection.map(x.invert);
-          //  renderGraph(data,x0,x1);
+          //  renderGraph(selection);
             //put update here
             //have a set of datapoints, go through and find maximum value to set y axis of selection
             //use that data to make the chart
@@ -148,9 +148,25 @@ d3.csv("XOM-XOM.csv")
        .call(brush);
 });
 
-function renderGraph(data, x0, x1) {
-    x.domain(d3.extent(data, function(d) { return x0 <= d.Date && d.Date <= x1; }));
-    y.domain([0, d3.max(data, function(d) { return x0 <= d.Close && d.Close <= x1; })]);
+function renderGraph(selec) {
+    x.domain(d3.extent(selec, function(d) { return d.Date; }));
+    y.domain([0, d3.max(selec, function(d) { return d.Close; })]);
+
+    focus.append("path")
+        .attr("class", "line")
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("d", valueline(selec));
+
+    //appending x axis to focus
+    focus.append("g")
+        .attr("class", "x axis")
+        .call(xAxis);
+
+    //appending y axis to focus
+    focus.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
 }
 
 function updateData() {
