@@ -25,7 +25,7 @@ var valueline = d3.line()
 //creating area
 var area = d3.area()
     .x(function(d) { return x(d.Date); })
-    .y0(height - margin.top - margin.bottom)
+    .y0(height - margin.bottom)
     .y1(function(d) { return y(d.Close); });
 
 //creating svg & viewbox for brushing
@@ -33,9 +33,9 @@ const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate("+margin.left+","+margin.top+")");
-//    .attr("viewBox", [0,0,width,height]);
+//    .append("g")
+//    .attr("transform", "translate("+margin.left+","+margin.top+")");
+    .attr("viewBox", [0,0,width,height]);
 
 //creating brush
 // const brush = d3.brushX()
