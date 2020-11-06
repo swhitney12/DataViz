@@ -6,7 +6,7 @@ var margin1 = {top:30, right: 20, bottom:30, left:50},
     height1 = 440 - margin.top - margin.bottom,
     width1 = 1000 - margin.left - margin.right;
 
-var focusheight = 100;
+var focusHeight = 100;
 
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
