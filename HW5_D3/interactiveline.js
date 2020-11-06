@@ -103,8 +103,6 @@ function makecontext(data) {
     return context;
 }
 
-update = undefined;
-
 function update(data) {
     const [minX, maxX] = makecontext(data);
     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
