@@ -40,6 +40,93 @@ var margin = {top:10, right: 10, bottom:100, left:40},
 
 //function makecontext(data) {
     //create context
+//     var context = svg.append("g")
+//         .attr("class", "context")
+//         .attr("viewBox", [0,0,width,height2]);
+
+//         const brush = d3.brushX()
+//         .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
+//         .on("brush", brushed)
+//         .on("end", brushended);
+    
+//     const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
+    
+//     //brushended function
+//     function brushended(event) {
+//         if(event.selection === null) {
+//             const dx = x(1) - x(0);
+//             const [[cx]] = d3.pointers(event);
+//             const [x0, x1] = [cx - dx / 2, cx + dx / 2];
+//             const[X0,X1] = x.range();
+//             d3.select(this)
+//                 .call(brush.move, x1 > X1 ? [X1 - dx, X1]
+//                     : x0 < X0 ? [X0, X0 + dx]
+//                     :[x0, x1]);
+//         } else {
+//             var [brushL, brushR] = d3.brushSelection(this);
+//             if(brushR - brushL < 100) {
+//                 d3.select(this)
+//                 .call(brush.move, [brushL - 50, brushR+50]);
+//             }
+//         }
+// //     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+// //     makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
+//     }
+
+//     //brushed function
+//     function brushed(event) {
+//         const selection = event.selection;
+//         if(selection === null) {
+//             const gb = svg.append("g")
+//                 .call(brush)
+//                 .call(brush.move, defaultSelection);
+//         } else {
+//             const[x0, x1] = selection.map(x.invert);
+//         }
+//     }
+
+    // //appending line to context
+    // context.append("path")
+    // .attr("class", "line")
+    // .attr("fill", "none")
+    // .attr("stroke", "steelblue")
+    // .attr("d", valueline2(data));
+
+    // //appending x axis to context
+    // context.append("g")
+    // .attr("class", "x axis")
+    // .call(xAxis2);
+
+    // //adding brush to context
+    // context.append("g")
+    // .attr("class", "brush")
+    // .call(brush);
+
+//    return context;
+//}
+
+//function for date parsing
+var parseDate = d3.timeParse("%Y-%m-%d");
+
+var x = d3.scaleUtc().range([margin.left, width - margin.right]);
+    x2 = d3.scaleUtc().range([margin2.left, width - margin2.right]);
+    y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
+    y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
+
+//setting up axes
+
+xAxis = g => g
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
+
+xAxis2 = g => g
+    .attr("transform", `translate(0,${height2 - margin2.bottom})`)
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
+
+ yAxis = g => g
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(d3.axisLeft(y));
+
     var context = svg.append("g")
         .attr("class", "context")
         .attr("viewBox", [0,0,width,height2]);
@@ -84,48 +171,6 @@ var margin = {top:10, right: 10, bottom:100, left:40},
             const[x0, x1] = selection.map(x.invert);
         }
     }
-
-    // //appending line to context
-    // context.append("path")
-    // .attr("class", "line")
-    // .attr("fill", "none")
-    // .attr("stroke", "steelblue")
-    // .attr("d", valueline2(data));
-
-    // //appending x axis to context
-    // context.append("g")
-    // .attr("class", "x axis")
-    // .call(xAxis2);
-
-    // //adding brush to context
-    // context.append("g")
-    // .attr("class", "brush")
-    // .call(brush);
-
-//    return context;
-//}
-
-//function for date parsing
-var parseDate = d3.timeParse("%Y-%m-%d");
-
-var x = d3.scaleUtc().range([margin.left, width - margin.right]);
-    x2 = d3.scaleUtc().range([margin2.left, width - margin2.right]);
-    y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
-    y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
-
-//setting up axes
-
-xAxis = g => g
-    .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-
-xAxis2 = g => g
-    .attr("transform", `translate(0,${height2 - margin2.bottom})`)
-    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-
- yAxis = g => g
-    .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y));
 
 //creating line
 var valueline = d3.line()
