@@ -4,12 +4,13 @@ var margin = {top:10, right: 10, bottom:100, left:40},
     height = 500 - margin.top - margin.bottom,
     height2 = 700 - margin2.top - margin2.bottom;
 
-function makechart(data) { 
-    //creating svg & viewbox for brushing
+//creating svg & viewbox for brushing
     const svg = d3.select("body")
         .append("svg")
         .attr("width", width) 
         .attr("height", height); 
+
+function makechart(data) { 
 
     //create focus
     var focus = svg.append("g")
