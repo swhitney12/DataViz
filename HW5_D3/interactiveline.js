@@ -35,7 +35,7 @@ yAxis = g => g
     .call(d3.axisLeft(y))
     .call(g => g.select(".domain").remove())
         .attr("class", "title")
-        .attr("x", -margin.left)
+        .attr("x", margin.left)
         .attr("y", 10)
         .attr("fill", "currentColor")
         .attr("text-anchor", "start")
