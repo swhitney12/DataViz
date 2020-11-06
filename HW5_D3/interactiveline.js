@@ -11,7 +11,7 @@ var y = d3.scaleLinear().range([height, 0]);
 //setting up axes
 var xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(d3.timeMonth.every(3).tickFormat(d3.timeFormat("%Y-%m-%d")));
+    .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%Y-%m-%d")));
 
 var yAxis = g => g
      .attr("transform", `translate(${margin.left},0)`)
@@ -49,7 +49,12 @@ d3.csv("XOM-XOM.csv")
         .attr("class", "line")
         .attr("d", valueline(data));
 
-    svg.append("g").call(xAxis);
+    svg.append("g").call(xAxis)
+        .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", "rotate(-65)");
     svg.append("g").call(brush);
     svg.append("g").call(yAxis);
 });
