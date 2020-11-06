@@ -5,6 +5,8 @@ var margin = {top:10, right: 10, bottom:100, left:40},
     height2 = 700 - margin2.top - margin2.bottom;
 
 
+//data variable
+var myData = null;
 //creating svg & viewbox for brushing
     const svg = d3.select("body")
         .append("svg")
@@ -79,7 +81,7 @@ xAxis2 = g => g
         //renderGraph(data);
         } else {
             const[x0, x1] = selection.map(x.invert);
-            let filterednodes = svg.select("context") //.select("path").filter(
+            let filterednodes = data; //.select("path").filter(
             console.log(filterednodes)   
             // //function(d) {
                 //     console.log(d)
@@ -114,6 +116,7 @@ d3.csv("XOM-XOM.csv")
              d.Close = +d.Close;
     });
 
+    myData = data;
 //setting domains
     x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
