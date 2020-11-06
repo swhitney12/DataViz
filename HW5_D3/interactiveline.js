@@ -69,9 +69,6 @@ function makecontext(data) {
             }
         }
         UpdateChart(data);
-        // const [minX, maxX] = makecontext(data);
-        // const maxY = d3.max(data, d => minX <= d.Date && d.Date <= maxX ? d.Close : NaN);
-        // makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
     }
 
     //brushed function
@@ -108,7 +105,7 @@ function makecontext(data) {
 
 function UpdateChart(data) {
     const [minX, maxX] = makecontext(data);
-    const maxY = d3.max(data, d => minX <= d.Date && d.Date <= maxX ? d.Close : NaN);
+    const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
     makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
 }
 
