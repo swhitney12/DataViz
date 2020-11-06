@@ -1,21 +1,24 @@
-var margin = {top:30, right: 20, bottom:30, left:50},
-    height = 500 - margin.top - margin.bottom,
-    width = 1000 - margin.left - margin.right;
+var margin = {top:10, right: 10, bottom:100, left:40},
+    margin2 = {top:130, right:10, bottom: 20, left:40},
+    width = 960 - margin.left - margin.right,
+    height = 200 - margin.top - margin.bottom,
+    height2 = 200 - margin2.top - margin2.bottom,
 
-var focusHeight = 100;
 
 //function for date parsing
 var parseDate = d3.timeParse("%Y-%m-%d");
 
 var x = d3.scaleTime().range([margin.left, width - margin.right]);
+var x2 = d3.scaleTime().range([margin2.left, width - margin2.right]);
 var y = d3.scaleLinear().range([height - margin.bottom, margin.top]);
+var y2 = d3.scaleLinear().range([height2 - margin2.bottom, margin2.top]);
 
 //setting up axes
 xAxis = g => g  
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
 
-xAxis2 = (g,x,height2) => g
+xAxis2 = g => g
     .attr("transform", `translate(0,${height2 - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(5));
 
@@ -63,7 +66,7 @@ d3.csv("XOM-XOM.csv")
 
     svg.append("g")
         .attr("class", "x axis 2")
-        .call(xAxis, x, focusHeight);
+        .call(xAxis);
 
     svg.append("g")
          .call(brush);
