@@ -25,7 +25,7 @@ var valueline = d3.line()
 //creating area
 var area = d3.area()
     .x(function(d) { return x(d.Date); })
-    .y0(height)
+    .y0(height + margin.top + margin.bottom)
     .y1(function(d) { return y(d.Close); });
 
 //creating svg & viewbox for brushing
