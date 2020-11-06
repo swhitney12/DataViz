@@ -4,7 +4,7 @@ var margin = {top:10, right: 10, bottom:100, left:40},
     height = 500 - margin.top - margin.bottom,
     height2 = 700 - margin2.top - margin2.bottom;
 
-function makechart() { 
+function makechart(data) { 
     //creating svg & viewbox for brushing
     const svg = d3.select("body")
         .append("svg")
@@ -34,7 +34,7 @@ function makechart() {
         .call(yAxis);
 }
 
-function makecontext() {
+function makecontext(data) {
     //create context
     var context = svg.append("g")
         .attr("class", "context")
@@ -228,8 +228,8 @@ d3.csv("XOM-XOM.csv")
 //         .attr("class", "y axis")
 //         .call(yAxis);
 
-    makechart();
-    makecontext();
+    makechart(data);
+    makecontext(data);
 
 // //appending line to context
 //     context.append("path")
