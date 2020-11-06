@@ -48,48 +48,6 @@ xAxis2 = g => g
         .on("end", brushended);
     
     const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
-    
-    //brushended function
-    function brushended(event) {
-        if(event.selection === null) {
-            const dx = x(1) - x(0);
-            const [[cx]] = d3.pointers(event);
-            const [x0, x1] = [cx - dx / 2, cx + dx / 2];
-            const[X0,X1] = x.range();
-            d3.select(this)
-                .call(brush.move, x1 > X1 ? [X1 - dx, X1]
-                    : x0 < X0 ? [X0, X0 + dx]
-                    :[x0, x1]);
-        } else {
-            var [brushL, brushR] = d3.brushSelection(this);
-            if(brushR - brushL < 100) {
-                d3.select(this)
-                .call(brush.move, [brushL - 50, brushR+50]);
-            }
-        }
-//     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
-//     makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
-    }
-
-    //brushed function
-    function brushed(event) {
-        const selection = event.selection;
-        if(selection === null) {
-            const gb = svg.append("g")
-                .call(brush)
-                .call(brush.move, defaultSelection);
-                //call function here and render whole dataset
-        } else {
-            const[x0, x1] = selection.map(x.invert);
-            renderGraph(data,x0,x1);
-            //put update here
-            //have a set of datapoints, go through and find maximum value to set y axis of selection
-            //use that data to make the chart
-            //make a separate function for the drawing
-            //pass in the data itself
-            //can just append w/ the new data, and it should erase previous selection
-        }
-    }
 
 //creating line
 var valueline = d3.line()
@@ -190,3 +148,45 @@ function updateData() {
         .call(xAxis2);
     });
 }
+
+    //brushended function
+    function brushended(event) {
+        if(event.selection === null) {
+            const dx = x(1) - x(0);
+            const [[cx]] = d3.pointers(event);
+            const [x0, x1] = [cx - dx / 2, cx + dx / 2];
+            const[X0,X1] = x.range();
+            d3.select(this)
+                .call(brush.move, x1 > X1 ? [X1 - dx, X1]
+                    : x0 < X0 ? [X0, X0 + dx]
+                    :[x0, x1]);
+        } else {
+            var [brushL, brushR] = d3.brushSelection(this);
+            if(brushR - brushL < 100) {
+                d3.select(this)
+                .call(brush.move, [brushL - 50, brushR+50]);
+            }
+        }
+//     const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+//     makechart(data).update(x.copy().domain(makechart(data)), y.copy().domain([0, maxY]));
+    }
+
+    //brushed function
+    function brushed(event) {
+        const selection = event.selection;
+        if(selection === null) {
+            const gb = svg.append("g")
+                .call(brush)
+                .call(brush.move, defaultSelection);
+                //call function here and render whole dataset
+        } else {
+            const[x0, x1] = selection.map(x.invert);
+            renderGraph(data,x0,x1);
+            //put update here
+            //have a set of datapoints, go through and find maximum value to set y axis of selection
+            //use that data to make the chart
+            //make a separate function for the drawing
+            //pass in the data itself
+            //can just append w/ the new data, and it should erase previous selection
+        }
+    }
