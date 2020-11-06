@@ -31,6 +31,12 @@ var valueline = d3.line()
     .x(function(d) { return x(d.Date);})
     .y(function(d) { return y(d.Close);});
 
+//creating line2
+var valueline2 = d3.line()
+    .x(function(d) {return x(d.Date); })
+    .y0(height2)
+    y1(function(d) { return y(d.Close); });
+
 //creating svg & viewbox for brushing
 const svg = d3.select("body")
     .append("svg")
@@ -38,6 +44,13 @@ const svg = d3.select("body")
         .attr("height", height + margin.top + margin.bottom)
     .attr("viewBox", [0,0,width,height]);
 
+var focus = svg.append("g")
+    .attr("class", "focus")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var context = svg.append("g")
+    .attr("class", "context")
+    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 //creating brush
 const brush = d3.brushX()
      .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
