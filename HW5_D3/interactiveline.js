@@ -215,14 +215,14 @@ d3.csv("XOM-XOM.csv")
 
     //appending line to context
     context.append("path")
-       .attr("class", "line")
+       .attr("class", "line2")
        .attr("fill", "none")
        .attr("stroke", "steelblue")
        .attr("d", valueline2(data));
    
     //appending x axis to context
     context.append("g")
-       .attr("class", "x axis")
+       .attr("class", "x axis2")
        .call(xAxis2);
    
     //adding brush to context
@@ -259,13 +259,13 @@ function updateData() {
         .duration(750)
         .call(yAxis);
 
-    // var context = d3.select("body").transition();
-    // context.select(".line")
-    //     .duration(750)
-    //     .attr("d", valueline2(data));
-    // context.select(".x.axis")
-    //     .duration(750)
-    //     .call(xAxis2);
+    var context = d3.select("body").transition();
+    context.select(".line2")
+        .duration(750)
+        .attr("d", valueline2(data));
+    context.select(".x.axis2")
+        .duration(750)
+        .call(xAxis2);
    //makechart(data);
    //makecontext(data);
     });
