@@ -17,7 +17,7 @@ var margin = {top:10, right: 10, bottom:100, left:40},
         .attr("viewBox", [0,0,width,height]);
 
 //function for date parsing
-var parseDate = d3.timeParse("%y-%m-%d");
+var parseDate = d3.timeParse("%Y-%m-%d");
 
 var x = d3.scaleUtc().range([margin.left, width - margin.right]);
     x2 = d3.scaleUtc().range([margin2.left, width - margin2.right]);
