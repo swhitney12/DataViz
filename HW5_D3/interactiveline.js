@@ -34,6 +34,7 @@ function makechart(data) {
         .attr("class", "y axis")
         .call(yAxis);
 
+    console.log(focus.node);
     return focus.node();
 }
 
