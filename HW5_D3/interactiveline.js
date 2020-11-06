@@ -1,8 +1,8 @@
 var margin = {top:10, right: 10, bottom:100, left:40},
     margin2 = {top:130, right:10, bottom: 20, left:40},
     width = 960 - margin.left - margin.right,
-    height = 200 - margin.top - margin.bottom,
-    height2 = 200 - margin2.top - margin2.bottom;
+    height = 500 - margin.top - margin.bottom,
+    height2 = 500 - margin2.top - margin2.bottom;
 
 
 //function for date parsing
