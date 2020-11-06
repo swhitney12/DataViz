@@ -19,15 +19,10 @@ var x = d3.scaleUtc().range([margin.left, width - margin.right]);
 xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
     .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-// xAxis = g => g  
-//     .attr("transform", `translate(0,${height - margin.bottom})`)
-//     .call(d3.axisBottom(x).ticks(5));
+
 xAxis2 = g => g
     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
     .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-// xAxis2 = g => g
-//     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
-//     .call(d3.axisBottom(x).ticks(5));
 
  yAxis = g => g
     .attr("transform", `translate(${margin.left},0)`)
@@ -75,6 +70,7 @@ const brush = d3.brushX()
 
 const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
 
+//brushended function
 function brushended(event) {
     if(event.selection === null) {
         const dx = x(1) - x(0);
@@ -94,6 +90,7 @@ function brushended(event) {
     }
 }
 
+//brushed function
 function brushed(event) {
     const selection = event.selection;
     if(selection === null) {
