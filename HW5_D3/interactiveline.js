@@ -75,6 +75,16 @@ const brush = d3.brushX()
 
 const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
 
+// const gb = svg.append("g")
+//     .call(brush)
+//     .call(brush.move, defaultSelection);
+
+// function brushed({selection}) {
+//     if(selection) {
+//         context.property("value", selection.map(x.invert, x).map(d3.utcDay.round));
+//         context.dispatch("input");
+//     }
+// }
 function brushended(event) {
     if(event.selection === null) {
         const dx = x(1) - x(0);
@@ -94,6 +104,12 @@ function brushended(event) {
     }
 }
 
+// function brushended({selection}) {
+//     if (!selection) {
+//       gb.call(brush.move, defaultSelection);
+//     }
+// }
+
 function brushed(event) {
     const selection = event.selection;
     if(selection === null) {
@@ -102,10 +118,8 @@ function brushed(event) {
             .call(brush.move, defaultSelection);
     } else {
         const[x0, x1] = selection.map(x.invert);
-        updateview()
     }
 }
-
 
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
@@ -121,6 +135,11 @@ d3.csv("XOM-XOM.csv")
     x2.domain(x.domain());
     y2.domain(y.domain());
 
+//update
+// update = undefined
+// const [minX, maxX] = focus;
+// const maxY = d3.max(data, d => minX <= d.date && d.date <= maxX ? d.value : NaN);
+// chart.update(x.copy().domain(focus), y.copy().domain([0, maxY]));
 //appending line to focus
     focus.append("path")
         .attr("class", "line")
