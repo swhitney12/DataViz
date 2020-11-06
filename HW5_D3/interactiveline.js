@@ -35,9 +35,13 @@ const svg = d3.select("body")
     .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-    .attr("viewBox", [0,0,width,height])
-    .style("display", "block");
+    .attr("viewBox", [0,0,width,height]);
 
+const svg1 = d3.select("body")
+    .append("svg1")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .attr("viewBox", [0,0,width,focusheight]);
 //creating brush
 const brush = d3.brushX()
      .extent([[margin.left,margin.top],[width-margin.right,height-margin.bottom]])
