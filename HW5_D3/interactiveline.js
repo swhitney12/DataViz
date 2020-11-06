@@ -51,9 +51,12 @@ var focus = svg.append("g")
 var context = svg.append("g")
     .attr("class", "context")
     .attr("viewBox", [0,0,width,height2]);
+
 //creating brush
 const brush = d3.brushX()
     .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
+    .on("brush", brushed)
+    .on("end", brushended);
 
 //getting the data for line1
 d3.csv("XOM-XOM.csv")
@@ -102,6 +105,13 @@ d3.csv("XOM-XOM.csv")
     context.append("g")
         .attr("class", "brush")
         .call(brush);
+
+    function brushed({selection}) {
+        if(selection) {
+            focus.select(".valueline").attr("d", valueline);
+            focus.select(".x.axis").call(xAxis);
+        }
+    }
 
 });
 
