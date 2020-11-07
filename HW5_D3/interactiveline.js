@@ -81,9 +81,11 @@ xAxis2 = g => g
             //     .call(brush.move, defaultSelection);
             //renderGraph(myData);
         } else {
-            console.log(selection.map(x2.invert).map(d3.utcDay.round));
-            const[x0, x1] = selection.map(x.invert, x).map(d3.utcDay.round);
+            //console.log(selection.map(x2.invert).map(d3.utcDay.round));
+            //const[x0, x1] 
+            value = selection.map(x.invert, x).map(d3.utcDay.round);
             //console.log(`[${x0} , ${x1}]`)
+            console.log(value);
             let filterednodes = myData.filter(
                 function(d) {
                     return d.Date >= x0 && d.Date <= x1;
