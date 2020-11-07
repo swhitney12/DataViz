@@ -139,8 +139,8 @@ d3.csv("XOM-XOM.csv")
 
     myData = data;
 // //setting domains
-    x2.domain(d3.extent(nodes, function(d) { return d.Date; }));
-    y2.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
+    x2.domain(d3.extent(data, function(d) { return d.Date; }));
+    y2.domain([0, d3.max(data, function(d) { return d.Close; })]);
 //     x.domain(d3.extent(data, function(d) { return d.Date; }));
 //     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 //      x2.domain(x.domain());
