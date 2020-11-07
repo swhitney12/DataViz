@@ -127,7 +127,7 @@ d3.csv(data1name)
     context.append("path")
        .attr("class", "line2")
        .attr("fill", "none")
-       .attr("stroke", "steelblue")
+       .attr("stroke", "#de6dfa")
        .attr("d", valueline2(data));
    
     //appending x axis to context
@@ -152,7 +152,7 @@ function renderGraph(nodes) {
     focus.append("path")
         .attr("class", "line")
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("stroke", " #de6dfa")
         .attr("d", valueline(nodes));
 
     //appending x axis to focus
