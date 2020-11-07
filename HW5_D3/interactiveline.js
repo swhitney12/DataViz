@@ -74,28 +74,40 @@ xAxis2 = g => g
     //brushed function
     function brushed(event) {
         let selection = event.selection;
+        value = selection.map(x.invert, x).map(d3.utcDay.round);
+        let targetX1 = value[0];
+        let targetX2 = value[1];
+
+        let filterednodes = myData.filter(
+            function(d) {
+                //return d.Date >= x0 && d.Date <= x1;
+                return targetX1 <= d.Date && d.Date <= targetX2;
+            }
+        );
+
+        renderGraph(filterednodes);
 //        console.log(selection);
-        if(selection === null) {
-            // const gb = svg.append("g")
-            //     .call(brush)
-            //     .call(brush.move, defaultSelection);
-            //renderGraph(myData);
-        } else {
-            // const[x0, x1] 
-            value = selection.map(x.invert, x).map(d3.utcDay.round);
-            let targetX1 = value[0];
-            let targetX2 = value[1];
+        // if(selection === null) {
+        //     // const gb = svg.append("g")
+        //     //     .call(brush)
+        //     //     .call(brush.move, defaultSelection);
+        //     //renderGraph(myData);
+        // } else {
+        //     // const[x0, x1] 
+        //     value = selection.map(x.invert, x).map(d3.utcDay.round);
+        //     let targetX1 = value[0];
+        //     let targetX2 = value[1];
 
-            console.log(`${targetX1}, ${targetX2}`)
-            let filterednodes = myData.filter(
-                function(d) {
-                    //return d.Date >= x0 && d.Date <= x1;
-                    return targetX1 <= d.Date && d.Date <= targetX2;
-                }
-            );
+        //     console.log(`${targetX1}, ${targetX2}`)
+        //     let filterednodes = myData.filter(
+        //         function(d) {
+        //             //return d.Date >= x0 && d.Date <= x1;
+        //             return targetX1 <= d.Date && d.Date <= targetX2;
+        //         }
+        //     );
 
-            renderGraph(filterednodes);
-        }
+            // renderGraph(filterednodes);
+        //}
     }
 
  
