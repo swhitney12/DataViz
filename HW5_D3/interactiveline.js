@@ -11,6 +11,8 @@ var myData = null;
 //booleans to tell which data is presented
 var data1 = true;
 var data2 = false;
+
+//datanames to use for data read in
 var data1name = "XOM-XOM.csv";
 var data2name = "TSLA-TSLA.csv";
 
@@ -104,7 +106,7 @@ var valueline2 = d3.line()
     .y(function(d) { return y2(d.Close); });
 
 //getting the data for line1
-d3.csv("XOM-XOM.csv")
+d3.csv(data1name)
      .then(function(data) {
          data.forEach(function(d)  {
              d.Date = parseDate(d.Date);
@@ -163,49 +165,52 @@ function renderGraph(nodes) {
 //switch data function
 function updateData() {
 
-var dataname = null;
-if(data1 == true) { 
-    dataname = data2name;
-    data1 = false;
-    data2 = true;
-} else {
-    dataname = data1name;
-    data2 = false;
-    data1 = true;
-}
+    //check which data is active, swap to indicate other data is now active
+    var dataname = null;
+    if(data1 == true) { 
+        dataname = data2name;
+        data1 = false;
+        data2 = true;
+    } else {
+        dataname = data1name;
+        data2 = false;
+        data1 = true;
+    }
 
+    //feed in data to switch to
     d3.csv(dataname)
-    .then(function(data) {
-        data.forEach(function(d)  {
-            d.Date = parseDate(d.Date);
-            d.Close = +d.Close;
-   });
+        .then(function(data) {
+            data.forEach(function(d)  {
+                d.Date = parseDate(d.Date);
+                d.Close = +d.Close;
+            });
 
 
-//setting domains
-   x.domain(d3.extent(data, function(d) { return d.Date; }));
-   y.domain([0, d3.max(data, function(d) { return d.Close; })]);
-   x2.domain(x.domain());
-   y2.domain(y.domain());
+        //setting domains
+        x.domain(d3.extent(data, function(d) { return d.Date; }));
+        y.domain([0, d3.max(data, function(d) { return d.Close; })]);
+        x2.domain(x.domain());
+        y2.domain(y.domain());
 
-    var focus = d3.select("body").transition();
+        var focus = d3.select("body").transition();
 
-    focus.select(".line")
-        .duration(750)
-        .attr("d", valueline(data));
-    focus.select(".x.axis")
-        .duration(750)
-        .call(xAxis);
-    focus.select(".y.axis")
-        .duration(750)
-        .call(yAxis);
+        focus.select(".line")
+            .duration(750)
+            .attr("d", valueline(data));
+        focus.select(".x.axis")
+            .duration(750)
+            .call(xAxis);
+        focus.select(".y.axis")
+            .duration(750)
+            .call(yAxis);
 
-    var context = d3.select("body").transition();
-    context.select(".line2")
-        .duration(750)
-        .attr("d", valueline2(data));
-    context.select(".x.axis2")
-        .duration(750)
-        .call(xAxis2);
+        var context = d3.select("body").transition();
+            
+        context.select(".line2")
+            .duration(750)
+            .attr("d", valueline2(data));
+        context.select(".x.axis2")
+            .duration(750)
+            .call(xAxis2);
     });
 }
