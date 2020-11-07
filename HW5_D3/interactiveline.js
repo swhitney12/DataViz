@@ -190,6 +190,16 @@ function tester(nodes) {
     .attr("fill", "none")
     .attr("stroke", "steelblue")
     .attr("d", valueline(nodes));
+
+        //appending x axis to focus
+        focus.append("g")
+        .attr("class", "x axis")
+        .call(xAxis);
+
+    //appending y axis to focus
+    focus.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
 }
 function renderGraph(nodes) {
     //d3.select("focus > *").remove();
