@@ -167,7 +167,7 @@ function renderGraph(nodes) {
 
     focus.append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", margin.left - 60)
+        .attr("y", margin.left - 40)
         .attr("x", margin.top - (height/2) + 40)
         .attr("dy", "1em")
         .style("text-anchor", "middle")
