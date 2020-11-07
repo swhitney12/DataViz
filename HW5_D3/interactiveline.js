@@ -82,7 +82,7 @@ xAxis2 = g => g
             //renderGraph(myData);
         } else {
             console.log(selection.map(x2.invert).map(d3.utcDay.round));
-            const[x0, x1] = selection.map(x2.invert, x2).map(d3.utcDay.round);
+            const[x0, x1] = selection.map(x.invert, x).map(d3.utcDay.round);
             //console.log(`[${x0} , ${x1}]`)
             let filterednodes = myData.filter(
                 function(d) {
