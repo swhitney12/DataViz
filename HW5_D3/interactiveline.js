@@ -88,7 +88,7 @@ xAxis2 = g => g
         console.log("data")
         //myData.map(d => value[0] <= d.Date && d.Date <= value[1] ? console.log(d.Date) : console.log("false"));
 
-        let filterednodes = myData.map(d => value[0] <= d.Date && d.Date <= value[1]);
+        let filterednodes = myData.map(d => value[0] <= d.Date && d.Date <= value[1] ? d.Date : console.log("false"));
         // let filterednodes = myData.filter(
         //     function(d) {
         //         //return d.Date >= x0 && d.Date <= x1;
