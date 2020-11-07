@@ -113,8 +113,10 @@ d3.csv(data1name)
              d.Close = +d.Close;
     });
 
+    //putting data into a variable for brush use
     myData = data;
-// //setting domains
+
+   //setting domains
     x2.domain(d3.extent(data, function(d) { return d.Date; }));
     y2.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
@@ -138,6 +140,7 @@ d3.csv(data1name)
        .call(brush);
 });
 
+//function to render graphs
 function renderGraph(nodes) {
 
     //updating the domains
@@ -185,15 +188,19 @@ function updateData() {
                 d.Close = +d.Close;
             });
 
-
+        //update myData variable for brush use
+        myData = data;
+        
         //setting domains
         x.domain(d3.extent(data, function(d) { return d.Date; }));
         y.domain([0, d3.max(data, function(d) { return d.Close; })]);
         x2.domain(x.domain());
         y2.domain(y.domain());
 
+        //create transition for focus data
         var focus = d3.select("body").transition();
 
+        //Inputting new data to transition to for focus
         focus.select(".line")
             .duration(750)
             .attr("d", valueline(data));
@@ -204,8 +211,10 @@ function updateData() {
             .duration(750)
             .call(yAxis);
 
+        //create transition for context data
         var context = d3.select("body").transition();
-            
+        
+        //Inputting new data to transition to for context
         context.select(".line2")
             .duration(750)
             .attr("d", valueline2(data));
