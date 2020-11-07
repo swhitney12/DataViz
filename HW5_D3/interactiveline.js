@@ -7,6 +7,7 @@ var margin = {top:10, right: 10, bottom:100, left:40},
 
 //data variable
 var myData = null;
+var value = null;
 //creating svg & viewbox for brushing
     const svg = d3.select("body")
         .append("svg")
@@ -86,15 +87,17 @@ xAxis2 = g => g
             value = selection.map(x.invert, x).map(d3.utcDay.round);
             //console.log(`[${x0} , ${x1}]`)
             console.log(value);
-            let filterednodes = myData.filter(
-                function(d) {
-                    return d.Date >= x0 && d.Date <= x1;
-                    //return d.Date >= value[0] && d.Date <= value[1];
-                }
-            ); 
+
             renderGraph(filterednodes);
         }
     }
+
+    let filterednodes = myData.filter(
+        function(d) {
+            //return d.Date >= x0 && d.Date <= x1;
+            return d.Date >= value[0] && d.Date <= value[1];
+        }
+    ); 
 
 //creating line
 var valueline = d3.line()
