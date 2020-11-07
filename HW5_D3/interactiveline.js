@@ -74,7 +74,7 @@ xAxis2 = g => g
     //brushed function
     function brushed(event) {
         const selection = event.selection;
-        console.log(event);
+        //console.log(event);
         if(selection === null) {
             const gb = svg.append("g")
                 .call(brush)
@@ -84,6 +84,7 @@ xAxis2 = g => g
             const[x0, x1] = selection.map(x.invert);
             let filterednodes = myData.filter(
                 function(d) {
+                    console.log(d);
                     return d.Date >= x0 && d.Date <= x1;
                 }
             ); 
@@ -155,7 +156,7 @@ d3.csv("XOM-XOM.csv")
 function renderGraph(nodes) {
     //d3.select("focus > *").remove();
 
-    console.log(nodes);
+    //console.log(nodes);
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
     y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
     x2.domain(x.domain());
