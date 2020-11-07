@@ -152,7 +152,7 @@ function renderGraph(nodes) {
     focus.append("path")
         .attr("class", "line")
         .attr("fill", "none")
-        .attr("stroke", " #de6dfa")
+        .attr("stroke", "#de6dfa")
         .attr("d", valueline(nodes));
 
     //appending x axis to focus
