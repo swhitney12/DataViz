@@ -98,7 +98,7 @@ xAxis2 = g => g
 
         console.log(filterednodes);
 
-        //renderGraph(filterednodes);
+        renderGraph(filterednodes);
 //        console.log(selection);
         // if(selection === null) {
         //     // const gb = svg.append("g")
