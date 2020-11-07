@@ -81,7 +81,7 @@ xAxis2 = g => g
             //     .call(brush.move, defaultSelection);
             //renderGraph(myData);
         } else {
-            const[x0, x1] = selection.map(x.invert);
+            const[x0, x1] = selection.map(x2.invert);
             //console.log(x0)
             //console.log(x1);
             let filterednodes = myData.filter(
