@@ -100,7 +100,7 @@ xAxis2 = g => g
             const maxY = d3.max(myData, d => x0 <= d.Date && d.Date <= x1 ? d.Close : NaN);
             console.log(`[${x0} , ${x1}]`);
 
-            renderGraph(filterednodes);
+            renderGraph(focus);
         }
     }
 
@@ -171,7 +171,7 @@ function renderGraph(nodes) {
     //d3.select("focus > *").remove();
 
    // console.log(nodes);
-   x.copy().domain(focus);
+   x.copy().domain(nodes);
    y.copy().domain([0, maxY]);
   // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
    x2.domain(x.domain());
