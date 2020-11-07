@@ -82,15 +82,16 @@ xAxis2 = g => g
         // console.log(value[0]);
         // console.log("max");
         // console.log(value[1]);
+        myData.map(d => console.log(d.Date));
 
-        let filterednodes = myData.filter(
-            function(d) {
-                //return d.Date >= x0 && d.Date <= x1;
-                return value[0][0] <= d.Date && d.Date <= value[1][0];
-            }
-        );
+        // let filterednodes = myData.filter(
+        //     function(d) {
+        //         //return d.Date >= x0 && d.Date <= x1;
+        //         return value[0][0] <= d.Date && d.Date <= value[1][0];
+        //     }
+        // );
 
-        console.log(filterednodes);
+        //console.log(filterednodes);
 
         //renderGraph(filterednodes);
 //        console.log(selection);
