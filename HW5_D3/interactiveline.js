@@ -166,12 +166,13 @@ function renderGraph(nodes) {
         .call(yAxis);
 
     focus.append("text")
+        .attr("font-family", "Arial")
         .attr("transform", "rotate(-90)")
         .attr("y", margin.left - 45)
         .attr("x", margin.top - (height/2) + 40)
         .attr("dy", "1em")
         .style("text-anchor", "middle")
-        .text("Close");
+        .text("Close $");
 
 }
 
