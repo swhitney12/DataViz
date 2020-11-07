@@ -91,7 +91,7 @@ xAxis2 = g => g
 
         console.log(filterednodes);
 
-        tester(filternodes);
+        tester(filterednodes);
         //renderGraph(filterednodes);
 //        console.log(selection);
         // if(selection === null) {
