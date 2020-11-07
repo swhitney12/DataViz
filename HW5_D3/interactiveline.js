@@ -91,7 +91,7 @@ xAxis2 = g => g
 
         console.log(filterednodes);
 
-        tester(filterednodes);
+        renderGraph(filterednodes);
         //renderGraph(filterednodes);
 //        console.log(selection);
         // if(selection === null) {
@@ -139,6 +139,8 @@ d3.csv("XOM-XOM.csv")
 
     myData = data;
 // //setting domains
+    x2.domain(d3.extent(nodes, function(d) { return d.Date; }));
+    y2.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
 //     x.domain(d3.extent(data, function(d) { return d.Date; }));
 //     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 //      x2.domain(x.domain());
@@ -190,8 +192,8 @@ function renderGraph(nodes) {
   // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
     y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
-    x2.domain(x.domain());
-    y2.domain(y.domain());
+    // x2.domain(x.domain());
+    // y2.domain(y.domain());
 
     focus.append("path")
         .attr("class", "line")
