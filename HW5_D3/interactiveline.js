@@ -188,5 +188,10 @@ function updateData() {
     context.select(".x.axis2")
         .duration(750)
         .call(xAxis2);
+
+    context.select(".brush")
+       .duration(750)
+       .call(brush);
+    
     });
 }
