@@ -141,10 +141,8 @@ d3.csv("XOM-XOM.csv")
 // //setting domains
     x2.domain(d3.extent(data, function(d) { return d.Date; }));
     y2.domain([0, d3.max(data, function(d) { return d.Close; })]);
-    x.domain(d3.extent(data, function(d) { return d.Date; }));
-    y.domain([0, d3.max(data, function(d) { return d.Close; })]);
-    //  x2.domain(x.domain());
-    //  y2.domain(y.domain());
+    // x.domain(d3.extent(data, function(d) { return d.Date; }));
+    // y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
     renderGraph(myData);
 //     //appending line to focus
@@ -185,12 +183,8 @@ d3.csv("XOM-XOM.csv")
 function renderGraph(nodes) {
     //d3.select("focus > *").remove();
 
-    //can't do domain update in here
-  // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
     y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
-    // x2.domain(x.domain());
-    // y2.domain(y.domain());
 
     focus.append("path")
         .attr("class", "line")
