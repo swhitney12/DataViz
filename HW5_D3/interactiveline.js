@@ -185,7 +185,7 @@ function renderGraph(focus, maxY) {
         .attr("class", "line")
         .attr("fill", "none")
         .attr("stroke", "steelblue")
-        .attr("d", valueline(nodes));
+        .attr("d", valueline(focus));
 
     //appending x axis to focus
     focus.append("g")
