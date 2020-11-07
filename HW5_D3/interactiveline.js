@@ -82,13 +82,13 @@ xAxis2 = g => g
         let filterednodes = myData.filter(
             function(d) {
                 //return d.Date >= x0 && d.Date <= x1;
-                return value[0] <= d.Date && d.Date <= value[1];
+                //return value[0] <= d.Date && d.Date <= value[1];
             }
         );
 
         //console.log(filterednodes);
 
-        renderGraph(filterednodes);
+        //renderGraph(filterednodes);
 //        console.log(selection);
         // if(selection === null) {
         //     // const gb = svg.append("g")
