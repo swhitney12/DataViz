@@ -89,7 +89,7 @@ xAxis2 = g => g
             let filterednodes = myData.filter(
                 function(d) {
                     //return d.Date >= x0 && d.Date <= x1;
-                    return d.Date >= value[1] && d.Date <= value[0];
+                    return value[0] <= d.Date && d.Date <= value[1];
                 }
             );
             renderGraph(filterednodes);
