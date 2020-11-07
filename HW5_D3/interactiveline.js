@@ -77,6 +77,7 @@ xAxis2 = g => g
         //value = selection.map(x.invert, x).map(d3.utcDay.round);
         let targetX1 = selection[0][0];
         let targetX2 = selection[1][0];
+        console.log(`${targetX1}, ${targetX2}`);
 
         let filterednodes = myData.filter(
             function(d) {
