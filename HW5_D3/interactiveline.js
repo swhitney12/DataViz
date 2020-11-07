@@ -78,6 +78,10 @@ xAxis2 = g => g
         //let targetX1 = selection[0][0];
         //let targetX2 = selection[1][0];
         console.log(value);
+        console.log("min");
+        console.log(value[0]);
+        console.log("max");
+        console.log(value[1]);
 
         let filterednodes = myData.filter(
             function(d) {
