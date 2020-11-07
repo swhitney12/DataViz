@@ -94,10 +94,9 @@ xAxis2 = g => g
             // );
 
             focus.property("Date", selection.map(x2.invert).map(d3.utcDay.round));
-            //focus.dispatch("input");
+            focus.dispatch("input");
             const [x0, x1] = focus;
-            let filterednodes = myData.filter( d => x0 <= d.Date && d.Date <= x1)
-            console.log(filterednodes);
+            //let filterednodes = myData.filter( d => x0 <= d.Date && d.Date <= x1)
             const maxY = d3.max(myData, d => x0 <= d.Date && d.Date <= x1 ? d.Close : NaN);
             console.log(`[${x0} , ${x1}]`);
 
@@ -172,10 +171,15 @@ function renderGraph(nodes) {
     //d3.select("focus > *").remove();
 
    // console.log(nodes);
-    x.domain(d3.extent(nodes, function(d) { return d.Date; }));
-    y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
-    x2.domain(x.domain());
-    y2.domain(y.domain());
+   x.copy().domain(focus);
+   y.copy().domain([0, maxY]);
+  // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
+   x2.domain(x.domain());
+   y2.domain(y.domain());
+    // x.domain(d3.extent(nodes, function(d) { return d.Date; }));
+    // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
+    // x2.domain(x.domain());
+    // y2.domain(y.domain());
 
     focus.append("path")
         .attr("class", "line")
