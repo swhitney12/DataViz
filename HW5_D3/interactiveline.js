@@ -91,7 +91,8 @@ xAxis2 = g => g
 
         console.log(filterednodes);
 
-        renderGraph(filterednodes);
+        tester(filternodes);
+        //renderGraph(filterednodes);
 //        console.log(selection);
         // if(selection === null) {
         //     // const gb = svg.append("g")
@@ -179,30 +180,34 @@ d3.csv("XOM-XOM.csv")
        .call(brush);
 });
 
+
+function tester(nodes) {
+    console.log(nodes);
+}
 function renderGraph(nodes) {
     //d3.select("focus > *").remove();
 
   // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
-    // x.domain(d3.extent(nodes, function(d) { return d.Date; }));
-    // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
-    // x2.domain(x.domain());
-    // y2.domain(y.domain());
+    x.domain(d3.extent(nodes, function(d) { return d.Date; }));
+    y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
+    x2.domain(x.domain());
+    y2.domain(y.domain());
 
-    // focus.append("path")
-    //     .attr("class", "line")
-    //     .attr("fill", "none")
-    //     .attr("stroke", "steelblue")
-    //     .attr("d", valueline(nodes));
+    focus.append("path")
+        .attr("class", "line")
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("d", valueline(nodes));
 
-    // //appending x axis to focus
-    // focus.append("g")
-    //     .attr("class", "x axis")
-    //     .call(xAxis);
+    //appending x axis to focus
+    focus.append("g")
+        .attr("class", "x axis")
+        .call(xAxis);
 
-    // //appending y axis to focus
-    // focus.append("g")
-    //     .attr("class", "y axis")
-    //     .call(yAxis);
+    //appending y axis to focus
+    focus.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
 }
 
 function updateData() {
