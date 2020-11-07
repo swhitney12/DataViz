@@ -83,16 +83,19 @@ xAxis2 = g => g
         } else {
             //console.log(selection.map(x2.invert).map(d3.utcDay.round));
             //const[x0, x1] 
-            value = selection.map(x.invert, x).map(d3.utcDay.round);
-            //console.log(`[${x0} , ${x1}]`)
-            console.log(value);
-            let filterednodes = myData.filter(
-                function(d) {
-                    //return d.Date >= x0 && d.Date <= x1;
-                    return value[0] <= d.Date && d.Date <= value[1];
-                }
-            );
-            renderGraph(filterednodes);
+            // value = selection.map(x.invert, x).map(d3.utcDay.round);
+            // //console.log(`[${x0} , ${x1}]`)
+            // console.log(value);
+            // let filterednodes = myData.filter(
+            //     function(d) {
+            //         //return d.Date >= x0 && d.Date <= x1;
+            //         return value[0] <= d.Date && d.Date <= value[1];
+            //     }
+            // );
+
+            focus.property("Date", selection.map(x2.invert).map(d3.utcDay.round));
+            focus.dispatch("input");
+            renderGraph(focus);
         }
     }
 
