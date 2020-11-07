@@ -85,6 +85,8 @@ xAxis2 = g => g
             }
         );
 
+        console.log(filterednodes);
+
         renderGraph(filterednodes);
 //        console.log(selection);
         // if(selection === null) {
