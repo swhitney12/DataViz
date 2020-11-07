@@ -171,8 +171,8 @@ function renderGraph(focus, maxY, nodes) {
     //d3.select("focus > *").remove();
 
    // console.log(nodes);
-   x.copy().domain(focus);
-   y.copy().domain([0, maxY]);
+   x.domain(focus);
+   y.domain([0, maxY]);
   // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
    x2.domain(x.domain());
    y2.domain(y.domain());
