@@ -183,8 +183,8 @@ d3.csv("XOM-XOM.csv")
 });
 
 function domainupdate(node) {
-    x.domain(d3.extent(nodes, function(d) { return d.Date; }));
-    y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
+    x.domain(d3.extent(node, function(d) { return d.Date; }));
+    y.domain([0, d3.max(node, function(d) { return d.Close; })]);
 }
 
 function renderGraph(nodes) {
