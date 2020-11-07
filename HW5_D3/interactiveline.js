@@ -73,7 +73,7 @@ xAxis2 = g => g
 
     //brushed function
     function brushed(event) {
-        let selection = d3.event.selection;
+        let selection = event.selection;
 //        console.log(selection);
         if(selection === null) {
             // const gb = svg.append("g")
