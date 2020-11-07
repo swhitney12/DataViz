@@ -74,7 +74,7 @@ xAxis2 = g => g
     //brushed function
     function brushed(event) {
         let selection = event.selection;
-        value = selection.map(x.invert, x) //.map(d3.utcDay.round);
+        value = selection.map(x2.invert, x2) //.map(d3.utcDay.round);
         //let targetX1 = selection[0][0];
         //let targetX2 = selection[1][0];
         console.log("value 0")
@@ -139,12 +139,12 @@ d3.csv("XOM-XOM.csv")
 
     myData = data;
 // //setting domains
-    //x2.domain(d3.extent(data, function(d) { return d.Date; }));
-    //y2.domain([0, d3.max(data, function(d) { return d.Close; })]);
+    x2.domain(d3.extent(data, function(d) { return d.Date; }));
+    y2.domain([0, d3.max(data, function(d) { return d.Close; })]);
     x.domain(d3.extent(data, function(d) { return d.Date; }));
     y.domain([0, d3.max(data, function(d) { return d.Close; })]);
-     x2.domain(x.domain());
-     y2.domain(y.domain());
+    //  x2.domain(x.domain());
+    //  y2.domain(y.domain());
 
     renderGraph(myData);
 //     //appending line to focus
