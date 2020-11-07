@@ -185,7 +185,11 @@ d3.csv("XOM-XOM.csv")
 
 function tester(nodes) {
     console.log(nodes);
-    x.domain(d3.extent(nodes, function(d) { return d.Date; }));
+    focus.append("path")
+    .attr("class", "line")
+    .attr("fill", "none")
+    .attr("stroke", "steelblue")
+    .attr("d", valueline(nodes));
 }
 function renderGraph(nodes) {
     //d3.select("focus > *").remove();
