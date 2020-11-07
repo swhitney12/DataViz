@@ -81,8 +81,8 @@ xAxis2 = g => g
             //     .call(brush.move, defaultSelection);
             //renderGraph(myData);
         } else {
-            console.log(selection.map(x2.invert));
-            const[x0, x1] = selection.map(x2.invert);
+            console.log(selection.map(x2.invert).map(d3.utcDay.round));
+            const[x0, x1] = selection.map(x2.invert).map(d3.utcDay.round);
             //console.log(`[${x0} , ${x1}]`)
             let filterednodes = myData.filter(
                 function(d) {
