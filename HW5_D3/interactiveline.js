@@ -86,7 +86,7 @@ xAxis2 = g => g
         // console.log("max");
         // console.log(value[1]);
         console.log("data")
-        myData.map(d => console.log(d.Date));
+        myData.map(d => value[0] <= d.Date && d.Date <= value[1] ? console.log(d.Date) : console.log("false"));
 
         // let filterednodes = myData.filter(
         //     function(d) {
