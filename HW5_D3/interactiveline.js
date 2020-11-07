@@ -7,7 +7,6 @@ var margin = {top:10, right: 10, bottom:100, left:40},
 
 //data variable
 var myData = null;
-var value = null;
 //creating svg & viewbox for brushing
     const svg = d3.select("body")
         .append("svg")
