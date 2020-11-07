@@ -164,7 +164,8 @@ function renderGraph(nodes) {
     focus.append("g")
         .attr("class", "y axis")
         .call(yAxis);
-
+    
+    //y axis label append to focus
     focus.append("text")
         .attr("class", "y axis label")
         .attr("font-family", "Arial")
