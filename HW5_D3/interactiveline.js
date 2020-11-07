@@ -74,47 +74,16 @@ xAxis2 = g => g
     //brushed function
     function brushed(event) {
         let selection = event.selection;
-        value = selection.map(x2.invert, x2) //.map(d3.utcDay.round);
-        //let targetX1 = selection[0][0];
-        //let targetX2 = selection[1][0];
-        console.log("value 0")
-         console.log(value[0]);
-        console.log("value 1")
-         console.log(value[1])
-        // console.log("min");
-        // console.log(value[0]);
-        // console.log("max");
-        // console.log(value[1]);
-        console.log("data")
-
-        let filterednodes = myData.filter(d => value[0] <= d.Date && d.Date <= value[1]); 
-
-        console.log(filterednodes);
-
-        renderGraph(filterednodes);
-        //renderGraph(filterednodes);
-//        console.log(selection);
-        // if(selection === null) {
-        //     // const gb = svg.append("g")
-        //     //     .call(brush)
-        //     //     .call(brush.move, defaultSelection);
-        //     //renderGraph(myData);
-        // } else {
-        //     // const[x0, x1] 
-        //     value = selection.map(x.invert, x).map(d3.utcDay.round);
-        //     let targetX1 = value[0];
-        //     let targetX2 = value[1];
-
-        //     console.log(`${targetX1}, ${targetX2}`)
-        //     let filterednodes = myData.filter(
-        //         function(d) {
-        //             //return d.Date >= x0 && d.Date <= x1;
-        //             return targetX1 <= d.Date && d.Date <= targetX2;
-        //         }
-        //     );
-
-            // renderGraph(filterednodes);
-        //}
+        if(selection === null) {
+            // const gb = svg.append("g")
+            //     .call(brush)
+            //     .call(brush.move, defaultSelection);
+            renderGraph(myData);
+        } else {
+            value = selection.map(x2.invert, x2).map(d3.utcDay.round);
+            let filterednodes = myData.filter(d => value[0] <= d.Date && d.Date <= value[1]);     
+            renderGraph(filterednodes);
+        }
     }
 
  
@@ -141,26 +110,8 @@ d3.csv("XOM-XOM.csv")
 // //setting domains
     x2.domain(d3.extent(data, function(d) { return d.Date; }));
     y2.domain([0, d3.max(data, function(d) { return d.Close; })]);
-    // x.domain(d3.extent(data, function(d) { return d.Date; }));
-    // y.domain([0, d3.max(data, function(d) { return d.Close; })]);
 
     renderGraph(myData);
-//     //appending line to focus
-//     focus.append("path")
-//         .attr("class", "line")
-//         .attr("fill", "none")
-//         .attr("stroke", "steelblue")
-//         .attr("d", valueline(data));
-
-//     //appending x axis to focus
-//     focus.append("g")
-//         .attr("class", "x axis")
-//         .call(xAxis);
-
-//     //appending y axis to focus
-//     focus.append("g")
-//         .attr("class", "y axis")
-//         .call(yAxis);
 
     //appending line to context
     context.append("path")
