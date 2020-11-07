@@ -1,3 +1,4 @@
+//create margins for focus and context
 var margin = {top:10, right: 10, bottom:100, left:40},
     margin2 = {top:330, right:10, bottom: 5, left:40},
     width = 960 - margin.left - margin.right,
@@ -39,7 +40,7 @@ var x = d3.scaleUtc().range([margin.left, width - margin.right]);
 
 xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(1));
 
 xAxis2 = g => g
     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
@@ -190,7 +191,7 @@ function updateData() {
 
         //update myData variable for brush use
         myData = data;
-        
+
         //setting domains
         x.domain(d3.extent(data, function(d) { return d.Date; }));
         y.domain([0, d3.max(data, function(d) { return d.Close; })]);
