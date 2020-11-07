@@ -49,7 +49,7 @@ xAxis2 = g => g
         .on("brush", brushed)
         .on("end", brushended);
     
-    const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
+    //const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
     
     //brushended function
     function brushended(event) {
@@ -76,8 +76,8 @@ xAxis2 = g => g
         const selection = event.selection;
         if(selection === null) {
             const gb = svg.append("g")
-                .call(brush)
-                .call(brush.move, defaultSelection);
+                // .call(brush)
+                // .call(brush.move, defaultSelection);
             //renderGraph(myData);
         } else {
             const[x0, x1] = selection.map(x.invert);
@@ -152,7 +152,7 @@ d3.csv("XOM-XOM.csv")
 });
 
 function renderGraph(nodes) {
-    d3.select("focus > *").remove();
+    //d3.select("focus > *").remove();
 
     console.log(nodes);
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
