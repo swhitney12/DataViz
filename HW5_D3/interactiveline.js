@@ -81,8 +81,9 @@ xAxis2 = g => g
             //     .call(brush.move, defaultSelection);
             //renderGraph(myData);
         } else {
+            console.log(selection.map(x2.invert));
             const[x0, x1] = selection.map(x2.invert);
-            console.log(`[${x0} , ${x1}]`)
+            //console.log(`[${x0} , ${x1}]`)
             let filterednodes = myData.filter(
                 function(d) {
                     return d.Date >= x0 && d.Date <= x1;
