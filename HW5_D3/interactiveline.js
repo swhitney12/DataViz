@@ -40,7 +40,7 @@ var x = d3.scaleUtc().range([margin.left, width - margin.right]);
 
 xAxis = g => g
     .attr("transform", `translate(0,${height - margin.bottom})`)
-    .call(d3.axisBottom(x).ticks(width / 70).tickSizeOuter(0));
+    .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0.5));
 
 xAxis2 = g => g
     .attr("transform", `translate(0,${height2 - margin2.bottom})`)
