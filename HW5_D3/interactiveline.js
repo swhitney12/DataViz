@@ -72,17 +72,17 @@ xAxis2 = g => g
     // }
 
     //brushed function
-    function brushed() { //event) {
-        let selection = d3.event.selection;
-        //value = selection.map(x.invert, x).map(d3.utcDay.round);
-        let targetX1 = selection[0][0];
-        let targetX2 = selection[1][0];
-        console.log(`${targetX1}, ${targetX2}`);
+    function brushed(event) {
+        let selection = event.selection;
+        value = selection.map(x.invert, x).map(d3.utcDay.round);
+        //let targetX1 = selection[0][0];
+        //let targetX2 = selection[1][0];
+        console.log(`${value[0]}, ${value[1]}`);
 
         let filterednodes = myData.filter(
             function(d) {
                 //return d.Date >= x0 && d.Date <= x1;
-                return targetX1 <= d.Date && d.Date <= targetX2;
+                return value[0] <= d.Date && d.Date <= value[1];
             }
         );
 
