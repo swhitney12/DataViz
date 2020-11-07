@@ -80,6 +80,7 @@ xAxis2 = g => g
             //     .call(brush.move, defaultSelection);
             renderGraph(myData);
         } else {
+            focus.select("*").remove();
             value = selection.map(x2.invert, x2).map(d3.utcDay.round);
             let filterednodes = myData.filter(d => value[0] <= d.Date && d.Date <= value[1]);     
             renderGraph(filterednodes);
