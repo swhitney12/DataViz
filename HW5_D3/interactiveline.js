@@ -76,9 +76,9 @@ xAxis2 = g => g
         const selection = event.selection;
         //console.log(event);
         if(selection === null) {
-            const gb = svg.append("g")
-                .call(brush)
-                .call(brush.move, defaultSelection);
+            // const gb = svg.append("g")
+            //     .call(brush)
+            //     .call(brush.move, defaultSelection);
             //renderGraph(myData);
         } else {
             const[x0, x1] = selection.map(x.invert);
