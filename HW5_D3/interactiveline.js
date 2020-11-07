@@ -187,8 +187,8 @@ function renderGraph(nodes) {
 
     //can't do domain update in here
   // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
-    // x.domain(d3.extent(nodes, function(d) { return d.Date; }));
-    // y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
+    x.domain(d3.extent(nodes, function(d) { return d.Date; }));
+    y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
     // x2.domain(x.domain());
     // y2.domain(y.domain());
 
