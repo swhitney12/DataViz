@@ -74,7 +74,7 @@ xAxis2 = g => g
     //brushed function
     function brushed(event) {
         const selection = event.selection;
-        console.log(selection);
+//        console.log(selection);
         if(selection === null) {
             // const gb = svg.append("g")
             //     .call(brush)
@@ -82,8 +82,7 @@ xAxis2 = g => g
             //renderGraph(myData);
         } else {
             const[x0, x1] = selection.map(x2.invert);
-            //console.log(x0)
-            //console.log(x1);
+            console.log(`[${x0} , ${x1}]`)
             let filterednodes = myData.filter(
                 function(d) {
                     return d.Date >= x0 && d.Date <= x1;
