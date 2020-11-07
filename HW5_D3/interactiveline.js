@@ -82,6 +82,7 @@ xAxis2 = g => g
         // console.log(value[0]);
         // console.log("max");
         // console.log(value[1]);
+        myData.map(d => d.Date.invert, d.Date);
         myData.map(d => console.log(d.Date));
 
         // let filterednodes = myData.filter(
