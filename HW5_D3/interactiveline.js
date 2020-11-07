@@ -7,6 +7,13 @@ var margin = {top:10, right: 10, bottom:100, left:40},
 
 //data variable
 var myData = null;
+
+//booleans to tell which data is presented
+var data1 = true;
+var data2 = false;
+var data1name = "XOM-XOM.csv";
+var data2name = "TSLA-TSLA.csv";
+
 //creating svg & viewbox for brushing
     const svg = d3.select("body")
         .append("svg")
@@ -75,9 +82,6 @@ xAxis2 = g => g
     function brushed(event) {
         let selection = event.selection;
         if(selection === null) {
-            // const gb = svg.append("g")
-            //     .call(brush)
-            //     .call(brush.move, defaultSelection);
             renderGraph(myData);
         } else {
             focus.selectAll("*").remove();
@@ -133,11 +137,12 @@ d3.csv("XOM-XOM.csv")
 });
 
 function renderGraph(nodes) {
-    //d3.select("focus > *").remove();
 
+    //updating the domains
     x.domain(d3.extent(nodes, function(d) { return d.Date; }));
     y.domain([0, d3.max(nodes, function(d) { return d.Close; })]);
 
+    //appending the line to focus
     focus.append("path")
         .attr("class", "line")
         .attr("fill", "none")
@@ -155,13 +160,27 @@ function renderGraph(nodes) {
         .call(yAxis);
 }
 
+//switch data function
 function updateData() {
-    d3.csv("TSLA-TSLA.csv")
+
+var dataname = null;
+if(data1 == true) { 
+    dataname = data2name;
+    data1 = false;
+    data2 = true;
+} else {
+    dataname = data1name;
+    data2 = false;
+    data1 = true;
+}
+
+    d3.csv(dataname)
     .then(function(data) {
         data.forEach(function(d)  {
             d.Date = parseDate(d.Date);
             d.Close = +d.Close;
    });
+
 
 //setting domains
    x.domain(d3.extent(data, function(d) { return d.Date; }));
@@ -188,10 +207,5 @@ function updateData() {
     context.select(".x.axis2")
         .duration(750)
         .call(xAxis2);
-
-    context.select(".brush")
-       .duration(750)
-       .call(brush);
-    
     });
 }
