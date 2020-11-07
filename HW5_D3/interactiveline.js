@@ -96,8 +96,8 @@ xAxis2 = g => g
             focus.property("Date", selection.map(x2.invert).map(d3.utcDay.round));
             focus.dispatch("input");
             const [x0, x1] = focus;
-            let filterednodes = myData.filter( d => x0 <= d.Date && d.Date <= x1)
-            const maxY = d3.max(filterednodes ? d.Close : NaN);//(myData, d => x0 <= d.Date && d.Date <= x1 ? d.Close : NaN);
+            let filterednodes = myData.filter( d => x0 <= d.Date && d.Date <= x1);
+            const maxY = d3.max(filterednodes ? filterednodes.data.Close : NaN);//(myData, d => x0 <= d.Date && d.Date <= x1 ? d.Close : NaN);
             console.log(`[${x0} , ${x1}]`);
 
             renderGraph(focus, maxY, filterednodes);
