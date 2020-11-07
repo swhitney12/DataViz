@@ -73,7 +73,7 @@ xAxis2 = g => g
 
     //brushed function
     function brushed(event) {
-        const selection = event.selection;
+        let selection = d3.event.selection;
 //        console.log(selection);
         if(selection === null) {
             // const gb = svg.append("g")
@@ -82,11 +82,14 @@ xAxis2 = g => g
             //renderGraph(myData);
         } else {
             // const[x0, x1] 
-            value = selection.map(x.invert, x).map(d3.utcDay.round);
+            //value = selection.map(x.invert, x).map(d3.utcDay.round);
+            let targetX1 = selection[0][0];
+            let targetX2 = selection[1][0];
+
             let filterednodes = myData.filter(
                 function(d) {
                     //return d.Date >= x0 && d.Date <= x1;
-                    return value[0] <= d.Date && d.Date <= value[1];
+                    return targetX1 <= d.Date && d.Date <= targetX2;
                 }
             );
 
