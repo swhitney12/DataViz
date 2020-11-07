@@ -44,12 +44,12 @@ xAxis2 = g => g
         .attr("class", "context")
         .attr("viewBox", [0,0,width,height2]);
 
-        const brush = d3.brushX()
+    const brush = d3.brushX()
         .extent([[margin2.left,margin2.top - 10],[width-margin2.right,height2-margin2.bottom]])
         .on("brush", brushed)
         .on("end", brushended);
     
-    //const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
+    const defaultSelection = [x(d3.utcYear.offset(x.domain()[1], -1)), x.range()[1]];
     
     //brushended function
     function brushended(event) {
@@ -74,10 +74,11 @@ xAxis2 = g => g
     //brushed function
     function brushed(event) {
         const selection = event.selection;
+        console.log(event);
         if(selection === null) {
             const gb = svg.append("g")
-                // .call(brush)
-                // .call(brush.move, defaultSelection);
+                .call(brush)
+                .call(brush.move, defaultSelection);
             //renderGraph(myData);
         } else {
             const[x0, x1] = selection.map(x.invert);
