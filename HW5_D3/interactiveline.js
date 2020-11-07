@@ -77,12 +77,15 @@ xAxis2 = g => g
         value = selection.map(x.invert, x) //.map(d3.utcDay.round);
         //let targetX1 = selection[0][0];
         //let targetX2 = selection[1][0];
+        console.log("value 0")
          console.log(value[0]);
+        console.log("value 1")
          console.log(value[1])
         // console.log("min");
         // console.log(value[0]);
         // console.log("max");
         // console.log(value[1]);
+        console.log("data")
         myData.map(d => console.log(d.Date));
 
         // let filterednodes = myData.filter(
