@@ -121,7 +121,7 @@ d3.csv("XOM-XOM.csv")
 //      x2.domain(x.domain());
 //      y2.domain(y.domain());
 
-//     //renderGraph(myData);
+    renderGraph(myData);
 //     //appending line to focus
 //     focus.append("path")
 //         .attr("class", "line")
