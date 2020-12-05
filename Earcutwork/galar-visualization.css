@@ -1,0 +1,169 @@
+#visualization{
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    height: 100vw;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+#resizable{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: peachpuff; */
+}
+
+#left{
+    width: 25%;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+    overflow: auto;
+}
+
+#middle{
+    height: 100vh;
+    width: 75%;
+    font-family: 'Raleway', sans-serif;
+    z-index: 0;
+    /* background-color: palevioletred; */
+}
+
+#right{
+    width: fit-content;
+    height: 100vh;
+    /* background-color: palegreen; */
+    display: flex;
+    overflow: hidden;
+}
+#right img{
+    max-width: 100%;
+    height: 100vh;
+    width: auto\9; /* ie8 */
+    opacity: 0.5;
+}
+
+.sortFilter{
+    padding: 1em;
+}
+
+.sortFilter h1{
+    font-family: 'Sansita Swashed', cursive;
+    text-align: center;
+    color: #3FB8AF;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.sortFilter input[type="text"]{
+    width: 97%;
+    height: 1.5em;
+    margin-right: .2em;
+    margin-top: .3em;
+    margin-bottom: 2em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.sortFilter select{
+    width: 100%;
+    height: 2em;
+    margin-top: .3em;
+    margin-bottom: 2em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.sortFilter option{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.sortFilter label{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+#gen{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: .3em;
+    margin-bottom: 1.5em;
+    font-family: 'Raleway', sans-serif;
+}
+
+#HP, #Chance{
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: .5em;
+    margin-bottom: 4em;
+}
+
+.verticalCheckbox{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.noUi-tooltip { 
+    bottom:-32px !important;
+    font-family: 'Raleway', sans-serif;
+}
+
+#middle #header-row{
+    height: 2.5em;
+    border-bottom: solid 2px #3FB8AF;
+    color: #3FB8AF;
+    font-weight: bold;
+    align-items: flex-end;
+    padding-bottom: .5em;
+}
+
+#table-contents{
+    overflow-y: auto;
+    height: calc(100% - 3em);
+}
+
+#middle .table-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3em;
+    padding-right: 3em;
+    height: 2em;
+}
+#table-contents .table-row:nth-child(odd){
+    background-color: #fbfbfb;
+}
+
+div.name-col{
+    width: 30%;
+}
+
+div.type1-col, div.type2-col{
+    width: 15%;
+    font-weight: bold;
+}
+
+div.gen-col, div.hp-col{
+    width: 5%;
+    text-align: right;
+}
+
+button#filter-reset{
+    background-color: #3FB8AF;
+    color: white;
+    border: none;
+    padding: 1em 2em 1em 2em;
+    float: right;
+}
+
+button#filter-reset:hover{
+    background-color: #9ccf76;
+    transition: background-color .5s;
+}

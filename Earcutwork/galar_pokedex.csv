@@ -1,0 +1,285 @@
+NUMBER,CODE,SERIAL,NAME,TYPE1,TYPE2,COLOR,ABILITY1,ABILITY2,ABILITY HIDDEN,GENERATION,LEGENDARY,MEGA_EVOLUTION,HEIGHT,WEIGHT,HP,ATK,DEF,SP_ATK,SP_DEF,SPD,TOTAL
+10,1,101,Caterpie,Bug,,Green,Shield Dust,,Run Away,1,0,0,0.3,2.9,45,30,35,20,20,45,195
+11,1,111,Metapod,Bug,,Green,Shed Skin,,,1,0,0,0.7,9.9,50,20,55,25,25,30,205
+12,1,121,Butterfree,Bug,Flying,White,Compound Eyes,,Tinted Lens,1,0,0,1.1,32,60,45,50,90,80,70,395
+25,1,251,Pikachu,Electric,,Yellow,Static,,Lightning Rod,1,0,0,0.4,6,35,55,40,50,50,90,320
+35,1,351,Clefairy,Fairy,,Pink,Cute Charm,Magic Guard,Friend Guard,1,0,0,0.6,7.5,70,45,48,60,65,35,323
+37,1,371,Vulpix,Fire,,Brown,Flash Fire,,Drought,1,0,0,0.6,9.9,38,41,40,50,65,65,299
+38,1,381,Ninetales,Fire,,Yellow,Flash Fire,,Drought,1,0,0,1.1,19.9,73,76,75,81,100,100,505
+43,1,431,Oddish,Grass,Poison,Blue,Chlorophyll,,Run Away,1,0,0,0.5,5.4,45,50,55,75,65,30,320
+44,1,441,Gloom,Grass,Poison,Blue,Chlorophyll,,Stench,1,0,0,0.8,8.6,60,65,70,85,75,40,395
+50,1,501,Diglett,Ground,,Brown,Sand Veil,Arena Trap,Sand Force,1,0,0,0.2,0.8,10,55,25,35,45,95,265
+51,1,511,Dugtrio,Ground,,Brown,Sand Veil,Arena Trap,Sand Force,1,0,0,0.7,33.3,35,100,50,50,70,120,425
+52,1,521,Meowth,Normal,,Yellow,Pickup,Technician,Unnerve,1,0,0,0.4,4.2,40,45,35,40,40,90,290
+58,1,581,Growlithe,Fire,,Brown,Intimidate,Flash Fire,Justified,1,0,0,0.7,19,55,70,45,70,50,60,350
+59,1,591,Arcanine,Fire,,Brown,Intimidate,Flash Fire,Justified,1,0,0,1.9,155,90,110,80,100,80,95,555
+66,1,661,Machop,Fighting,,Grey,Guts,No Guard,Steadfast,1,0,0,0.8,19.5,70,80,50,35,35,35,305
+67,1,671,Machoke,Fighting,,Grey,Guts,No Guard,Steadfast,1,0,0,1.5,70.5,80,100,70,50,60,45,405
+77,1,771,Ponyta,Fire,,Yellow,Run Away,Flash Fire,Flame Body,1,0,0,1,30,50,85,55,65,65,90,410
+83,1,831,Farfetch'd,Normal,Flying,Brown,Keen Eye,Inner Focus,Defiant,1,0,0,0.8,15,52,90,55,58,62,60,377
+90,1,901,Shellder,Water,,Purple,Shell Armor,Skill Link,Overcoat,1,0,0,0.3,4,30,65,100,45,25,40,305
+91,1,911,Cloyster,Water,Ice,Purple,Shell Armor,Skill Link,Overcoat,1,0,0,1.5,132.5,50,95,180,85,45,70,525
+92,1,921,Gastly,Ghost,Poison,Purple,Levitate,,,1,0,0,1.3,0.1,30,35,30,100,35,80,310
+93,1,931,Haunter,Ghost,Poison,Purple,Levitate,,,1,0,0,1.6,0.1,45,50,45,115,55,95,405
+95,1,951,Onix,Rock,Ground,Grey,Rock Head,Sturdy,Weak Armor,1,0,0,8.8,210,35,45,160,30,45,70,385
+98,1,981,Krabby,Water,,Red,Hyper Cutter,Shell Armor,Sheer Force,1,0,0,0.4,6.5,30,105,90,25,25,50,325
+99,1,991,Kingler,Water,,Red,Hyper Cutter,Shell Armor,Sheer Force,1,0,0,1.3,60,55,130,115,50,50,75,475
+106,1,1061,Hitmonlee,Fighting,,Brown,Limber,Reckless,Unburden,1,0,0,1.5,49.8,50,120,53,35,110,87,455
+107,1,1071,Hitmonchan,Fighting,,Brown,Keen Eye,Iron Fist,Inner Focus,1,0,0,1.4,50.2,50,105,79,35,110,76,455
+109,1,1091,Koffing,Poison,,Purple,Levitate,Neutralizing Gas,Stench,1,0,0,0.6,1,40,65,95,60,45,35,340
+110,1,1101,Weezing,Poison,,Purple,Levitate,Neutralizing Gas,Stench,1,0,0,1.2,9.5,65,90,120,85,70,60,490
+111,1,1111,Rhyhorn,Ground,Rock,Grey,Lightning Rod,Rock Head,Reckless,1,0,0,1,115,80,85,95,30,30,25,345
+112,1,1121,Rhydon,Ground,Rock,Grey,Lightning Rod,Rock Head,Reckless,1,0,0,1.9,120,105,130,120,45,45,40,485
+118,1,1181,Goldeen,Water,,Red,Swift Swim,Water Veil,Lightning Rod,1,0,0,0.6,15,45,67,60,35,50,63,320
+122,1,1221,Mr. Mime,Psychic,Fairy,Pink,Soundproof,Filter,Technician,1,0,0,1.3,54.5,40,45,65,100,120,90,460
+129,1,1291,Magikarp,Water,,Red,Swift Swim,,Rattled,1,0,0,0.9,10,20,10,55,15,20,80,200
+130,1,1301,Gyarados,Water,Flying,Blue,Intimidate,,Moxie,1,0,0,6.5,235,95,125,79,60,100,81,540
+132,1,1321,Ditto,Normal,,Purple,Limber,,Imposter,1,0,0,0.3,4,48,48,48,48,48,48,288
+133,1,1331,Eevee,Normal,,Brown,Run Away,Adaptability,Anticipation,1,0,0,0.3,6.5,55,55,50,45,65,55,325
+163,1,1631,Hoothoot,Normal,Flying,Brown,Insomnia,Keen Eye,Tinted Lens,2,0,0,0.7,21.2,60,30,30,36,56,50,262
+164,1,1641,Noctowl,Normal,Flying,Brown,Insomnia,Keen Eye,Tinted Lens,2,0,0,1.6,40.8,100,50,50,86,96,70,452
+170,1,1701,Chinchou,Water,Electric,Blue,Volt Absorb,Illuminate,Water Absorb,2,0,0,0.5,12,75,38,38,56,56,67,330
+171,1,1711,Lanturn,Water,Electric,Blue,Volt Absorb,Illuminate,Water Absorb,2,0,0,1.2,22.5,125,58,58,76,76,67,460
+175,1,1751,Togepi,Fairy,,White,Hustle,Serene Grace,Super Luck,2,0,0,0.3,1.5,35,20,65,40,65,20,245
+177,1,1771,Natu,Psychic,Flying,Green,Synchronize,Early Bird,Magic Bounce,2,0,0,0.2,2,40,50,45,70,45,70,320
+178,1,1781,Xatu,Psychic,Flying,Green,Synchronize,Early Bird,Magic Bounce,2,0,0,1.5,15,65,75,70,95,70,95,470
+185,1,1851,Sudowoodo,Rock,,Brown,Sturdy,Rock Head,Rattled,2,0,0,1.2,38,70,100,115,30,65,30,410
+194,1,1941,Wooper,Water,Ground,Blue,Damp,Water Absorb,Unaware,2,0,0,0.4,8.5,55,45,45,25,25,15,210
+195,1,1951,Quagsire,Water,Ground,Blue,Damp,Water Absorb,Unaware,2,0,0,1.4,75,95,85,85,65,65,35,430
+202,1,2021,Wobbuffet,Psychic,,Blue,Shadow Tag,,Telepathy,2,0,0,1.3,28.5,190,33,58,33,58,33,405
+211,1,2111,Qwilfish,Water,Poison,Grey,Poison Point,Swift Swim,Intimidate,2,0,0,0.5,3.9,65,95,85,55,55,85,440
+213,1,2131,Shuckle,Bug,Rock,Yellow,Sturdy,Gluttony,Contrary,2,0,0,0.6,20.5,20,10,230,10,230,5,505
+215,1,2151,Sneasel,Dark,Ice,Black,Inner Focus,Keen Eye,Pickpocket,2,0,0,0.9,28,55,95,55,35,75,115,430
+220,1,2201,Swinub,Ice,Ground,Brown,Oblivious,Snow Cloak,Thick Fat,2,0,0,0.4,6.5,50,50,40,30,30,50,250
+221,1,2211,Piloswine,Ice,Ground,Brown,Oblivious,Snow Cloak,Thick Fat,2,0,0,1.1,55.8,100,100,80,60,60,50,450
+222,1,2221,Corsola,Water,Rock,Pink,Hustle,Natural Cure,Regenerator,2,0,0,0.6,5,65,55,95,65,95,35,410
+223,1,2231,Remoraid,Water,,Grey,Hustle,Sniper,Moody,2,0,0,0.6,12,35,65,35,65,35,65,300
+224,1,2241,Octillery,Water,,Red,Suction Cups,Sniper,Moody,2,0,0,0.9,28.5,75,105,75,105,75,45,480
+225,1,2251,Delibird,Ice,Flying,Red,Vital Spilit,Hustle,Insomnia,2,0,0,0.9,16,45,55,45,65,45,75,330
+226,1,2261,Mantine,Water,Flying,Purple,Swift Swim,Water Absorb,Water Veil,2,0,0,2.1,220,85,40,70,80,140,70,485
+236,1,2361,Tyrogue,Fighting,,Purple,Guts,Steadfast,Vital Spilit,2,0,0,0.7,21,35,35,35,35,35,35,210
+237,1,2371,Hitmontop,Fighting,,Brown,Intimidate,Technician,Steadfast,2,0,0,1.4,48,50,95,95,35,110,70,455
+246,1,2461,Larvitar,Rock,Ground,Green,Guts,,Sand Veil,2,0,0,0.6,72,50,64,50,45,50,41,300
+247,1,2471,Pupitar,Rock,Ground,Grey,Shed Skin,,,2,0,0,1.2,152,70,84,70,65,70,51,410
+263,1,2631,Zigzagoon,Normal,,Brown,Pickup,Gluttony,Quick Feet,3,0,0,0.4,17.5,38,30,41,30,41,60,240
+264,1,2641,Linoone,Normal,,White,Pickup,Gluttony,Quick Feet,3,0,0,0.5,32.5,78,70,61,50,61,100,420
+270,1,2701,Lotad,Water,Grass,Green,Swift Swim,Rain Dish,Own Tempo,3,0,0,0.5,2.6,40,30,30,40,50,30,220
+271,1,2711,Lombre,Water,Grass,Green,Swift Swim,Rain Dish,Own Tempo,3,0,0,1.2,32.5,60,50,50,60,70,50,340
+273,1,2731,Seedot,Grass,,Brown,Chlorophyll,Early Bird,Pickpocket,3,0,0,0.5,4,40,40,50,30,30,30,220
+274,1,2741,Nuzleaf,Grass,Dark,Brown,Chlorophyll,Early Bird,Pickpocket,3,0,0,1,28,70,70,40,60,40,60,340
+278,1,2781,Wingull,Water,Flying,White,Keen Eye,Hydration,Rain Dish,3,0,0,0.6,9.5,40,30,30,55,30,85,270
+279,1,2791,Pelipper,Water,Flying,Yellow,Keen Eye,Drizzle,Rain Dish,3,0,0,1.2,28,60,50,100,95,70,65,440
+280,1,2801,Ralts,Psychic,Fairy,White,Synchronize,Trace,Telepathy,3,0,0,0.4,6.6,28,25,25,45,35,40,198
+282,1,2821,Gardevoir,Psychic,Fairy,White,Synchronize,Trace,Telepathy,3,0,0,1.6,48.4,68,65,65,125,115,80,518
+290,1,2901,Nincada,Bug,Ground,Grey,Compound Eyes,,Run Away,3,0,0,0.5,5.5,31,45,90,30,30,40,266
+291,1,2911,Ninjask,Bug,Flying,Yellow,Speed Boost,,Infiltrator,3,0,0,0.8,12,61,90,45,50,50,160,456
+302,1,3021,Sableye,Dark,Ghost,Purple,Keen Eye,Stall,Prankster,3,0,0,0.5,11,50,75,75,65,65,50,380
+303,1,3031,Mawile,Steel,Fairy,Black,Hyper Cutter,Intimidate,Sheer Force,3,0,0,0.6,11.5,50,85,85,55,55,50,380
+309,1,3091,Electrike,Electric,,Green,Static,Lightning Rod,Minus,3,0,0,0.6,15.2,40,45,40,65,40,65,295
+310,1,3101,Manectric,Electric,,Yellow,Static,Lightning Rod,Minus,3,0,0,1.5,40.2,70,75,60,105,60,105,475
+315,1,3151,Roselia,Grass,Poison,Green,Natural Cure,Poison Point,Leaf Guard,3,0,0,0.3,2,50,60,45,100,80,65,400
+324,1,3241,Torkoal,Fire,,Brown,White Smoke,Drought,Shell Armor,3,0,0,0.5,80.4,70,85,140,85,70,20,470
+328,1,3281,Trapinch,Ground,,Brown,Hyper Cutter,Arena Trap,Sheer Force,3,0,0,0.7,15,45,100,45,45,45,10,290
+330,1,3301,Flygon,Ground,Dragon,Green,Levitate,,,3,0,0,2,82,80,100,80,80,80,100,520
+337,1,3371,Lunatone,Rock,Psychic,Yellow,Levitate,,,3,0,0,1,168,90,55,65,95,85,70,460
+338,1,3381,Solrock,Rock,Psychic,Red,Levitate,,,3,0,0,1.2,154,90,95,85,55,65,70,460
+339,1,3391,Barboach,Water,Ground,Grey,Oblivious,Anticipation,Hydration,3,0,0,0.4,1.9,50,48,43,46,41,60,288
+341,1,3411,Corphish,Water,,Red,Hyper Cutter,Shell Armor,Adaptability,3,0,0,0.6,11.5,43,80,65,50,35,35,308
+342,1,3421,Crawdaunt,Water,Dark,Red,Hyper Cutter,Shell Armor,Adaptability,3,0,0,1.1,32.8,63,120,85,90,55,55,468
+343,1,3431,Baltoy,Ground,Psychic,Brown,Levitate,,,3,0,0,0.5,21.5,40,40,55,40,70,55,300
+344,1,3441,Claydol,Ground,Psychic,Black,Levitate,,,3,0,0,1.5,108,60,70,105,70,120,75,500
+355,1,3551,Duskull,Ghost,,Black,Levitate,,Frisk,3,0,0,0.8,15,20,40,90,30,90,25,295
+361,1,3611,Snorunt,Ice,,Grey,Inner Focus,Ice Body,Moody,3,0,0,0.7,16.8,50,50,50,50,50,50,300
+362,1,3621,Glalie,Ice,,Grey,Inner Focus,Ice Body,Moody,3,0,0,1.5,256.5,80,80,80,80,80,80,480
+406,1,4061,Budew,Grass,Poison,Green,Natural Cure,Poison Point,Leaf Guard,4,0,0,0.2,1.2,40,30,35,50,70,55,280
+415,1,4151,Combee,Bug,Flying,Yellow,Honey Gather,,Hustle,4,0,0,0.3,5.5,30,30,42,30,42,70,244
+420,1,4201,Cherubi,Grass,,Pink,Chlorophyll,,,4,0,0,0.4,3.3,45,35,45,62,53,35,275
+422,1,4221,Shellos,Water,,Purple,Sticky Hold,Storm Drain,Sand Force,4,0,0,0.3,6.3,76,48,48,57,62,34,325
+423,1,4231,Gastrodon,Water,Ground,Purple,Sticky Hold,Storm Drain,Sand Force,4,0,0,0.9,29.9,111,83,68,92,82,39,475
+425,1,4251,Drifloon,Ghost,Flying,Purple,Aftermath,Unburden,Flare Boost,4,0,0,0.4,1.2,90,50,34,60,44,70,348
+426,1,4261,Drifblim,Ghost,Flying,Purple,Aftermath,Unburden,Flare Boost,4,0,0,1.2,15,150,80,44,90,54,80,498
+434,1,4341,Stunky,Poison,Dark,Purple,Stench,Aftermath,Keen Eye,4,0,0,0.4,19.2,63,63,47,41,41,74,329
+436,1,4361,Bronzor,Steel,Psychic,Green,Levitate,Heatproof,Heavy Metal,4,0,0,0.5,60.5,57,24,86,24,86,23,300
+437,1,4371,Bronzong,Steel,Psychic,Green,Levitate,Heatproof,Heavy Metal,4,0,0,1.3,187,67,89,116,79,116,33,500
+438,1,4381,Bonsly,Rock,,Brown,Sturdy,Rock Head,Rattled,4,0,0,0.5,15,50,80,95,10,45,10,290
+447,1,4471,Riolu,Fighting,,Blue,Steadfast,Inner Focus,Prankster,4,0,0,0.7,20.2,40,70,40,35,40,60,285
+449,1,4491,Hippopotas,Ground,,Brown,Sand Stream,,Sand Force,4,0,0,0.8,49.5,68,72,78,38,42,32,330
+450,1,4501,Hippowdon,Ground,,Brown,Sand Stream,,Sand Force,4,0,0,2,300,108,112,118,68,72,47,525
+451,1,4511,Skorupi,Poison,Bug,Purple,Battle Armor,Sniper,Keen Eye,4,0,0,0.8,12,40,50,90,30,55,65,330
+452,1,4521,Drapion,Poison,Dark,Purple,Battle Armor,Sniper,Keen Eye,4,0,0,1.3,61.5,70,90,110,60,75,95,500
+453,1,4531,Croagunk,Poison,Fighting,Blue,Anticipation,Dry Skin,Poison Touch,4,0,0,0.7,23,48,61,40,61,40,50,300
+458,1,4581,Mantyke,Water,Flying,Blue,Swift Swim,Water Absorb,Water Veil,4,0,0,1,65,45,20,50,60,120,50,345
+459,1,4591,Snover,Grass,Ice,White,Snow Warning,,Soundproof,4,0,0,1,50.5,60,62,50,62,60,40,334
+460,1,4601,Abomasnow,Grass,Ice,White,Snow Warning,,Soundproof,4,0,0,2.2,135.5,90,92,75,92,85,60,494
+468,1,4681,Togekiss,Fairy,Flying,White,Hustle,Serene Grace,Super Luck,4,0,0,1.5,38,85,50,95,120,115,80,545
+479,1,4791,Rotom,Electric,Ghost,Red,Levitate,,,4,0,0,0.3,0.3,50,50,77,95,77,91,440
+509,1,5091,Purrloin,Dark,,Purple,Limber,Unburden,Prankster,5,0,0,0.4,10.1,41,50,37,50,37,66,281
+510,1,5101,Liepard,Dark,,Purple,Limber,Unburden,Prankster,5,0,0,1.1,37.5,64,88,50,88,50,106,446
+517,1,5171,Munna,Psychic,,Pink,Forewarn,Synchronize,Telepathy,5,0,0,0.6,23.3,76,25,45,67,55,24,292
+519,1,5191,Pidove,Normal,Flying,Grey,Big Pecks,Super Luck,Rivalry,5,0,0,0.3,2.1,50,55,50,36,30,43,264
+520,1,5201,Tranquill,Normal,Flying,Grey,Big Pecks,Super Luck,Rivalry,5,0,0,0.6,15,62,77,62,50,42,65,358
+521,1,5211,Unfezant,Normal,Flying,Grey,Big Pecks,Super Luck,Rivalry,5,0,0,1.2,29,80,115,80,65,55,93,488
+524,1,5241,Roggenrola,Rock,,Blue,Sturdy,Weak Armor,Sand Force,5,0,0,0.4,18,55,75,85,25,25,15,280
+525,1,5251,Boldore,Rock,,Blue,Sturdy,Weak Armor,Sand Force,5,0,0,0.9,102,70,105,105,50,40,20,390
+527,1,5271,Woobat,Psychic,Flying,Blue,Unaware,Klutz,Simple,5,0,0,0.4,2.1,65,45,43,55,43,72,323
+529,1,5291,Drilbur,Ground,,Grey,Sand Rush,Sand Force,Mold Breaker,5,0,0,0.3,8.5,60,85,40,30,45,68,328
+530,1,5301,Excadrill,Ground,Steel,Grey,Sand Rush,Sand Force,Mold Breaker,5,0,0,0.7,40.4,110,135,60,50,65,88,508
+532,1,5321,Timburr,Fighting,,Grey,Guts,Sheer Force,Iron Fist,5,0,0,0.6,12.5,75,80,55,25,35,35,305
+533,1,5331,Gurdurr,Fighting,,Grey,Guts,Sheer Force,Iron Fist,5,0,0,1.2,40,85,105,85,40,50,40,405
+535,1,5351,Tympole,Water,,Blue,Swift Swim,Hydration,Water Absorb,5,0,0,0.5,4.5,50,50,40,50,40,64,294
+536,1,5361,Palpitoad,Water,Ground,Blue,Swift Swim,Hydration,Water Absorb,5,0,0,0.8,17,75,65,55,65,55,69,384
+537,1,5371,Seismitoad,Water,Ground,Blue,Swift Swim,Poison Touch,Water Absorb,5,0,0,1.5,62,105,95,75,85,75,74,509
+538,1,5381,Throh,Fighting,,Red,Guts,Inner Focus,Mold Breaker,5,0,0,1.3,55.5,120,100,85,30,85,45,465
+539,1,5391,Sawk,Fighting,,Blue,Sturdy,Inner Focus,Mold Breaker,5,0,0,1.4,51,75,125,75,30,75,85,465
+546,1,5461,Cottonee,Grass,Fairy,Green,Prankster,Infiltrator,Chlorophyll,5,0,0,0.3,0.6,40,27,60,37,50,66,280
+550,1,5501,Basculin,Water,,Green,Reckless,Adaptability,Mold Breaker,5,0,0,1,18,70,92,65,80,55,98,460
+554,1,5541,Darumaka,Fire,,Red,Hustle,,Inner Focus,5,0,0,0.6,37.5,70,90,45,15,45,50,315
+556,1,5561,Maractus,Grass,,Green,Water Absorb,Chlorophyll,Storm Drain,5,0,0,1,28,75,86,67,106,67,60,461
+557,1,5571,Dwebble,Bug,Rock,Red,Sturdy,Shell Armor,Weak Armor,5,0,0,0.3,14.5,50,65,85,35,35,55,325
+558,1,5581,Crustle,Bug,Rock,Red,Sturdy,Shell Armor,Weak Armor,5,0,0,1.4,200,70,105,125,65,75,45,485
+559,1,5591,Scraggy,Dark,Fighting,Yellow,Shed Skin,Moxie,Intimidate,5,0,0,0.6,11.8,50,75,70,35,70,48,348
+561,1,5611,Sigilyph,Psychic,Flying,Black,Wonder Skin,Magic Guard,Tinted Lens,5,0,0,1.4,14,72,58,80,103,80,97,490
+562,1,5621,Yamask,Ghost,,Black,Mummy,,,5,0,0,0.5,1.5,38,30,85,55,65,30,303
+568,1,5681,Trubbish,Poison,,Green,Stench,Sticky Hold,Aftermath,5,0,0,0.6,31,50,50,62,40,62,65,329
+569,1,5691,Garbodor,Poison,,Green,Stench,Weak Armor,Aftermath,5,0,0,1.9,107.3,80,95,82,60,82,75,474
+572,1,5721,Minccino,Normal,,Grey,Cute Charm,Technician,Skill Link,5,0,0,0.4,5.8,55,50,40,40,40,75,300
+574,1,5741,Gothita,Psychic,,Purple,Frisk,Competitive,Shadow Tag,5,0,0,0.4,5.8,45,30,50,55,65,45,290
+575,1,5751,Gothorita,Psychic,,Purple,Frisk,Competitive,Shadow Tag,5,0,0,0.7,18,60,45,70,75,85,55,390
+576,1,5761,Gothitelle,Psychic,,Purple,Frisk,Competitive,Shadow Tag,5,0,0,1.5,44,70,55,95,95,110,65,490
+577,1,5771,Solosis,Psychic,,Green,Overcoat,Magic Guard,Regenerator,5,0,0,0.3,1,45,30,40,105,50,20,290
+578,1,5781,Duosion,Psychic,,Green,Overcoat,Magic Guard,Regenerator,5,0,0,0.6,8,65,40,50,125,60,30,370
+579,1,5791,Reuniclus,Psychic,,Green,Overcoat,Magic Guard,Regenerator,5,0,0,1,20.1,110,65,75,125,85,30,490
+582,1,5821,Vanillite,Ice,,White,Ice Body,Snow Cloak,Weak Armor,5,0,0,0.4,5.7,36,50,50,65,60,44,305
+583,1,5831,Vanillish,Ice,,White,Ice Body,Snow Cloak,Weak Armor,5,0,0,1.1,41,51,65,65,80,75,59,395
+584,1,5841,Vanilluxe,Ice,,White,Ice Body,Snow Warning,Weak Armor,5,0,0,1.3,57.5,71,95,85,110,95,79,535
+588,1,5881,Karrablast,Bug,,Blue,Swarm,Shed Skin,No Guard,5,0,0,0.5,5.9,50,75,45,40,45,60,315
+592,1,5921,Frillish,Water,Ghost,White,Water Absorb,Cursed Body,Damp,5,0,0,1.2,33,55,40,50,65,85,40,335
+593,1,5931,Jellicent,Water,Ghost,White,Water Absorb,Cursed Body,Damp,5,0,0,2.2,135,100,60,70,85,105,60,480
+595,1,5951,Joltik,Bug,Electric,Yellow,Compound Eyes,Unnerve,Swarm,5,0,0,0.1,0.6,50,47,50,57,50,65,319
+596,1,5961,Galvantula,Bug,Electric,Yellow,Compound Eyes,Unnerve,Swarm,5,0,0,0.8,14.3,70,77,60,97,60,108,472
+597,1,5971,Ferroseed,Grass,Steel,Grey,Iron Barbs,,,5,0,0,0.6,18.8,44,50,91,24,86,10,305
+598,1,5981,Ferrothorn,Grass,Steel,Grey,Iron Barbs,,Anticipation,5,0,0,1,110,74,94,131,54,116,20,489
+599,1,5991,Klink,Steel,,Grey,Plus,Minus,Clear Body,5,0,0,0.3,21,40,55,70,45,60,30,300
+601,1,6011,Klinklang,Steel,,Grey,Plus,Minus,Clear Body,5,0,0,0.6,81,60,100,115,70,85,90,520
+605,1,6051,Elgyem,Psychic,,Blue,Telepathy,Synchronize,Analytic,5,0,0,0.5,9,55,55,55,85,55,30,335
+606,1,6061,Beheeyem,Psychic,,Brown,Telepathy,Synchronize,Analytic,5,0,0,1,34.5,75,75,75,125,95,40,485
+607,1,6071,Litwick,Ghost,Fire,White,Flash Fire,Flame Body,Infiltrator,5,0,0,0.3,3.1,50,30,55,65,55,20,275
+608,1,6081,Lampent,Ghost,Fire,Black,Flash Fire,Flame Body,Infiltrator,5,0,0,0.6,13,60,40,60,95,60,55,370
+610,1,6101,Axew,Dragon,,Green,Rivalry,Mold Breaker,Unnerve,5,0,0,0.6,18,46,87,60,30,40,57,320
+612,1,6121,Haxorus,Dragon,,Yellow,Rivalry,Mold Breaker,Unnerve,5,0,0,1.8,105.5,76,147,90,60,70,97,540
+613,1,6131,Cubchoo,Ice,,White,Snow Cloak,Slush Rush,Rattled,5,0,0,0.5,8.5,55,70,40,60,40,40,305
+614,1,6141,Beartic,Ice,,White,Snow Cloak,Slush Rush,Swift Swim,5,0,0,2.6,260,95,130,80,70,80,50,505
+616,1,6161,Shelmet,Bug,,Red,Hydration,Shell Armor,Overcoat,5,0,0,0.4,7.7,50,40,85,40,65,25,305
+618,1,6181,Stunfisk,Electric,Ground,Brown,Stanfisk,Limber,Sand Veil,5,0,0,0.7,11,109,66,84,81,99,32,471
+622,1,6221,Golett,Ground,Ghost,Green,Iron Fist,Klutz,No Guard,5,0,0,1,92,59,74,50,35,50,35,303
+623,1,6231,Golurk,Ground,Ghost,Green,Iron Fist,Klutz,No Guard,5,0,0,2.8,330,89,124,80,55,80,55,483
+624,1,6241,Pawniard,Dark,Steel,Red,Defiant,Inner Focus,Pressure,5,0,0,0.5,10.2,45,85,70,40,40,60,340
+625,1,6251,Bisharp,Dark,Steel,Red,Defiant,Inner Focus,Pressure,5,0,0,1.6,70,65,125,100,60,70,70,490
+627,1,6271,Rufflet,Normal,Flying,White,Keen Eye,Sheer Force,Hustle,5,0,0,0.5,10.5,70,83,50,37,50,60,350
+628,1,6281,Braviary,Normal,Flying,Red,Keen Eye,Sheer Force,Defiant,5,0,0,1.5,41,100,123,75,57,75,80,510
+629,1,6291,Vullaby,Dark,Flying,Brown,Big Pecks,Overcoat,Weak Armor,5,0,0,0.5,9,70,55,75,45,65,60,370
+630,1,6301,Mandibuzz,Dark,Flying,Brown,Big Pecks,Overcoat,Weak Armor,5,0,0,1.2,39.5,110,65,105,55,95,80,510
+631,1,6311,Heatmor,Fire,,Red,Gluttony,Flaash Fire,White Smoke,5,0,0,1.4,58,85,97,66,105,66,65,484
+632,1,6321,Durant,Bug,Steel,Grey,Swarm,Hustle,Truant,5,0,0,0.3,33,58,109,112,48,48,109,484
+633,1,6331,Deino,Dark,Dragon,Blue,Hustle,,,5,0,0,0.8,17.3,52,65,50,45,50,38,300
+634,1,6341,Zweilous,Dark,Dragon,Blue,Hustle,,,5,0,0,1.4,50,72,85,70,65,70,58,420
+659,1,6591,Bunnelby,Normal,,Brown,Pickup,Cheek Pouch,Huge Power,6,0,0,0.4,5,38,36,38,32,36,57,237
+660,1,6601,Diggersby,Normal,Ground,Brown,Pickup,Cheek Pouch,Huge Power,6,0,0,1,42.4,85,56,77,50,77,78,423
+674,1,6741,Pancham,Fighting,,White,Iron Fist,Mold Breaker,Scrappy,6,0,0,0.6,8,67,82,62,46,48,43,348
+675,1,6751,Pangoro,Fighting,Dark,White,Iron Fist,Mold Breaker,Scrappy,6,0,0,2.1,136,95,124,78,69,71,58,495
+677,1,6771,Espurr,Psychic,,Grey,Keen Eye,Infiltrator,Own Tempo,6,0,0,0.3,3.5,62,48,54,63,60,68,355
+678,1,6781,Meowstic M,Psychic,,Blue,Keen Eye,Infiltrator,Prankster,6,0,0,0.6,8.5,74,48,76,83,81,104,466
+678,2,6782,Meowstic F,Psychic,,White,Keen Eye,Infiltrator,Competitive,6,0,0,0.6,8.5,74,48,76,83,81,104,466
+679,1,6791,Honedge,Steel,Ghost,Brown,No Guard,,,6,0,0,0.8,2,45,80,100,35,37,28,325
+680,1,6801,Doublade,Steel,Ghost,Brown,No Guard,,,6,0,0,0.8,4.5,59,110,150,45,49,35,448
+682,1,6821,Spritzee,Fairy,,Pink,Healer,,Aroma Veil,6,0,0,0.2,0.5,78,52,60,63,65,23,341
+684,1,6841,Swirlix,Fairy,,White,Sweet Veil,,Unburden,6,0,0,0.4,3.5,62,48,66,59,57,49,341
+686,1,6861,Inkay,Dark,Psychic,Blue,Contrary,Suction Cups,Infiltrator,6,0,0,0.4,3.5,53,54,53,37,46,45,288
+688,1,6881,Binacle,Rock,Water,Brown,Tough Claws,Sniper,Pickpocket,6,0,0,0.5,31,42,52,67,39,56,50,306
+689,1,6891,Barbaracle,Rock,Water,Brown,Tough Claws,Sniper,Pickpocket,6,0,0,1.3,96,72,105,115,54,86,68,500
+694,1,6941,Helioptile,Electric,Normal,Yellow,Dry Skin,Sand Veil,Solar Power,6,0,0,0.5,6,44,38,33,61,43,70,289
+701,1,7011,Hawlucha,Fighting,Flying,Green,Limber,Unburden,Mold Breaker,6,0,0,0.8,21.5,78,92,75,74,63,118,500
+704,1,7041,Goomy,Dragon,,Purple,Sap Sipper,Hydration,Gooey,6,0,0,0.3,2.8,45,50,35,55,75,40,300
+705,1,7051,Sliggoo,Dragon,,Purple,Sap Sipper,Hydration,Gooey,6,0,0,0.8,17.5,68,75,53,83,113,60,452
+708,1,7081,Phantump,Ghost,Grass,Brown,Natural Cure,Frisk,Harvest,6,0,0,0.4,7,43,70,48,50,60,38,309
+710,1,7101,Pumpkaboo,Ghost,Grass,Brown,Pickup,Frisk,Insomnia,6,0,0,0.3,3.5,49,66,70,44,55,51,335
+712,1,7121,Bergmite,Ice,,Blue,Own Tempo,Ice Body,Sturdy,6,0,0,1,99.5,55,69,85,32,35,28,304
+714,1,7141,Noibat,Flying,Dragon,Purple,Frisk,Infiltrator,Telepathy,6,0,0,0.5,8,40,30,35,45,40,55,245
+715,1,7151,Noivern,Flying,Dragon,Purple,Frisk,Infiltrator,Telepathy,6,0,0,1.5,85,85,70,80,97,80,123,535
+736,1,7361,Grubbin,Bug,,Grey,Swarm,,,7,0,0,0.4,4.4,47,62,45,55,45,46,300
+737,1,7371,Charjabug,Bug,Electric,Green,Battery,,,7,0,0,0.5,10.5,57,82,95,55,75,36,400
+742,1,7421,Cutiefly,Bug,Fairy,Yellow,Honey Gather,Shield Dust,Sweet Veil,7,0,0,0.1,0.2,40,45,40,55,40,84,304
+743,1,7431,Ribombee,Bug,Fairy,Yellow,Honey Gather,Shield Dust,Sweet Veil,7,0,0,0.2,0.5,60,55,60,95,70,124,464
+746,1,7461,Wishiwashi,Water,,Blue,Schooling,,,7,0,0,0.2,0.3,45,20,20,25,25,40,175
+747,1,7471,Mareanie,Poison,Water,Blue,Merciness,Limber,Regenerator,7,0,0,0.4,8,50,53,62,43,52,45,305
+749,1,7491,Mudbray,Ground,,Brown,Own Tempo,Stamina,Inner Focus,7,0,0,1,110,70,100,70,45,55,45,385
+750,1,7501,Mudsdale,Ground,,Brown,Own Tempo,Stamina,Inner Focus,7,0,0,2.5,920,100,125,100,55,85,35,500
+751,1,7511,Dewpider,Water,Bug,Green,Water Bubble,,Water Absorb,7,0,0,0.3,4,38,40,52,40,72,27,269
+752,1,7521,Araquanid,Water,Bug,Green,Water Bubble,,Water Absorb,7,0,0,1.8,82,68,70,92,50,132,42,454
+755,1,7551,Morelull,Grass,Fairy,Purple,Illuminate,Effect Spore,Rain Dish,7,0,0,0.2,1.5,40,35,55,65,75,15,285
+756,1,7561,Shiinotic,Grass,Fairy,Purple,Illuminate,Effect Spore,Rain Dish,7,0,0,1,11.5,60,45,80,90,100,30,405
+757,1,7571,Salandit,Poison,Fire,Black,Corrosion,,Oblivious,7,0,0,0.6,4.8,48,44,40,71,40,77,320
+759,1,7591,Stufful,Normal,Fighting,Pink,Fluffy,Klutz,Cute Charm,7,0,0,0.5,6.8,70,75,50,45,50,50,340
+760,1,7601,Bewear,Normal,Fighting,Pink,Fluffy,Klutz,Unnerve,7,0,0,2.1,135,120,125,80,55,60,60,500
+761,1,7611,Bounsweet,Grass,,Purple,Leaf Guard,Oblivious,Sweet Veil,7,0,0,0.3,3.2,42,30,38,30,38,32,210
+762,1,7621,Steenee,Grass,,Purple,Leaf Guard,Oblivious,Sweet Veil,7,0,0,0.7,8.2,52,40,48,40,48,62,290
+765,1,7651,Oranguru,Normal,Psychic,White,Inner Focus,Telepathy,Symbiosis,7,0,0,1.5,76,90,60,80,90,110,60,490
+766,1,7661,Passimian,Fighting,,White,Reciever,,Defiant,7,0,0,2,82.8,100,120,90,40,60,80,490
+767,1,7671,Wimpod,Bug,Water,Grey,Wimp Out,,,7,0,0,0.5,12,25,35,40,20,30,80,230
+768,1,7681,Golisopod,Bug,Water,Grey,Emergency Exit,,,7,0,0,2,108,75,125,140,60,90,40,530
+771,1,7711,Pyukumuku,Water,,Black,Innards Out,,Unaware,7,0,0,0.3,1.2,55,60,130,30,130,5,410
+776,1,7761,Turtonator,Fire,Dragon,Red,Shell Armor,,,7,0,0,2,212,60,78,135,91,85,36,485
+777,1,7771,Togedemaru,Electric,Steel,Grey,Iron Barbs,Lightning Rod,Sturdy,7,0,0,0.3,3.3,65,98,63,40,73,96,435
+778,1,7781,Mimikyu,Ghost,Fairy,Yellow,Disguise,,,7,0,0,0.2,0.7,55,90,80,50,105,96,476
+780,1,7801,Drampa,Normal,Dragon,White,Berserk,Sap Sipper,Cloud Nine,7,0,0,3,185,78,60,85,135,91,36,485
+782,1,7821,Jangmo-o,Dragon,,Grey,Bulletproof,Soundproof,Overcoat,7,0,0,0.6,29.7,45,55,65,45,45,45,300
+819,1,8191,Skwovet,Normal,,Brown,Cheek Pouch,,Gluttony,8,0,0,0.3,2.5,70,55,40,35,35,25,260
+820,1,8201,Greedent,Normal,,Brown,Cheek Pouch,,Gluttony,8,0,0,0.6,6,120,95,55,55,75,20,420
+821,1,8211,Rookidee,Flying,,Blue,Keen Eye,Unnerve,Big Pecks,8,0,0,0.2,1.8,38,47,65,33,35,57,275
+824,1,8241,Blipbug,Bug,,Blue,Swarm,Compound Eyes,Telepathy,8,0,0,0.4,8,25,20,20,25,45,45,180
+825,1,8251,Dottler,Bug,Psychic,Yellow,Swarm,Compound Eyes,Telepathy,8,0,0,0.4,19.5,50,35,80,50,90,30,335
+826,1,8261,Orbeetle,Bug,Psychic,Red,Swarm,Frisk,Telepathy,8,0,0,0.4,40.8,60,45,110,80,120,90,505
+827,1,8271,Nickit,Dark,,Brown,Run Away,Unburden,Stekeout,8,0,0,0.6,8.9,40,28,28,47,52,50,245
+828,1,8281,Thievul,Dark,,Brown,Run Away,Unburden,Stekeout,8,0,0,1.2,19.9,70,58,58,87,92,90,455
+829,1,8291,Gossifleur,Grass,,Green,Cotton Down,Regenerator,Effect Spore,8,0,0,0.4,2.2,40,40,60,40,60,10,250
+830,1,8301,Eldegoss,Grass,,Green,Cotton Down,Regenerator,Effect Spore,8,0,0,0.5,2.5,60,50,90,80,120,60,460
+831,1,8311,Wooloo,Normal,,White,Fluffy,Run Away,Bulletproof,8,0,0,0.6,6,42,40,55,40,45,48,270
+832,1,8321,Dubwool,Normal,,White,Fluffy,Steadfast,Bulletproof,8,0,0,1.3,43,72,80,100,60,90,88,490
+833,1,8331,Chewtle,Water,,Green,Strong Jaw,Shell Armor,Swift Swim,8,0,0,0.3,8.5,50,64,50,38,38,44,284
+834,1,8341,Drednaw,Water,Rock,Green,Strong Jaw,Shell Armor,Swift Swim,8,0,0,1,115.5,90,115,90,48,68,74,485
+835,1,8351,Yamper,Electric,,Yellow,Bell Fetch,,Rattled,8,0,0,0.3,13.5,59,45,50,40,50,26,270
+836,1,8361,Boltund,Electric,,Yellow,Strong Jaw,,Competitive,8,0,0,1,34,69,90,60,90,60,121,490
+837,1,8371,Rolycoly,Rock,,Black,Steam Engine,Heatproof,Flash Fire,8,0,0,0.3,12,30,40,50,40,50,30,240
+838,1,8381,Carkol,Rock,Fire,Black,Steam Engine,Flame Body,Flash Fire,8,0,0,1.1,78,80,60,90,60,70,50,410
+839,1,8391,Coalossal,Rock,Fire,Black,Steam Engine,Flame Body,Flash Fire,8,0,0,2.8,310.5,110,80,120,80,90,30,510
+840,1,8401,Applin,Grass,Dragon,Green,Ripen,Gluttony,Bulletproof,8,0,0,0.2,0.5,40,40,80,40,40,20,260
+843,1,8431,Silicobra,Ground,,Green,Sand Spit,Shed Skin,Sand Veil,8,0,0,2.2,7.6,52,57,75,35,50,46,315
+844,1,8441,Sandaconda,Ground,,Green,Sand Spit,Shed Skin,Sand Veil,8,0,0,3.8,65.5,72,107,125,65,70,71,510
+845,1,8451,Cramorant,Flying,Water,Blue,Gulp Missile,,,8,0,0,0.8,18,70,85,55,85,95,85,475
+846,1,8461,Arrokuda,Water,,Brown,Swift Swim,,Propeller Tail,8,0,0,0.5,1,41,63,40,40,30,66,280
+847,1,8471,Barraskewda,Water,,Brown,Swift Swim,,Propeller Tail,8,0,0,1.3,30,61,123,60,60,50,136,490
+848,1,8481,Toxel,Electric,Poison,Purple,Rattled,Static,Klutz,8,0,0,0.4,11,40,38,35,54,35,40,242
+850,1,8501,Sizzlipede,Fire,Bug,Red,Flash Fire,White Smoke,Flame Body,8,0,0,0.7,1,50,65,45,50,50,45,305
+854,1,8541,Sinistea,Ghost,,Purple,Weak Armor,,Cursed Body,8,0,0,0.1,0.2,40,45,45,74,54,50,308
+857,1,8571,Hattrem,Psychic,,Pink,Healer,Anticipation,Magic Bounce,8,0,0,0.6,4.8,57,40,90,86,73,49,395
+858,1,8581,Hatterene,Psychic,Fairy,Pink,Healer,Anticipation,Magic Bounce,8,0,0,2.1,5.1,57,90,45,136,103,29,460
+859,1,8591,Impidimp,Dark,Fairy,Pink,Prankster,Frisk,Pickpocket,8,0,0,0.4,5.5,45,45,65,55,40,50,300
+860,1,8601,Morgrem,Dark,Fairy,Pink,Prankster,Frisk,Pickpocket,8,0,0,0.8,12.5,65,60,45,75,55,70,370
+862,1,8621,Obstagoon,Dark,Normal,Grey,Reckless,Guts,Defiant,8,0,0,1.6,46,93,90,101,60,81,95,520
+863,1,8631,Perrserker,Steel,,Brown,Battle Armor,Tough Claws,Steely Spilit,8,0,0,0.8,28,70,110,100,50,60,50,440
+868,1,8681,Milcery,Fairy,,White,Sweet Veil,,Aroma Veil,8,0,0,0.2,0.3,45,40,40,50,61,34,270
+870,1,8701,Falinks,Fighting,,Yellow,Battle Armor,,Defiant,8,0,0,3,62,65,100,100,70,60,75,470
+871,1,8711,Pincurchin,Electric,,Purple,Lightning Rod,,Electric Surge,8,0,0,0.3,1,48,101,95,91,85,15,435
+872,1,8721,Snom,Ice,Bug,White,Shield Dust,,Ice Scales,8,0,0,0.3,3.8,30,25,35,45,30,20,185
+874,1,8741,Stonjourner,Rock,,Grey,Power Spot,,,8,0,0,2.5,520,100,125,135,20,20,70,470
+875,1,8751,Eiscue,Ice,,Blue,Ice Face,,,8,0,0,1.4,89,75,80,110,65,90,50,470
+876,1,8761,Indeedee M,Psychic,Normal,Purple,Inner Focus,Synchronize,Psychic Surge,8,0,0,0.9,28,60,65,55,105,95,95,475
+876,2,8762,Indeedee F,Psychic,Normal,Purple,Own Tempo,Synchronize,Psychic Surge,8,0,0,0.9,28,70,55,65,95,105,85,475
+877,1,8771,Morpeko,Electric,Dark,Yellow,Hunger Switch,,,8,0,0,0.3,3,58,95,58,70,58,97,436
+878,1,8781,Cufant,Steel,,Yellow,Sheer Force,,Heavy Metal,8,0,0,1.2,100,72,80,49,40,49,40,330
+879,1,8791,Copperajah,Steel,,Green,Sheer Force,,Heavy Metal,8,0,0,3,650,122,130,69,80,69,30,500
+884,1,8841,Duraludon,Steel,Dragon,White,Light Metal,Heavy Metal,Stalwart,8,0,0,1.8,40,70,95,115,120,50,85,535
+885,1,8851,Dreepy,Dragon,Ghost,Green,Clear Body,Infiltrator,Cursed Body,8,0,0,0.5,2,28,60,30,40,30,82,270
+886,1,8861,Drakloak,Dragon,Ghost,Green,Clear Body,Infiltrator,Cursed Body,8,0,0,1.4,11,68,80,50,60,50,102,410
+823,023,8071,Corviknight,Flying,Steel,Pressure,Unnerve,Mirror Armor,7,0,0, 2.2,75,98,87,105,53,85,67,,
+356,1,3561,Dusclops,Ghost,,Black,Pressure,,Frisk,3,0,0,1.6,30.6,40,70,130,60,130,25,455
